@@ -1,0 +1,51 @@
+<div class="auth-wrapper">
+  <div class="auth-content text-center">
+    <img src="assets/images/logo-dark.png" alt="" class="img-fluid mb-4">
+    <div class="auth-bg">
+      <span class="r"></span>
+      <span class="r s"></span>
+      <span class="r s"></span>
+      <span class="r"></span>
+    </div>
+    <div class="card">
+      <div class="card-body text-center">
+        <h5 class="mb-4">Personal Information</h5>
+        <div class="btn-group btn-group-toggle btn-auth-gen mb-4" ngbRadioGroup [(ngModel)]="radioButtons">
+          <label class="btn btn-outline-primary btn-icon active" ngbButtonLabel>
+            <input type="radio" ngbButton name="options" id="option1" value="f" checked><span><i class="fas fa-mars"></i><small class="d-block">Female</small></span>
+          </label>
+          <label class="btn btn-outline-primary btn-icon" ngbButtonLabel>
+            <input type="radio" ngbButton name="options" id="option2" value="m"> <span><i class="fas fa-venus"></i><small class="d-block">Male</small></span>
+          </label>
+        </div>
+        <div class="input-group mb-3">
+          <select class="form-control">
+            <option>India</option>
+            <option>Peris</option>
+            <option>China</option>
+          </select>
+        </div>
+        <div class="input-group mb-4">
+          <input type="date" class="form-control">
+        </div>
+        <button class="btn btn-primary mb-4">Register</button>
+        <p class="mb-0 text-muted">Don’t have an account? <a [routerLink]="['/auth/signup']">Sign up</a></p>
+      </div>
+    </div>
+  </div>
+  <svg width="100%" height="250px" version="1.1" xmlns="http://www.w3.org/2000/svg" class="wave bg-wave">
+    <title>Wave</title>
+    <defs></defs>
+    <path id="feel-the-wave" d="M 0 108.47254258435183 C 320 185.83563089312676 320 185.83563089312676 640 147.1540867387393 C 960 108.47254258435181 960 108.47254258435181 1280 183.85517347960982 C 1600 259.23780437486784 1600 259.23780437486784 1920 168.36490149144052 L 1920 688 L 0 688 Z" fill="rgba(72, 134, 255, 4)"></path>
+  </svg>
+  <svg width="100%" height="250px" version="1.1" xmlns="http://www.w3.org/2000/svg" class="wave bg-wave">
+    <title>Wave</title>
+    <defs></defs>
+    <path id="feel-the-wave-two" d="M 0 128.95884754877417 C 191.99999999999986 75.29018602806744 191.99999999999986 75.29018602806744 383.9999999999997 102.12451678842082 C 575.9999999999995 128.95884754877417 575.9999999999995 128.95884754877417 767.9999999999994 71.76334854836878 C 959.9999999999993 14.567849547963363 959.9999999999993 14.567849547963363 1151.999999999999 88.27687726697178 C 1343.999999999999 161.98590498598023 1343.999999999999 161.98590498598023 1535.9999999999989 124.25156009802788 C 1727.9999999999986 86.51721521007553 1727.9999999999986 86.51721521007553 1919.9999999999986 73.8771116127018 L 1919.9999999999986 687.9999999999961 L 0 687.9999999999961 Z" fill="rgba(72, 134, 255, .3)"></path>
+  </svg>
+  <svg width="100%" height="250px" version="1.1" xmlns="http://www.w3.org/2000/svg" class="wave bg-wave">
+    <title>Wave</title>
+    <defs></defs>
+    <path id="feel-the-wave-three" d="M 0 57.04587196740989 C 239.99999971109986 79.41474345984528 239.99999971109986 79.41474345984528 479.9999994221997 68.23030771362758 C 719.9999991332996 57.04587196740989 719.9999991332996 57.04587196740989 959.9999988443994 96.030304568373 C 1199.9999985554996 135.01473716933612 1199.9999985554996 135.01473716933612 1439.9999982665993 72.21343378643654 C 1679.9999979776992 9.41213040353695 1679.9999979776992 9.41213040353695 1919.9999976887989 96.030304568373 L 1919.9999976887989 687.999993066398 L 0 687.999993066398 Z" fill="rgba(72, 134, 255, .2)"></path>
+  </svg>
+</div>

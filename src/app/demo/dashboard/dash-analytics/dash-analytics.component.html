@@ -1,0 +1,111 @@
+<div class="row align-items-center page-header">
+  <div class="col-md-6">
+    <app-breadcrumb></app-breadcrumb>
+  </div>
+  <div class="col-md-6 text-right">
+    <button type="button" class="btn btn-primary m-r-5"><i class="feather icon-plus"></i> Filter</button>
+    <button type="button" class="btn btn-outline-primary"><i class="feather icon-rotate-cw"></i> Reload</button>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-sm-12">
+    <app-card [hidHeader]="true" cardClass="panel-main o-income panel-refresh" blockClass="panel-wrapper">
+      <div class="m-b-10">
+        <div class="row">
+          <div class="col-md-4">
+            <h5 class="card-title m-b-0 align-self-center text-uppercase">Sessions</h5>
+          </div>
+          <div class="col-md-8 text-right">
+            <div class="ml-auto text-light-blue">
+              <ul class="list-inline m-b-30 text-uppercase lp-5 font-medium font-12">
+                <li>Last year</li>
+                <li>Last month</li>
+                <li>Last week</li>
+                <li><i class="flaticon-calendar"></i></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <ul class="list-inline m-b-30 text-uppercase lp-5 font-medium font-14">
+        <li><i class="fas fa-square m-r-5 text-primary"></i> Sales</li>
+        <li><i class="fas fa-square m-r-5 text-danger"></i> Orders</li>
+        <li><i class="fas fa-square m-r-5 text-success"></i> New visitors </li>
+      </ul>
+      <div #areaBasicChart>
+        <app-apex-chart chartID="activity-dah-shop" [chartConfig]="this.sessionDashAnalytics"></app-apex-chart>
+      </div>
+    </app-card>
+  </div>
+</div>
+
+<!--<div class="row">
+  <div class="col-sm-12">
+    <app-card [hidHeader]="true" cardClass="panel-main o-income panel-refresh" blockClass="panel-wrapper">
+      <div class="d-flex m-b-20 no-block">
+        <h5 class="card-title m-b-0 align-self-center">top 5 pages</h5>
+        <div class="ml-auto text-light-blue"> <a href="javascript:" class="pull-left text-light-blue inline-block refresh mr-15"> <i class="fas fa-sync"></i> Update </a> </div>
+      </div>
+      <div class="row">
+        <div class="col text-center">
+          <div class="chart easy-pie-chart-1">
+            <easy-pie-chart [percent]="percent1" [options]="options1"></easy-pie-chart>
+          </div>
+          <p class="font-16 font-weight-bold">Shop catalog</p>
+        </div>
+        <div class="col text-center">
+          <div class="chart easy-pie-chart-2">
+            <easy-pie-chart [percent]="percent2" [options]="options2"></easy-pie-chart>
+          </div>
+          <p class="font-16 font-weight-bold">Main page</p>
+        </div>
+        <div class="col text-center">
+          <div class="chart easy-pie-chart-3">
+            <easy-pie-chart [percent]="percent3" [options]="options3"></easy-pie-chart>
+          </div>
+          <p class="font-16 font-weight-bold">Customer page</p>
+        </div>
+        <div class="col text-center">
+          <div class="chart easy-pie-chart-4">
+            <easy-pie-chart [percent]="percent4" [options]="options4"></easy-pie-chart>
+          </div>
+          <p class="font-16 font-weight-bold">Readonly</p>
+        </div>
+        <div class="col text-center">
+          <div class="chart easy-pie-chart-5">
+            <easy-pie-chart [percent]="percent5" [options]="options5"></easy-pie-chart>
+          </div>
+          <p class="font-16 font-weight-bold">Products</p>
+        </div>
+      </div>
+    </app-card>
+  </div>
+</div>-->
+
+<div class="row">
+  <div class="col-lg-6 col-md-12">
+    <app-card [hidHeader]="true">
+      <div class="d-flex m-b-10 no-block">
+        <h5 class="card-title m-b-0 align-self-center">visitors Age</h5>
+        <div class="ml-auto text-light-blue"> <a href="javascript:" class="pull-left text-light-blue inline-block refresh mr-15"> <i class="fas fa-sync"></i> Update </a> </div>
+      </div>
+      <app-apex-chart chartID="visitor-age-dash-analytics" [chartConfig]="this.visitorAgeDashAnalytics"></app-apex-chart>
+    </app-card>
+  </div>
+  <div class="col-lg-6 col-md-12">
+    <app-card [hidHeader]="true">
+      <div class="d-flex m-b-10 no-block">
+        <h5 class="card-title m-b-0 align-self-center">visitors gender</h5>
+        <div class="ml-auto text-light-blue"> <a href="javascript:" class="pull-left text-light-blue inline-block refresh mr-15"> <i class="fas fa-sync"></i> Update </a> </div>
+      </div>
+      <ul class="list-inline m-b-30 text-uppercase lp-5 font-medium font-12">
+        <li><i class="fa fa-square m-r-5 text-primary"></i> Male</li>
+        <li><i class="fa fa-square m-r-5 text-warning"></i> Female</li>
+        <li><i class="fa fa-square m-r-5 text-purple"></i> Undefined</li>
+        <li><i class="fa fa-square m-r-5 text-success"></i> Suits</li>
+      </ul>
+      <app-apex-chart chartID="visitor-gender-dash-analytics" [chartConfig]="this.visitorGenderDashAnalytics"></app-apex-chart>
+    </app-card>
+  </div>
+</div>

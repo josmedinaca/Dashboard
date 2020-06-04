@@ -1,0 +1,1239 @@
+<div class="row align-items-center page-header">
+  <div class="col-md-12">
+    <app-breadcrumb></app-breadcrumb>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12 col-xl-8">
+    <app-card cardTitle="Last task">
+      <div class="new-task p-t-20">
+        <div class="to-do-list mb-3">
+          <div class="d-inline-block">
+            <label class="check-task custom-control custom-checkbox d-flex justify-content-center">
+              <input type="checkbox" class="custom-control-input">
+              <span class="custom-control-label">Check your Email!, Lorem Ipsum is simply dummy text of the printing</span>
+            </label>
+          </div>
+          <div class="float-right"><a onclick="delete_todo(1);" href="javascript:" class="delete_todolist"><i class="far fa-trash-alt"></i></a></div>
+        </div>
+        <div class="to-do-list mb-3">
+          <div class="d-inline-block">
+            <label class="check-task custom-control custom-checkbox d-flex justify-content-center">
+              <input type="checkbox" class="custom-control-input">
+              <span class="custom-control-label">Make YouTube Video ?. Lorem Ipsum is simply dummy text of the printing</span>
+            </label>
+          </div>
+          <div class="float-right"><a onclick="delete_todo(2);" href="javascript:" class="delete_todolist"><i class="far fa-trash-alt"></i></a></div>
+        </div>
+        <div class="to-do-list mb-3">
+          <div class="d-inline-block">
+            <label class="check-task custom-control custom-checkbox d-flex justify-content-center">
+              <input type="checkbox" class="custom-control-input">
+              <span class="custom-control-label">Create Banner. Lorem Ipsum is simply dummy text of the printing</span>
+            </label>
+          </div>
+          <div class="float-right"><a onclick="delete_todo(3);" href="javascript:" class="delete_todolist"><i class="far fa-trash-alt"></i></a></div>
+        </div>
+        <div class="to-do-list mb-4">
+          <div class="d-inline-block">
+            <label class="check-task custom-control custom-checkbox d-flex justify-content-center">
+              <input type="checkbox" class="custom-control-input">
+              <span class="custom-control-label">Upload Project done . . Lorem Ipsum is simply dummy text of the printing</span>
+            </label>
+          </div>
+          <div class="float-right"><a onclick="delete_todo(4);" href="javascript:" class="delete_todolist"><i class="far fa-trash-alt"></i></a></div>
+        </div>
+      </div>
+      <div class="input-group">
+        <input type="text" name="task-insert" class="form-control add_task_todo" id="Task" placeholder="Add Task">
+        <div class="input-group-append">
+          <button class="btn btn-primary" id="add-btn">
+            <i class="feather icon-plus"></i>
+          </button>
+        </div>
+      </div>
+    </app-card>
+  </div>
+  <div class="col-md-12 col-xl-4">
+    <app-card cardTitle="Browser Status">
+      <div class="browser-card p-b-15 ">
+        <p class="d-inline-block m-0 ">Google Crome</p>
+        <label class="badge badge-primary rounded-pill float-right btn-browser">50%</label>
+      </div>
+      <div class="browser-card border-top p-t-15 p-b-15 ">
+        <p class="d-inline-block m-0 ">Mozila Firefox</p>
+        <label class="badge badge-danger rounded-pill float-right btn-browser">12%</label>
+      </div>
+      <div class="browser-card border-top p-t-15 p-b-15 ">
+        <p class="d-inline-block m-0 ">Apple Safari</p>
+        <label class="badge badge-warning rounded-pill float-right btn-browser">23%</label>
+      </div>
+      <div class="browser-card border-top p-t-15 p-b-15 ">
+        <p class="d-inline-block m-0 ">Internet Explorer</p>
+        <label class="badge badge-success rounded-pill float-right btn-browser">17%</label>
+      </div>
+      <div class="browser-card border-top p-t-15 p-b-15 ">
+        <p class="d-inline-block m-0 ">Opera Mini</p>
+        <label class="badge badge-warning rounded-pill float-right btn-browser">07%</label>
+      </div>
+      <div class="browser-card border-top p-t-15">
+        <p class="d-inline-block m-0 ">Microsoft Edge</p>
+        <label class="badge badge-primary rounded-pill float-right btn-browser mb-0">28%</label>
+      </div>
+    </app-card>
+  </div>
+
+  <div class="col-xl-8 col-md-12">
+    <app-card cardTitle="Application Sales" cardClass="table-card">
+      <div class="table-responsive">
+        <table class="table table-hover mb-0 table-borderless">
+          <thead>
+          <tr>
+            <th>
+              <div class="chk-option">
+                <label class="check-task custom-control custom-checkbox d-flex justify-content-center done-task">
+                  <input type="checkbox" class="custom-control-input">
+                  <span class="custom-control-label"></span>
+                </label>
+              </div>
+              Application
+            </th>
+            <th>Sales</th>
+            <th>Change</th>
+            <th>Avg Price</th>
+            <th>Total</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td>
+              <div class="chk-option">
+                <label class="check-task custom-control custom-checkbox d-flex justify-content-center done-task">
+                  <input type="checkbox" class="custom-control-input">
+                  <span class="custom-control-label"></span>
+                </label>
+              </div>
+              <div class="d-inline-block align-middle">
+                <h6>Pangong</h6>
+                <p class="text-muted m-b-0">Powerful Admin Theme</p>
+              </div>
+            </td>
+            <td>16,300</td>
+            <td>
+              <div id="app-sale1" style="height:50px"></div>
+            </td>
+            <td>$53</td>
+            <td class="text-c-blue">$15,652</td>
+          </tr>
+          <tr>
+            <td>
+              <div class="chk-option">
+                <label class="check-task custom-control custom-checkbox d-flex justify-content-center done-task">
+                  <input type="checkbox" class="custom-control-input">
+                  <span class="custom-control-label"></span>
+                </label>
+              </div>
+              <div class="d-inline-block align-middle">
+                <h6>Photoshop</h6>
+                <p class="text-muted m-b-0">Design Software</p>
+              </div>
+            </td>
+            <td>26,421</td>
+            <td>
+              <div id="app-sale2" style="height:50px"></div>
+            </td>
+            <td>$35</td>
+            <td class="text-c-blue">$18,785</td>
+          </tr>
+          <tr>
+            <td>
+              <div class="chk-option">
+                <label class="check-task custom-control custom-checkbox d-flex justify-content-center done-task">
+                  <input type="checkbox" class="custom-control-input">
+                  <span class="custom-control-label"></span>
+                </label>
+              </div>
+              <div class="d-inline-block align-middle">
+                <h6>Pangong</h6>
+                <p class="text-muted m-b-0">Best Admin Template</p>
+              </div>
+            </td>
+            <td>8,265</td>
+            <td>
+              <div id="app-sale3" style="height:50px"></div>
+            </td>
+            <td>$98</td>
+            <td class="text-c-blue">$9,652</td>
+          </tr>
+          <tr>
+            <td>
+              <div class="chk-option">
+                <label class="check-task custom-control custom-checkbox d-flex justify-content-center done-task">
+                  <input type="checkbox" class="custom-control-input">
+                  <span class="custom-control-label"></span>
+                </label>
+              </div>
+              <div class="d-inline-block align-middle">
+                <h6>Pangong</h6>
+                <p class="text-muted m-b-0">Admin App</p>
+              </div>
+            </td>
+            <td>10,652</td>
+            <td>
+              <div id="app-sale4" style="height:50px"></div>
+            </td>
+            <td>$20</td>
+            <td class="text-c-blue">$7,856</td>
+          </tr>
+          </tbody>
+        </table>
+        <div class="text-center">
+          <a href="javascript:" class=" b-b-primary text-primary">View all Projects</a>
+        </div>
+      </div>
+    </app-card>
+  </div>
+  <div class="col-md-12 col-xl-4">
+    <app-card cardTitle="Activities" blockClass="p-t-20">
+      <div class="card-notification">
+        <div class="card-noti-conatin">
+          <small>5 mins ago</small>
+          <p class="text-muted m-b-30">jennifer sent you an attachament</p>
+        </div>
+      </div>
+      <div class="card-notification">
+        <div class="card-noti-conatin">
+          <small>45 mins ago</small>
+          <p class="text-muted m-b-30">Paul has sent a request for access to the project folder</p>
+        </div>
+      </div>
+      <div class="card-notification">
+        <div class="card-noti-conatin">
+          <small>2 days ago</small>
+          <p class="text-muted m-b-30">Demin change the dedline on the project</p>
+        </div>
+      </div>
+      <div class="card-notification">
+        <div class="card-noti-conatin">
+          <small>12 mins ago</small>
+          <p class="text-muted m-b-30">jennifer invite you to join the project</p>
+        </div>
+      </div>
+      <div class="card-notification">
+        <div class="card-noti-conatin">
+          <small>60 mins ago</small>
+          <p class="text-muted mb-1">Josephine share a folder with you</p>
+        </div>
+      </div>
+    </app-card>
+  </div>
+
+  <div class="col-md-6 col-xl-5">
+    <app-card cardTitle="Traffic resources" cardClass="review-resourse" blockClass="p-t-10 p-b-10">
+      <div class="table-responsive">
+        <table class="table table-hover">
+          <tbody>
+          <tr>
+            <td>
+              <h6>Unique visitors</h6>
+            </td>
+            <td>
+              <span class="f-18 text-muted">4,562</span>
+            </td>
+            <td class="text-right">
+              <span class="visitor" data-peity='{"fill": "rgba(70, 128, 254,0.2)", "stroke": "rgb(70, 128, 254)"}'>0,5,0,5,7,6,5.5,10,8</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <h6>Pageviews</h6>
+            </td>
+            <td>
+              <span class="f-18 text-muted">679</span>
+            </td>
+            <td class="text-right">
+              <span class="visitor" data-peity='{"fill": "rgba(252, 97, 128,0.2)", "stroke": "rgb(252, 97, 128)"}'>0,5,0,5,7,6,5.5,10,8</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <h6>Page/visite</h6>
+            </td>
+            <td>
+              <span class="f-18 text-muted">2,516</span>
+            </td>
+            <td class="text-right">
+              <span class="visitor" data-peity='{"fill": "rgba(147, 190, 82,0.2)", "stroke": "rgb(147, 190, 82)"}'>0,5,0,5,7,6,5.5,10,8</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <h6>Bounce rate</h6>
+            </td>
+            <td>
+              <span class="f-18 text-muted">67%</span>
+            </td>
+            <td class="text-right">
+              <span class="visitor" data-peity='{"fill": "rgba(255, 182, 77,0.2)", "stroke": "rgb(255, 182, 77)"}'>0,5,0,5,7,6,5.5,10,8</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <h6>Visite</h6>
+            </td>
+            <td>
+              <span class="f-18 text-muted">845</span>
+            </td>
+            <td class="text-right">
+              <span class="visitor" data-peity='{"fill": "rgba(254, 138, 125,0.2)", "stroke": "rgb(254, 138, 125)"}'>0,5,0,5,7,6,5.5,10,8</span>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </app-card>
+  </div>
+  <div class="col-md-6 col-xl-7">
+    <app-card cardTitle="Reviews" cardClass="review-task">
+      <div class="table-responsive">
+        <table class="table table-hover">
+          <tbody>
+          <tr>
+            <td><a href="javascript:"><img class="img-radius wid-40" src="assets/images/user/avatar-3.jpg" alt="chat-user"></a>
+            </td>
+            <td>
+              <h6>Josephin John</h6>
+              <p class="text-muted">Lorem ipsum dolor</p>
+            </td>
+            <td>
+              <p class="review-date">09 Fab</p>
+              <p class="">09:40 AM</p>
+            </td>
+            <td>
+              <a href="javascript:"><i class="feather icon-star-on  f-18 text-c-blue"></i></a>
+              <a href="javascript:"><i class="feather icon-star-on f-18 text-muted"></i></a>
+              <a href="javascript:"><i class="feather icon-star-on f-18 text-muted"></i></a>
+              <a href="javascript:"><i class="feather icon-star-on f-18 text-muted"></i></a>
+              <a href="javascript:"><i class="feather icon-star-on f-18 text-muted"></i></a>
+            </td>
+          </tr>
+          <tr>
+            <td><a href="javascript:"><img class="img-radius wid-40" src="assets/images/user/avatar-2.jpg" alt="chat-user"></a>
+            </td>
+            <td>
+              <h6>Josephin Doe</h6>
+              <p class="text-muted">Lorem ipsum dolor sit amet</p>
+            </td>
+            <td>
+              <p class="review-date">04 Jan</p>
+              <p class="">10:45 AM</p>
+            </td>
+            <td>
+              <a href="javascript:"><i class="feather icon-star-on  f-18 text-c-blue"></i></a>
+              <a href="javascript:"><i class="feather icon-star-on f-18 text-c-blue"></i></a>
+              <a href="javascript:"><i class="feather icon-star-on f-18 text-c-blue"></i></a>
+              <a href="javascript:"><i class="feather icon-star-on f-18 text-c-blue"></i></a>
+              <a href="javascript:"><i class="feather icon-star-on f-18 text-muted"></i></a>
+            </td>
+          </tr>
+          <tr>
+            <td><a href="javascript:"><img class="img-radius wid-40" src="assets/images/user/avatar-3.jpg" alt="chat-user"></a>
+            </td>
+            <td>
+              <h6>Viral Dhimmar</h6>
+              <p class="text-muted">Lorem ipsum dolor sit amet</p>
+            </td>
+            <td>
+              <p class="review-date">16 Dec</p>
+              <p class="">12:00 PM</p>
+            </td>
+            <td>
+              <a href="javascript:"><i class="feather icon-star-on  f-18 text-c-blue"></i></a>
+              <a href="javascript:"><i class="feather icon-star-on f-18 text-c-blue"></i></a>
+              <a href="javascript:"><i class="feather icon-star-on f-18 text-muted"></i></a>
+              <a href="javascript:"><i class="feather icon-star-on f-18 text-muted"></i></a>
+              <a href="javascript:"><i class="feather icon-star-on f-18 text-muted"></i></a>
+            </td>
+          </tr>
+          <tr>
+            <td><a href="javascript:"><img class="img-radius wid-40" src="assets/images/user/avatar-4.jpg" alt="chat-user"></a>
+            </td>
+            <td>
+              <h6>Luciano Durk</h6>
+              <p class="text-muted">Lorem ipsum consectetur</p>
+            </td>
+            <td>
+              <p class="review-date">04 Jan</p>
+              <p class="">10:45 AM</p>
+            </td>
+            <td>
+              <a href="javascript:"><i class="feather icon-star-on  f-18 text-c-blue"></i></a>
+              <a href="javascript:"><i class="feather icon-star-on f-18 text-c-blue"></i></a>
+              <a href="javascript:"><i class="feather icon-star-on f-18 text-c-blue"></i></a>
+              <a href="javascript:"><i class="feather icon-star-on f-18 text-muted"></i></a>
+              <a href="javascript:"><i class="feather icon-star-on f-18 text-muted"></i></a>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </app-card>
+  </div>
+
+  <div class="col-md-12 col-xl-6 ">
+    <app-card cardTitle="Time spent : project &amp; task" cardClass="project-task" blockClass="p-b-10">
+      <div class="table-responsive">
+        <table class="table table-hover mb-0">
+          <thead>
+          <tr>
+            <th>Project & Task</th>
+            <th>Time Spents</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td>
+              <div class="task-contain">
+                <h6 class="bg-c-blue d-inline-block text-center">U</h6>
+                <p class="d-inline-block m-l-20">UI Design</p>
+              </div>
+            </td>
+            <td>
+              <p class="d-inline-block m-r-20">4 : 36</p>
+              <div class="progress d-inline-flex">
+                <div class="progress-bar bg-c-blue" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width:80%">
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="task-contain">
+                <h6 class="bg-c-red d-inline-block text-center">R</h6>
+                <p class="d-inline-block m-l-20">Redesign Android App</p>
+              </div>
+            </td>
+            <td>
+              <p class="d-inline-block m-r-20">5 : 15</p>
+              <div class="progress d-inline-flex">
+                <div class="progress-bar bg-c-red" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width:60%">
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="task-contain">
+                <h6 class="bg-c-yellow d-inline-block text-center">L</h6>
+                <p class="d-inline-block m-l-20">Logo Design</p>
+              </div>
+            </td>
+            <td>
+              <p class="d-inline-block m-r-20">6 : 36</p>
+              <div class="progress d-inline-flex">
+                <div class="progress-bar bg-c-yellow" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width:50%">
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="task-contain">
+                <h6 class="bg-c-green d-inline-block text-center">A</h6>
+                <p class="d-inline-block m-l-20">Appestia landing Page</p>
+              </div>
+            </td>
+            <td>
+              <p class="d-inline-block m-r-20">8 : 00</p>
+              <div class="progress d-inline-flex">
+                <div class="progress-bar bg-c-green" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width:50%">
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="task-contain">
+                <h6 class="bg-c-blue d-inline-block text-center">L</h6>
+                <p class="d-inline-block m-l-20">Logo Design</p>
+              </div>
+            </td>
+            <td>
+              <p class="d-inline-block m-r-20">10 : 36</p>
+              <div class="progress d-inline-flex">
+                <div class="progress-bar bg-c-blue" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width:50%">
+                </div>
+              </div>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </app-card>
+  </div>
+  <div class="col-md-12 col-xl-6">
+    <app-card cardTitle="Past payment" cardClass="past-payment-card">
+      <div class="table-responsive">
+        <table class="table table-hover">
+          <thead>
+          <tr>
+            <th>Team Member</th>
+            <th>Hours</th>
+            <th>Amount</th>
+            <th>Date</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td>
+              <a href="javascript:"><img class="img-radius" src="assets/images/user/avatar-1.jpg" alt=""></a>
+              <p class="d-inline-block m-l-10 f-w-600">Erwin Brown</p>
+            </td>
+            <td>
+              <p>6:23</p>
+            </td>
+            <td>
+              <p>$20.00/hr</p>
+            </td>
+            <td>
+              <p>23 oct, 2017</p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <a href="javascript:"><img class="img-radius" src="assets/images/user/avatar-2.jpg" alt=""></a>
+              <p class="d-inline-block m-l-10 f-w-600">Joseph Villa</p>
+            </td>
+            <td>
+              <p>10:56</p>
+            </td>
+            <td>
+              <p>$25.00/hr</p>
+            </td>
+            <td>
+              <p>25 oct, 2017</p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <a href="javascript:"><img class="img-radius" src="assets/images/user/avatar-3.jpg" alt=""></a>
+              <p class="d-inline-block m-l-10 f-w-600">Jekson Durk</p>
+            </td>
+            <td>
+              <p>5:56</p>
+            </td>
+            <td>
+              <p>$23.00/hr</p>
+            </td>
+            <td>
+              <p>01 nov, 2017</p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <a href="javascript:"><img class="img-radius" src="assets/images/user/avatar-4.jpg" alt=""></a>
+              <p class="d-inline-block m-l-10 f-w-600">Erwin Brown</p>
+            </td>
+            <td>
+              <p>6:23</p>
+            </td>
+            <td>
+              <p>$16.00/hr</p>
+            </td>
+            <td>
+              <p>05 nov, 2017</p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <a href="javascript:"><img class="img-radius" src="assets/images/user/avatar-1.jpg" alt=""></a>
+              <p class="d-inline-block m-l-10  f-w-600">Gregory Durk</p>
+            </td>
+            <td>
+              <p>15:23</p>
+            </td>
+            <td>
+              <p>$40.00/hr</p>
+            </td>
+            <td>
+              <p>15 nov, 2017</p>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </app-card>
+  </div>
+
+  <div class="col-xl-8 col-md-12">
+    <app-card cardTitle="Projects" cardClass="table-card">
+      <div class="table-responsive">
+        <table class="table table-hover">
+          <thead>
+          <tr>
+            <th>
+              <div class="chk-option">
+                <label class="check-task custom-control custom-checkbox d-flex justify-content-center done-task">
+                  <input type="checkbox" class="custom-control-input">
+                  <span class="custom-control-label"></span>
+                </label>
+              </div>
+              Assigned
+            </th>
+            <th>Name</th>
+            <th>Due Date</th>
+            <th class="text-right">Priority</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td>
+              <div class="chk-option">
+                <label class="check-task custom-control custom-checkbox d-flex justify-content-center done-task">
+                  <input type="checkbox" class="custom-control-input">
+                  <span class="custom-control-label"></span>
+                </label>
+              </div>
+              <div class="d-inline-block align-middle">
+                <img src="assets/images/user/avatar-4.jpg" alt="user image" class="img-radius wid-40 align-top m-r-15">
+                <div class="d-inline-block">
+                  <h6>John Deo</h6>
+                  <p class="text-muted m-b-0">Graphics Designer</p>
+                </div>
+              </div>
+            </td>
+            <td>Pangong</td>
+            <td>Jun, 26</td>
+            <td class="text-right"><label class="badge badge-light-danger">Low</label></td>
+          </tr>
+          <tr>
+            <td>
+              <div class="chk-option">
+                <label class="check-task custom-control custom-checkbox d-flex justify-content-center done-task">
+                  <input type="checkbox" class="custom-control-input">
+                  <span class="custom-control-label"></span>
+                </label>
+              </div>
+              <div class="d-inline-block align-middle">
+                <img src="assets/images/user/avatar-2.jpg" alt="user image" class="img-radius wid-40 align-top m-r-15">
+                <div class="d-inline-block">
+                  <h6>Jenifer Vintage</h6>
+                  <p class="text-muted m-b-0">Web Designer</p>
+                </div>
+              </div>
+            </td>
+            <td>Mashable</td>
+            <td>March, 31</td>
+            <td class="text-right"><label class="badge badge-light-primary">high</label></td>
+          </tr>
+          <tr>
+            <td>
+              <div class="chk-option">
+                <label class="check-task custom-control custom-checkbox d-flex justify-content-center done-task">
+                  <input type="checkbox" class="custom-control-input">
+                  <span class="custom-control-label"></span>
+                </label>
+              </div>
+              <div class="d-inline-block align-middle">
+                <img src="assets/images/user/avatar-3.jpg" alt="user image" class="img-radius wid-40 align-top m-r-15">
+                <div class="d-inline-block">
+                  <h6>William Jem</h6>
+                  <p class="text-muted m-b-0">Developer</p>
+                </div>
+              </div>
+            </td>
+            <td>Flatable</td>
+            <td>Aug, 02</td>
+            <td class="text-right"><label class="badge badge-light-success">medium</label></td>
+          </tr>
+          <tr>
+            <td>
+              <div class="chk-option">
+                <label class="check-task custom-control custom-checkbox d-flex justify-content-center done-task">
+                  <input type="checkbox" class="custom-control-input">
+                  <span class="custom-control-label"></span>
+                </label>
+              </div>
+              <div class="d-inline-block align-middle">
+                <img src="assets/images/user/avatar-2.jpg" alt="user image" class="img-radius wid-40 align-top m-r-15">
+                <div class="d-inline-block">
+                  <h6>David Jones</h6>
+                  <p class="text-muted m-b-0">Developer</p>
+                </div>
+              </div>
+            </td>
+            <td>Guruable</td>
+            <td>Sep, 22</td>
+            <td class="text-right"><label class="badge badge-light-primary">high</label></td>
+          </tr>
+          </tbody>
+        </table>
+        <div class="text-right m-r-20">
+          <a href="javascript:" class=" b-b-primary text-primary">View all Projects</a>
+        </div>
+      </div>
+    </app-card>
+  </div>
+  <div class="col-xl-4 col-md-12">
+    <app-card cardTitle="Team Members">
+      <div class="align-middle m-b-30 p-t-20">
+        <img src="assets/images/user/avatar-2.jpg" alt="user image" class="img-radius wid-40 align-top m-r-15">
+        <div class="d-inline-block">
+          <a href="javascript:">
+            <h6>David Jones</h6>
+          </a>
+          <p class="text-muted m-b-0">Developer</p>
+        </div>
+      </div>
+      <div class="align-middle m-b-30">
+        <img src="assets/images/user/avatar-3.jpg" alt="user image" class="img-radius wid-40 align-top m-r-15">
+        <div class="d-inline-block">
+          <a href="javascript:">
+            <h6>David Jones</h6>
+          </a>
+          <p class="text-muted m-b-0">Developer</p>
+        </div>
+      </div>
+      <div class="align-middle m-b-30">
+        <img src="assets/images/user/avatar-3.jpg" alt="user image" class="img-radius wid-40 align-top m-r-15">
+        <div class="d-inline-block">
+          <a href="javascript:">
+            <h6>David Jones</h6>
+          </a>
+          <p class="text-muted m-b-0">Developer</p>
+        </div>
+      </div>
+      <div class="align-middle m-b-30">
+        <img src="assets/images/user/avatar-4.jpg" alt="user image" class="img-radius wid-40 align-top m-r-15">
+        <div class="d-inline-block">
+          <a href="javascript:">
+            <h6>David Jones</h6>
+          </a>
+          <p class="text-muted m-b-0">Developer</p>
+        </div>
+      </div>
+      <div class="align-middle m-b-10">
+        <img src="assets/images/user/avatar-2.jpg" alt="user image" class="img-radius wid-40 align-top m-r-15">
+        <div class="d-inline-block">
+          <a href="javascript:">
+            <h6>David Jones</h6>
+          </a>
+          <p class="text-muted m-b-0">Developer</p>
+        </div>
+      </div>
+      <div class="text-center">
+        <a href="javascript:" class="b-b-primary text-primary">View all Projects</a>
+      </div>
+    </app-card>
+  </div>
+
+  <div class="col-md-12">
+    <app-card cardTitle="Latest Order" cardClass="table-card latest-activity-card">
+      <div class="table-responsive">
+        <table class="table table-hover table-borderless">
+          <thead>
+          <tr>
+            <th>Customer</th>
+            <th>Order ID</th>
+            <th>Photo</th>
+            <th>Product</th>
+            <th>Quantity</th>
+            <th>Date</th>
+            <th>Status</th>
+            <th>Action</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td>John Deo</td>
+            <td>#81412314</td>
+            <td><img src="assets/images/widget/PHONE1.jpg" alt="" class="img-fluid"></td>
+            <td>Moto G5</td>
+            <td>10</td>
+            <td>17-2-2017</td>
+            <td><label class="badge badge-light-warning">Pending</label></td>
+            <td><a href="javascript:"><i class="icon feather icon-edit f-w-600 f-16 m-r-15 text-c-green"></i></a><a href="javascript:"><i class="feather icon-trash-2 f-w-600 f-16 text-c-red"></i></a></td>
+          </tr>
+          <tr>
+            <td>Jenny William</td>
+            <td>#68457898</td>
+            <td><img src="assets/images/widget/PHONE2.jpg" alt="" class="img-fluid"></td>
+            <td>iPhone 8</td>
+            <td>16</td>
+            <td>20-2-2017</td>
+            <td><label class="badge badge-light-primary">Paid</label></td>
+            <td><a href="javascript:"><i class="icon feather icon-edit f-w-600 f-16 m-r-15 text-c-green"></i></a><a href="javascript:"><i class="feather icon-trash-2 f-w-600 f-16 text-c-red"></i></a></td>
+          </tr>
+          <tr>
+            <td>Lori Moore</td>
+            <td>#45457898</td>
+            <td><img src="assets/images/widget/PHONE3.jpg" alt="" class="img-fluid"></td>
+            <td>Redmi 4</td>
+            <td>20</td>
+            <td>17-2-2017</td>
+            <td><label class="badge badge-light-success">Success</label></td>
+            <td><a href="javascript:"><i class="icon feather icon-edit f-w-600 f-16 m-r-15 text-c-green"></i></a><a href="javascript:"><i class="feather icon-trash-2 f-w-600 f-16 text-c-red"></i></a></td>
+          </tr>
+          <tr>
+            <td>Austin Pena</td>
+            <td>#62446232</td>
+            <td><img src="assets/images/widget/PHONE4.jpg" alt="" class="img-fluid"></td>
+            <td>Jio</td>
+            <td>15</td>
+            <td>25-4-2017</td>
+            <td><label class="badge badge-light-danger">Failed</label></td>
+            <td><a href="javascript:"><i class="icon feather icon-edit f-w-600 f-16 m-r-15 text-c-green"></i></a><a href="javascript:"><i class="feather icon-trash-2 f-w-600 f-16 text-c-red"></i></a></td>
+          </tr>
+
+          </tbody>
+        </table>
+      </div>
+      <div class="text-right  m-r-20">
+        <a href="javascript:" class="b-b-primary text-primary">View all Orders</a>
+      </div>
+    </app-card>
+  </div>
+
+  <div class="col-xl-4 col-md-6">
+    <app-card cardTitle="New Customers" cardClass="new-cust-card" blockClass="p-b-0 scrollable-body">
+      <perfect-scrollbar [style.max-height]="'415px'" [style.padding-top]="0">
+        <div class="align-middle m-b-25">
+          <img src="assets/images/user/avatar-1.jpg" alt="user image" class="img-radius align-top m-r-15">
+          <div class="d-inline-block">
+            <a href="javascript:">
+              <h6>Alex Thompson</h6>
+            </a>
+            <p class="m-b-0">Cheers!</p>
+            <span class="status active"></span>
+          </div>
+        </div>
+        <div class="align-middle m-b-25">
+          <img src="assets/images/user/avatar-2.jpg" alt="user image" class="img-radius align-top m-r-15">
+          <div class="d-inline-block">
+            <a href="javascript:">
+              <h6>John Doue</h6>
+            </a>
+            <p class="m-b-0">stay hungry stay foolish!</p>
+            <span class="status active"></span>
+          </div>
+        </div>
+        <div class="align-middle m-b-25">
+          <img src="assets/images/user/avatar-3.jpg" alt="user image" class="img-radius align-top m-r-15">
+          <div class="d-inline-block">
+            <a href="javascript:">
+              <h6>Alex Thompson</h6>
+            </a>
+            <p class="m-b-0">Cheers!</p>
+            <span class="status deactive"><i class="far fa-clock m-r-10"></i>30 min ago</span>
+          </div>
+        </div>
+        <div class="align-middle m-b-25">
+          <img src="assets/images/user/avatar-4.jpg" alt="user image" class="img-radius align-top m-r-15">
+          <div class="d-inline-block">
+            <a href="javascript:">
+              <h6>John Doue</h6>
+            </a>
+            <p class="m-b-0">Cheers!</p>
+            <span class="status deactive"><i class="far fa-clock m-r-10"></i>10 min ago</span>
+          </div>
+        </div>
+        <div class="align-middle m-b-25">
+          <img src="assets/images/user/avatar-5.jpg" alt="user image" class="img-radius align-top m-r-15">
+          <div class="d-inline-block">
+            <a href="javascript:">
+              <h6>Shirley Hoe</h6>
+            </a>
+            <p class="m-b-0">stay hungry stay foolish!</p>
+            <span class="status active"></span>
+          </div>
+        </div>
+        <div class="align-middle m-b-25">
+          <img src="assets/images/user/avatar-1.jpg" alt="user image" class="img-radius align-top m-r-15">
+          <div class="d-inline-block">
+            <a href="javascript:">
+              <h6>John Doue</h6>
+            </a>
+            <p class="m-b-0">Cheers!</p>
+            <span class="status active"></span>
+          </div>
+        </div>
+        <div class="align-middle m-b-25">
+          <img src="assets/images/user/avatar-2.jpg" alt="user image" class="img-radius align-top m-r-15">
+          <div class="d-inline-block">
+            <a href="javascript:">
+              <h6>James Alexander</h6>
+            </a>
+            <p class="m-b-0">stay hungry stay foolish!</p>
+            <span class="status active"></span>
+          </div>
+        </div>
+        <div class="align-middle m-b-25">
+          <img src="assets/images/user/avatar-3.jpg" alt="user image" class="img-radius align-top m-r-15">
+          <div class="d-inline-block">
+            <a href="javascript:">
+              <h6>John Doue</h6>
+            </a>
+            <p class="m-b-0">Cheers!</p>
+            <span class="status deactive"><i class="far fa-clock m-r-10"></i>10 min ago</span>
+          </div>
+        </div>
+      </perfect-scrollbar>
+    </app-card>
+  </div>
+  <div class="col-xl-8 col-md-6">
+    <app-card cardTitle="New Products" cardClass="table-card" blockClass="p-0">
+      <perfect-scrollbar [style.max-height]="'415px'">
+        <div class="table-responsive">
+          <table class="table table-hover m-b-0">
+            <thead>
+            <tr>
+              <th>Product Name</th>
+              <th>Image</th>
+              <th>Status</th>
+              <th>Price</th>
+              <th>Action</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <td>HeadPhone</td>
+              <td><img src="assets/images/widget/p1.jpg" alt="" class="img-20"></td>
+              <td>
+                <div><label class="badge badge-light-warning">Pending</label></div>
+              </td>
+              <td>$10</td>
+              <td><a href="javascript:"><i class="icon feather icon-edit f-16  text-c-green"></i></a><a href="javascript:"><i class="feather icon-trash-2 ml-3 f-16 text-c-red"></i></a></td>
+            </tr>
+            <tr>
+              <td>Iphone 6</td>
+              <td><img src="assets/images/widget/p2.jpg" alt="" class="img-20"></td>
+              <td>
+                <div><label class="badge badge-light-danger">Cancel</label></div>
+              </td>
+              <td>$20</td>
+              <td><a href="javascript:"><i class="icon feather icon-edit f-16  text-c-green"></i></a><a href="javascript:"><i class="feather icon-trash-2 ml-3 f-16 text-c-red"></i></a></td>
+            </tr>
+            <tr>
+              <td>Jacket</td>
+              <td><img src="assets/images/widget/p3.jpg" alt="" class="img-20"></td>
+              <td>
+                <div><label class="badge badge-light-success">Success</label></div>
+              </td>
+              <td>$35</td>
+              <td><a href="javascript:"><i class="icon feather icon-edit f-16 text-c-green"></i></a><a href="javascript:"><i class="feather icon-trash-2 ml-3 f-16 text-c-red"></i></a></td>
+            </tr>
+            <tr>
+              <td>Sofa</td>
+              <td><img src="assets/images/widget/p4.jpg" alt="" class="img-20"></td>
+              <td>
+                <div><label class="badge badge-light-danger">Cancel</label></div>
+              </td>
+              <td>$85</td>
+              <td><a href="javascript:"><i class="icon feather icon-edit f-16 text-c-green"></i></a><a href="javascript:"><i class="feather icon-trash-2 ml-3 f-16 text-c-red"></i></a></td>
+            </tr>
+            <tr>
+              <td>Iphone 6</td>
+              <td><img src="assets/images/widget/p2.jpg" alt="" class="img-20"></td>
+              <td>
+                <div><label class="badge badge-light-success">Success</label></div>
+              </td>
+              <td>$20</td>
+              <td><a href="javascript:"><i class="icon feather icon-edit f-16 text-c-green"></i></a><a href="javascript:"><i class="feather icon-trash-2 ml-3 f-16 text-c-red"></i></a></td>
+            </tr>
+            <tr>
+              <td>HeadPhone</td>
+              <td><img src="assets/images/widget/p1.jpg" alt="" class="img-20"></td>
+              <td>
+                <div><label class="badge badge-light-warning">Pending</label></div>
+              </td>
+              <td>$50</td>
+              <td><a href="javascript:"><i class="icon feather icon-edit f-16 text-c-green"></i></a><a href="javascript:"><i class="feather icon-trash-2 ml-3 f-16 text-c-red"></i></a></td>
+            </tr>
+            <tr>
+              <td>Iphone 6</td>
+              <td><img src="assets/images/widget/p2.jpg" alt="" class="img-20"></td>
+              <td>
+                <div><label class="badge badge-light-danger">Cancel</label></div>
+              </td>
+              <td>$30</td>
+              <td><a href="javascript:"><i class="icon feather icon-edit f-16 text-c-green"></i></a><a href="javascript:"><i class="feather icon-trash-2 ml-3 f-16 text-c-red"></i></a></td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </perfect-scrollbar>
+    </app-card>
+  </div>
+
+  <div class="col-xl-4 col-md-6">
+    <app-card cardTitle="Testimonial" cardClass="testimonial-card table-card" blockClass="p-b-0">
+      <perfect-scrollbar [style.max-height]="'386px'">
+        <div class="review-block">
+          <div class="row">
+            <div class="col-sm-auto p-r-0">
+              <img src="assets/images/user/avatar-1.jpg" alt="user image" class="img-radius profile-img cust-img m-b-15">
+            </div>
+            <div class="col">
+              <h6 class="m-b-10">John Deo</h6>
+              <div class="row align-items-center">
+                <div class="col">
+                  <div class="progress">
+                    <div class="progress-bar bg-c-green" style="width:85%"></div>
+                  </div>
+                </div>
+                <div class="col">
+                  <h6 class="m-b-0">3.2</h6>
+                </div>
+              </div>
+              <p class="m-t-10 m-b-0">Lorem Ipsum is simply dummy text of the printing and typesetting.</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-auto p-r-0">
+              <img src="assets/images/user/avatar-2.jpg" alt="user image" class="img-radius profile-img cust-img m-b-15">
+            </div>
+            <div class="col">
+              <h6 class="m-b-10">Alex Thompson</h6>
+              <div class="row align-items-center">
+                <div class="col">
+                  <div class="progress">
+                    <div class="progress-bar bg-c-blue" style="width:50%"></div>
+                  </div>
+                </div>
+                <div class="col">
+                  <h6 class="m-b-0">4.2</h6>
+                </div>
+              </div>
+              <p class="m-t-10 m-b-0">Lorem Ipsum is simply dummy text of the printing and typesetting.</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-auto p-r-0">
+              <img src="assets/images/user/avatar-3.jpg" alt="user image" class="img-radius profile-img cust-img m-b-15">
+            </div>
+            <div class="col">
+              <h6 class="m-b-10">John Deo</h6>
+              <div class="row align-items-center">
+                <div class="col">
+                  <div class="progress">
+                    <div class="progress-bar bg-c-red" style="width:60%"></div>
+                  </div>
+                </div>
+                <div class="col">
+                  <h6 class="m-b-0">6.5</h6>
+                </div>
+              </div>
+              <p class="m-t-10 m-b-0">Lorem Ipsum is simply dummy text of the printing and typesetting.</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-auto p-r-0">
+              <img src="assets/images/user/avatar-2.jpg" alt="user image" class="img-radius profile-img cust-img m-b-15">
+            </div>
+            <div class="col">
+              <h6 class="m-b-10">Shirley Hoe</h6>
+              <div class="row align-items-center">
+                <div class="col">
+                  <div class="progress">
+                    <div class="progress-bar bg-c-yellow" style="width:85%"></div>
+                  </div>
+                </div>
+                <div class="col">
+                  <h6 class="m-b-0">9.6</h6>
+                </div>
+              </div>
+              <p class="m-t-10 m-b-0">Lorem Ipsum is simply dummy text of the printing and typesetting.</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-auto p-r-0">
+              <img src="assets/images/user/avatar-1.jpg" alt="user image" class="img-radius profile-img cust-img m-b-15">
+            </div>
+            <div class="col">
+              <h6 class="m-b-10">James Alexander</h6>
+              <div class="row align-items-center">
+                <div class="col">
+                  <div class="progress">
+                    <div class="progress-bar bg-c-green" style="width:30%"></div>
+                  </div>
+                </div>
+                <div class="col">
+                  <h6 class="m-b-0">5.5</h6>
+                </div>
+              </div>
+              <p class="m-t-10 m-b-0">Lorem Ipsum is simply dummy text of the printing and typesetting.</p>
+            </div>
+          </div>
+        </div>
+      </perfect-scrollbar>
+    </app-card>
+  </div>
+  <div class="col-xl-8 col-md-6">
+    <app-card cardTitle="Recent Tickets" cardClass="table-card">
+      <div class="table-responsive">
+        <table class="table table-hover table-borderless mb-0">
+          <thead>
+          <tr>
+            <th>Status</th>
+            <th>Subject</th>
+            <th>Department</th>
+            <th>Date</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td><label class="badge badge-light-success">open</label></td>
+            <td>Website down for one week</td>
+            <td>Support</td>
+            <td>Today 2:00</td>
+          </tr>
+          <tr>
+            <td><label class="badge badge-light-primary">progress</label></td>
+            <td>Loosing control on server</td>
+            <td>Support</td>
+            <td>Yesterday</td>
+          </tr>
+          <tr>
+            <td><label class="badge badge-light-danger">closed</label></td>
+            <td>Authorizations keys</td>
+            <td>Support</td>
+            <td>27, Aug</td>
+          </tr>
+          <tr>
+            <td><label class="badge badge-light-success">open</label></td>
+            <td>Restoring default settings</td>
+            <td>Support</td>
+            <td>Today 9:00</td>
+          </tr>
+          <tr>
+            <td><label class="badge badge-light-primary">progress</label></td>
+            <td>Loosing control on server</td>
+            <td>Support</td>
+            <td>Yesterday</td>
+          </tr>
+          <tr>
+            <td><label class="badge badge-light-success">open</label></td>
+            <td>Restoring default settings</td>
+            <td>Support</td>
+            <td>Today 9:00</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </app-card>
+  </div>
+
+  <div class="col-sm-12">
+    <app-card cardTitle="New Products" cardClass="table-card" blockClass="p-0">
+      <div class="table-responsive">
+        <perfect-scrollbar [style.max-height]="'405px'">
+          <table class="table table-hover m-b-0">
+            <thead>
+            <tr>
+              <th>Name</th>
+              <th>Product Code</th>
+              <th>Customer</th>
+              <th>Status</th>
+              <th>Rating</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <td>Sofa</td>
+              <td>#PHD001</td>
+              <td>abc@gmail.com</td>
+              <td><label class="badge badge-light-danger">Out Stock</label></td>
+              <td>
+                <a href="javascript:"><i class="fa fa-star f-14 text-c-yellow"></i></a>
+                <a href="javascript:"><i class="fa fa-star f-14 text-c-yellow"></i></a>
+                <a href="javascript:"><i class="fa fa-star f-14 text-c-yellow"></i></a>
+                <a href="javascript:"><i class="fa fa-star f-14 text-muted"></i></a>
+                <a href="javascript:"><i class="fa fa-star f-14 text-muted"></i></a>
+              </td>
+            </tr>
+            <tr>
+              <td>Computer</td>
+              <td>#PHD002</td>
+              <td>cdc@gmail.com</td>
+              <td><label class="badge badge-light-success">In Stock</label></td>
+              <td>
+                <a href="javascript:"><i class="fa fa-star f-14 text-c-yellow"></i></a>
+                <a href="javascript:"><i class="fa fa-star f-14 text-c-yellow"></i></a>
+                <a href="javascript:"><i class="fa fa-star f-14 text-muted"></i></a>
+                <a href="javascript:"><i class="fa fa-star f-14 text-muted"></i></a>
+                <a href="javascript:"><i class="fa fa-star f-14 text-muted"></i></a>
+              </td>
+            </tr>
+            <tr>
+              <td>Mobile</td>
+              <td>#PHD003</td>
+              <td>pqr@gmail.com</td>
+              <td><label class="badge badge-light-danger">Out Stock</label></td>
+              <td>
+                <a href="javascript:"><i class="fa fa-star f-14 text-c-yellow"></i></a>
+                <a href="javascript:"><i class="fa fa-star f-14 text-c-yellow"></i></a>
+                <a href="javascript:"><i class="fa fa-star f-14 text-c-yellow"></i></a>
+                <a href="javascript:"><i class="fa fa-star f-14 text-c-yellow"></i></a>
+                <a href="javascript:"><i class="fa fa-star f-14 text-muted"></i></a>
+              </td>
+            </tr>
+            <tr>
+              <td>Coat</td>
+              <td>#PHD004</td>
+              <td>bcs@gmail.com</td>
+              <td><label class="badge badge-light-success">In Stock</label></td>
+              <td>
+                <a href="javascript:"><i class="fa fa-star f-14 text-c-yellow"></i></a>
+                <a href="javascript:"><i class="fa fa-star f-14 text-c-yellow"></i></a>
+                <a href="javascript:"><i class="fa fa-star f-14 text-c-yellow"></i></a>
+                <a href="javascript:"><i class="fa fa-star f-14 text-muted"></i></a>
+                <a href="javascript:"><i class="fa fa-star f-14 text-muted"></i></a>
+              </td>
+            </tr>
+            <tr>
+              <td>Watch</td>
+              <td>#PHD003</td>
+              <td>cdc@gmail.com</td>
+              <td><label class="badge badge-light-danger">Out Stock</label></td>
+              <td>
+                <a href="javascript:"><i class="fa fa-star f-14 text-c-yellow"></i></a>
+                <a href="javascript:"><i class="fa fa-star f-14 text-c-yellow"></i></a>
+                <a href="javascript:"><i class="fa fa-star f-14 text-muted"></i></a>
+                <a href="javascript:"><i class="fa fa-star f-14 text-muted"></i></a>
+                <a href="javascript:"><i class="fa fa-star f-14 text-muted"></i></a>
+              </td>
+            </tr>
+            <tr>
+              <td>Sofa</td>
+              <td>#PHD009</td>
+              <td>xyz@gmail.com</td>
+              <td><label class="badge badge-light-danger">Out Stock</label></td>
+              <td>
+                <a href="javascript:"><i class="fa fa-star f-14 text-c-yellow"></i></a>
+                <a href="javascript:"><i class="fa fa-star f-14 text-c-yellow"></i></a>
+                <a href="javascript:"><i class="fa fa-star f-14 text-c-yellow"></i></a>
+                <a href="javascript:"><i class="fa fa-star f-14 text-muted"></i></a>
+                <a href="javascript:"><i class="fa fa-star f-14 text-muted"></i></a>
+              </td>
+            </tr>
+            <tr>
+              <td>Coat</td>
+              <td>#PHD005</td>
+              <td>dfg@gmail.com</td>
+              <td><label class="badge badge-light-success">In Stock</label></td>
+              <td>
+                <a href="javascript:"><i class="fa fa-star f-14 text-c-yellow"></i></a>
+                <a href="javascript:"><i class="fa fa-star f-14 text-c-yellow"></i></a>
+                <a href="javascript:"><i class="fa fa-star f-14 text-c-yellow"></i></a>
+                <a href="javascript:"><i class="fa fa-star f-14 text-muted"></i></a>
+                <a href="javascript:"><i class="fa fa-star f-14 text-muted"></i></a>
+              </td>
+            </tr>
+            </tbody>
+          </table>
+        </perfect-scrollbar>
+      </div>
+    </app-card>
+  </div>
+</div>

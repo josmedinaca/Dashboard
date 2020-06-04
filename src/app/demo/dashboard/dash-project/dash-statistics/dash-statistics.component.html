@@ -1,0 +1,71 @@
+<div class="row align-items-center page-header">
+  <div class="col-md-4">
+    <app-breadcrumb></app-breadcrumb>
+  </div>
+  <div class="col-md-8 text-right">
+    <ul class="nav nav-tabs customtab pro-customtab">
+      <li class="nav-item"> <a class="nav-link active" href="javascript:"><span>Statistics</span></a> </li>
+      <li class="nav-item"> <a class="nav-link" [routerLink]="['/dashboard/project/details/']"> <span>Details</span></a> </li>
+      <li class="nav-item"> <a class="nav-link" [routerLink]="['/dashboard/project/task-manager/']"><span>Task Manager</span></a> </li>
+      <li class="nav-item"> <a class="nav-link" [routerLink]="['/dashboard/project/members/']"><span>Members</span></a> </li>
+    </ul>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-lg-4 col-md-6">
+    <app-card [hidHeader]="true">
+      <div class="p-10 no-block text-center">
+        <div class="align-slef-center">
+          <h2 class="m-b-0">68%</h2>
+          <h6 class="text-muted m-b-25">Tasks done</h6>
+        </div>
+        <ngb-progressbar type="success" height="5px" [value]="80"><span class="sr-only">80% Complete</span></ngb-progressbar>
+      </div>
+    </app-card>
+  </div>
+  <div class="col-lg-4 col-md-6">
+    <app-card [hidHeader]="true">
+      <div class="p-10 no-block text-center">
+        <div class="align-slef-center">
+          <h2 class="m-b-0">21%</h2>
+          <h6 class="text-muted m-b-25">In process Tasks</h6>
+        </div>
+        <ngb-progressbar type="warning" height="5px" [value]="30"><span class="sr-only">30% Complete</span></ngb-progressbar>
+      </div>
+    </app-card>
+  </div>
+  <div class="col-lg-4 col-md-12">
+    <app-card [hidHeader]="true">
+      <div class="p-10 no-block text-center">
+        <div class="align-slef-center">
+          <h2 class="m-b-0">20%</h2>
+          <h6 class="text-muted m-b-25">Tasks Done</h6>
+        </div>
+        <ngb-progressbar height="5px" [value]="20"><span class="sr-only">20% Complete</span></ngb-progressbar>
+      </div>
+    </app-card>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-sm-12">
+    <app-card [hidHeader]="true">
+      <div class="row">
+        <div class="col-lg-6 col-md-6">
+          <div class="d-flex m-b-10 no-block">
+            <h5 class="card-title m-b-0 align-self-center text-uppercase">tasks statistics</h5>
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-6 text-right">
+          <ul class="list-inline m-b-30 text-uppercase lp-5 font-medium font-12">
+            <li>Last week</li>
+            <li>Last month</li>
+            <li><i class="flaticon-calendar text-primary f-16"></i></li>
+          </ul>
+        </div>
+      </div>
+      <app-apex-chart chartID="task-dah-statistics" [chartConfig]="this.taskDashStatistics"></app-apex-chart>
+    </app-card>
+  </div>
+</div>

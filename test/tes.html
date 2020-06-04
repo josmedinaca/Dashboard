@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <style type="text/css">
+        #container {
+            width: 455px;
+            margin: auto;
+        }
+        
+        #small {
+            width: 150px;
+            height: 150px;
+        }
+        
+        #large {
+            width: 300px;
+            height: 300px;
+        }
+        
+        circle {
+            fill: red;
+        }
+    </style>
+    <script src="http://d3js.org/d3.v2.min.js" type="text/javascript"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <div id="container">
+        <svg id="small">
+    </svg>
+        <svg id="large">
+    </svg>
+    </div>
+    <script type="text/javascript">
+        d3.json("https://gist.githubusercontent.com/jupaneira/a02af9ac03957aed15939ef72bfecfd2/raw/a75ede89adabff65c739268fb8d61137169b5691/bta_localidades.json", function(result) {
+            renderMap("#small", $("#small").width(), result);
+            renderMap("#large", $("#large").width(), result);
+        });
+
+        function renderMap(id, size, result) {
+            var projection = d3.geo.mercator();
+
+            projection.scale(size);
+            projection.translate([size / 2, size / 2]);
+
+            var map = d3.select(id);
+
+            map.selectAll("path")
+                .data(result.features)
+                .enter()
+                .append("path")
+                .attr("d", d3.geo.path().projection(projection));
+        }
+    </script>
+</body>
+
+</html>

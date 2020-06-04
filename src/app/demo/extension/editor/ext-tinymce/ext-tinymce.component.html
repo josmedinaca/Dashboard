@@ -1,0 +1,13 @@
+<div class="row align-items-center page-header">
+  <div class="col-md-12">
+    <app-breadcrumb></app-breadcrumb>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-sm-12">
+    <app-card cardTitle="Tinymce Editor" [options]="false">
+      <app-tinymce [(ngModel)]='basicContent' #tinymce='tinymce'></app-tinymce>
+    </app-card>
+  </div>
+</div>

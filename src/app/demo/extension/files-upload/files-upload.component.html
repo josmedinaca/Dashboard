@@ -1,0 +1,18 @@
+<div class="row align-items-center page-header">
+  <div class="col-md-12">
+    <app-breadcrumb></app-breadcrumb>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-sm-12">
+    <app-card cardTitle="File Upload" [options]="false">
+      <form [formGroup]="demoForm">
+        <file-upload formControlName="files"></file-upload>
+      </form>
+      <div class="text-center m-t-20">
+        <button class="btn btn-primary">Upload Now</button>
+      </div>
+    </app-card>
+  </div>
+</div>
