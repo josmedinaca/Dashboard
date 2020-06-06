@@ -32,6 +32,8 @@
                             "src/styles.scss"
                         ],
                         "scripts": [
+
+                            "node_modules/apexcharts/dist/apexcharts.min.js",
                             "node_modules/jquery/dist/jquery.min.js",
                             "node_modules/datatables.net/js/jquery.dataTables.js",
                             "node_modules/jszip/dist/jszip.js",
@@ -43,7 +45,8 @@
                             "node_modules/easy-pie-chart/dist/easypiechart.js",
                             "src/scripts/d3.v3.js",
                             "src/scripts/uStates.js",
-                            "src/scripts/topojson.v1.min.js"
+                            "src/scripts/topojson.v1.min.js",
+                            "src/scripts/sunburst-chart.min.js"
                         ]
                     },
                     "configurations": {
