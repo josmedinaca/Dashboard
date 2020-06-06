@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {TaskDashStatistics} from './chart/task-dash-statistics';
 import {SolidGaugeWidgetChart} from './chart/solid-gauge-widget-chart';
+
 declare const geo: any;
 declare const d3: any;
 declare const topojson: any;
@@ -27,7 +28,7 @@ export class SamplePageComponent implements OnInit {
  var rotate = [-74.2, 4.3, 0];
  var projection = d3.geo.mercator()
 	.rotate([74.2, -4.3, 0.0])
-	.scale(30000)
+	.scale(28000)
 	.translate([width / 2, height / 2]);
 
  var path = d3.geo.path()
@@ -65,8 +66,12 @@ export class SamplePageComponent implements OnInit {
 			d3.select(this).style('fill-opacity', 0.80);
 		})
 		.append('title')
-		.text(function(d) {
-			return d.properties.NOMBRE;
+		// tslint:disable-next-line: only-arrow-functions
+		.html(function(d) {
+			return  d.properties.NOMBRE.toString().bold() + '\n' +
+				'Total de PACS entregados: ' +'\n'+
+				'PACS entregados a Hombres: ' + '\n'+
+				'PACS entregados a Mujeres: ' +'\n'
 		});
 
 	svg.append('path')
@@ -89,12 +94,12 @@ d3.select('.mapsvg').style("height", height + "px");
 
    }
 
-// //   tooltipHtml(n, d) {	/* function to create html content string in tooltip div. */
-// // 		return '<h4>' + n + '</h4><table>' +
-// // 			'<tr><td>Lows</td><td>' + (d.low) + '</td></tr>' +
-// // 			'<tr><td>Average</td><td>' + (d.avg) + '</td></tr>' +
-// // 			'<tr><td>High</td><td>' + (d.high) + '</td></tr>' +
-// // 			'</table>';
-// // 	}
+  tooltipHtml(d) {	/* function to create html content string in tooltip div. */
+		return '<h4>' + d.properties.NOMBRE + '</h4><table>' +
+			'<tr><td>Lows</td><td>' + "2" + '</td></tr>' +
+			'<tr><td>Average</td><td>' + "3" + '</td></tr>' +
+			'<tr><td>High</td><td>' + "3" + '</td></tr>' +
+			'</table>';
+	}
 
  }
