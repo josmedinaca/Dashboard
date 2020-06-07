@@ -1,85 +1,31 @@
-// .state {
-//     fill: none;
-//     stroke: #a9a9a9;
-//     stroke-width: 1;
-// }
-// .state:hover {
-//     fill-opacity: 0.5;
-// }
-#tooltip {
-    position: fixed;
-    text-align: center;
-    padding: 20px;
-    margin: 10px;
-    font: 12px sans-serif;
-    background: lightsteelblue;
-    border: 1px;
-    border-radius: 2px;
-    pointer-events: none;
+#map {
+    width: 867px;
+    height: 650px;
 }
 
-#tooltip h4 {
-    margin: 0;
-    font-size: 14px;
-}
-
-#tooltip {
+.info {
+    padding: 6px 8px;
+    font: 14px/16px Arial, Helvetica, sans-serif;
     background: white;
-    border: 1px solid grey;
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
     border-radius: 5px;
-    font-size: 12px;
-    width: auto;
-    padding: 4px;
-    color: rgba(0, 0, 0, 0.9);
-    opacity: 0;
 }
 
-#tooltip table {
-    table-layout: fixed;
+.info h4 {
+    margin: 0 0 5px;
+    color: #777;
 }
 
-#tooltip tr td {
-    padding: auto;
-    margin: auto;
+.legend {
+    line-height: 18px;
+    color: #555;
 }
 
-#tooltip tr td:nth-child(1) {
-    width: 50px;
-}
-
-#tooltip tr td:nth-child(2) {
-    text-align: center;
-}
-
-.mapsvg {
-    padding: auto;
-    margin: auto;
-    text-align: center;
-}
-
-.localidades {
-    fill-opacity: 0.80;
-}
-
-.localidad-boundary {
-    fill: none;
-    stroke: #fff;
-    pointer-events: none;
-}
-
-#container {
-    width: 452px;
-    margin: auto;
-    fill: none;
-    stroke: #fff;
-}
-
-#small {
-    width: 150px;
-    height: 150px;
-}
-
-#mapsvg {
-    width: 600px;
-    height: 300px;
+.legend i {
+    width: 18px;
+    height: 18px;
+    float: left;
+    margin-right: 8px;
+    opacity: 0.7;
 }

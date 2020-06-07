@@ -119,12 +119,16 @@
 </div>
 <div id="ch"></div>
 <div class="row">
-    <div class="col-lg-9 col-md-6">
-        <app-card cardTitle="Niveles de subacceso" [options]="false">
+    <div class="col-lg-4 col-md-6">
+        <div id="my_dataviz" class="text-center"></div>
 
+    </div>
+    <div class="col-md-4">
+        <app-card cardTitle="Edades de estudiantes" [options]="false">
+            <app-apex-chart chartID="pie-chart-1-cac" [chartConfig]="this.chartDB.pie1CAC"></app-apex-chart>
         </app-card>
     </div>
-    <div class="col-lg-3 col-md-6">
+    <div class="col-lg-4 col-md-6">
         <app-card [hidHeader]="true">
             <div class="d-flex m-b-6 no-block">
                 <h5 class="card-title m-b-0 align-self-center">Niveles de PBM</h5>

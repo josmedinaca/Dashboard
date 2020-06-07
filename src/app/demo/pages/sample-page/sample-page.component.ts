@@ -2,15 +2,16 @@ import { Component, OnInit } from '@angular/core';
 import {TaskDashStatistics} from './chart/task-dash-statistics';
 import {SolidGaugeWidgetChart} from './chart/solid-gauge-widget-chart';
 
+declare const L: any;
 declare const geo: any;
-declare const d3: any;
-declare const topojson: any;
+declare const statesData: any;
 @Component({
   selector: 'app-sample-page',
   templateUrl: './sample-page.component.html',
   styleUrls: ['./sample-page.component.scss'],
 })
 export class SamplePageComponent implements OnInit {
+
   public taskDashStatistics: any;
   public solidGaugeWidgetChart: any;
   constructor() {
@@ -18,88 +19,111 @@ export class SamplePageComponent implements OnInit {
     this.solidGaugeWidgetChart = SolidGaugeWidgetChart.chartData; }
 //
   ngOnInit() {
-    this.name();
-  }
+    var map = L.map('map').setView([37.8, -96], 4);
 
- name() {
-	var width = 400,
-	height = 550;
-
- var rotate = [-74.2, 4.3, 0];
- var projection = d3.geo.mercator()
-	.rotate([74.2, -4.3, 0.0])
-	.scale(28000)
-	.translate([width / 2, height / 2]);
-
- var path = d3.geo.path()
-	.projection(projection);
-
- var color = d3.scale.category10();
+	L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+		maxZoom: 18,
+		attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
+			'<a href="http://bienestar.bogota.unal.edu.co/gestion.php">UNAL</a>, ' +
+			'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+		id: 'mapbox/light-v9',
+		tileSize: 512,
+		zoomOffset: -1
+	}).addTo(map);
 
 
- var svg = d3.select('.mapsvg')
-	.append('svg')
-	.attr('width', width)
-	.attr('height', height);
+	// control that shows state info on hover
+	var info = L.control();
 
- d3.json('https://gist.githubusercontent.com/jupaneira/a02af9ac03957aed15939ef72bfecfd2/raw/a75ede89adabff65c739268fb8d61137169b5691/bta_localidades.json', function(error, mapData) {
-	let localidades = topojson.feature(mapData, mapData.objects.bta_localidades).features,
-		neighbors = topojson.neighbors(mapData.objects.bta_localidades.geometries);
+	info.onAdd = function (map) {
+		this._div = L.DomUtil.create('div', 'info');
+		this.update();
+		return this._div;
+	};
 
-	// tslint:disable-next-line: indent
-	svg.append('g')
-		// tslint:disable-next-line: indent
-		.attr('class', 'localidades')
-		.selectAll('path')
-		.data(localidades)
-		.enter().append('path')
-		.attr('d', path)
-		.style('fill', function(d, i) {
-			return color(d.color = d3.max(neighbors[i], function(n) {
-				return localidades[n].color;
-			}) + 1 | 0);
-		})
-		.on('mouseover', function(d) {
-			d3.select(this).style('fill-opacity', 1);
-		})
-		.on('mouseout', function(d) {
-			d3.select(this).style('fill-opacity', 0.80);
-		})
-		.append('title')
-		// tslint:disable-next-line: only-arrow-functions
-		.html(function(d) {
-			return  d.properties.NOMBRE.toString().bold() + '\n' +
-				'Total de PACS entregados: ' +'\n'+
-				'PACS entregados a Hombres: ' + '\n'+
-				'PACS entregados a Mujeres: ' +'\n'
+	info.update = function (props) {
+    this._div.innerHTML = '<style> .info {    padding: 6px 8px; font: 14px/16px Arial, Helvetica, sans-serif;     background: white;  background: rgba(255, 255, 255, 0.8); box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);border-radius: 5px;} </style>'
+    +'<h4>Informacion de PACS</h4>' +  (props ?
+			'<b>' + props.name + '</b><br />' + props.density + ' people / mi<sup>2</sup>'
+			: 'Ubique su cursor en una localidad');
+	};
+
+	info.addTo(map);
+
+
+	// get color depending on population density value
+	function getColor(d) {
+		return d > 1000 ? '#800026' :
+				d > 500  ? '#BD0026' :
+				d > 200  ? '#E31A1C' :
+				d > 100  ? '#FC4E2A' :
+				d > 50   ? '#FD8D3C' :
+				d > 20   ? '#FEB24C' :
+				d > 10   ? '#FED976' :
+							'#FFEDA0';
+	}
+
+	function style(feature) {
+		return {
+			weight: 2,
+			opacity: 1,
+			color: 'white',
+			dashArray: '3',
+			fillOpacity: 0.7,
+			fillColor: getColor(feature.properties.density)
+		};
+	}
+
+	function highlightFeature(e) {
+		var layer = e.target;
+
+		layer.setStyle({
+			weight: 5,
+			color: '#666',
+			dashArray: '',
+			fillOpacity: 0.7
 		});
 
-	svg.append('path')
-		.datum(topojson.mesh(mapData, mapData.objects.bta_localidades, function(a, b) {
-			return a.properties.NOMBRE != b.properties.NOMBRE;
-		}))
-		.attr('class', 'localidad-boundary')
-		.attr('d', path);
-});
-d3.select('.mapsvg').style("height", height + "px");
-//  d3.select(self.frameElement).style('height', height + 'px');
-// 	const canvas = d3.select('body').append('statesvg').attr('width', 760).attr('height', 700);
-// 	d3.json('https://raw.githubusercontent.com/josmedinaca/josmedinaca.github.io/master/poligonos-localidades.geojson', function(data) {
-// 		const group = canvas.selectAll('g').data(data.features).enter().append('g');
+		if (!L.Browser.ie && !L.Browser.opera && !L.Browser.edge) {
+			layer.bringToFront();
+		}
 
-// 		const projection = d3.geo.mercator().scale(7000);
-// 		const path = d3.geo.path().projection(projection);
-// 		const areas = group.append('path').attr('d', path).attr('class', 'area').attr('fill', 'steelblue');
-// 	});
-
-   }
-
-  tooltipHtml(d) {	/* function to create html content string in tooltip div. */
-		return '<h4>' + d.properties.NOMBRE + '</h4><table>' +
-			'<tr><td>Lows</td><td>' + "2" + '</td></tr>' +
-			'<tr><td>Average</td><td>' + "3" + '</td></tr>' +
-			'<tr><td>High</td><td>' + "3" + '</td></tr>' +
-			'</table>';
+		info.update(layer.feature.properties);
 	}
+
+	var geojson;
+
+	function resetHighlight(e) {
+		geojson.resetStyle(e.target);
+		info.update();
+	}
+
+	function zoomToFeature(e) {
+		map.fitBounds(e.target.getBounds());
+	}
+
+	function onEachFeature(feature, layer) {
+		layer.on({
+			mouseover: highlightFeature,
+			mouseout: resetHighlight,
+			click: zoomToFeature
+		});
+	}
+
+	geojson = L.geoJson(statesData, {
+		style: style,
+		onEachFeature: onEachFeature
+	}).addTo(map);
+
+	map.attributionControl.addAttribution('Population data &copy; <a href="http://census.gov/">US Census Bureau</a>');
+
+
+
+
+  }
+
+ 
+
+
 
  }
