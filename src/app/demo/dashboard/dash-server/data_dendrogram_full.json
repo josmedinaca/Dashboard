@@ -2,9 +2,9 @@
     "children": [{
             "name": "PAES",
             "children": [
-                { "name": "Indígena", "group": "C", "value": 19.33333, "colname": "level3" },
-                { "name": "MejorBachiller", "group": "C", "value": 2.5333, "colname": "level3" },
-                { "name": "POBLACION AFRO", "group": "C", "value": 5.4, "colname": "level3" },
+                { "name": "Indigena", "group": "C", "value": 19.33333, "colname": "level3" },
+                { "name": "Mejor Bachiller", "group": "C", "value": 2.5333, "colname": "level3" },
+                { "name": "Poblacion Afro", "group": "C", "value": 5.4, "colname": "level3" },
                 { "name": "Municipio", "group": "C", "value": 2.6, "colname": "level3" },
                 { "name": "Victimas", "group": "C", "value": 2.266667, "colname": "level3" }
             ],
