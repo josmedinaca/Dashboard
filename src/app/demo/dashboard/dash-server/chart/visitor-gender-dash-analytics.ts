@@ -14,8 +14,8 @@ export class VisitorGenderDashAnalytics {
         }
       }
     },
-    labels: ['New', 'Return', 'Custom'],
-    series: [76.7, 15, 30],
+    labels: ['ND', '0-10', '11-20','21-30','31-40','41-50','51-60','61-70','71-80','81-90','91-100'],
+    series: [4, 1456, 496,118,100,49,33,22,9,5,9],
     legend: {
       show: false
     },
@@ -27,6 +27,6 @@ export class VisitorGenderDashAnalytics {
         left: 0
       },
     },
-    colors: ['#4886ff', '#0e9e4a', '#ff484c'],
+    colors: ['#008FFB', '#00E396', '#FEB019','#FF4560', '#775DD0', '#546E7A','#26a69a', '#ffcc00', '#99ffcc','#ffcccc','#666699'],
   };
 }

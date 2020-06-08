@@ -233,7 +233,7 @@ svg
     .attr('x', function (d) { return d.x0; })
     .attr('y', function (d) { return d.y0; })
     .attr('width', function (d) { return d.x1 - d.x0; })
-    .attr('height', function (d) { return d.y1 - d.y0; })
+    .attr('height', function (d) { return  d.y1 - d.y0; })
     .style("stroke", "black")
     .style("fill", function(d){ return color(d.parent.data.name)} )
     .style("opacity", function(d){ return opacity(d.data.value)})
