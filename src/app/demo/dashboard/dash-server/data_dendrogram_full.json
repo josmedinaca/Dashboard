@@ -2,11 +2,11 @@
     "children": [{
             "name": "PAES",
             "children": [
-                { "name": "mister_Indígena", "group": "A", "value": 87.1, "colname": "level3" },
-                { "name": "mister_MejorBachiller", "group": "A", "value": 3.8, "colname": "level3" },
-                { "name": "mister_POBLACION AFROCOLOMBIANA, Y OTROS", "group": "C", "value": 42.0, "colname": "level3" },
-                { "name": "mister_d", "group": "C", "value": 1.9, "colname": "level3" },
-                { "name": "mister_w", "group": "C", "value": 1.9, "colname": "level3" }
+                { "name": "mister_Indígena", "group": "A", "value": 871, "colname": "level3" },
+                { "name": "mister_MejorBachiller", "group": "A", "value": 38, "colname": "level3" },
+                { "name": "mister_POBLACION AFROCOLOMBIANA, Y OTROS", "group": "C", "value": 420, "colname": "level3" },
+                { "name": "mister_d", "group": "C", "value": 19, "colname": "level3" },
+                { "name": "mister_w", "group": "C", "value": 19, "colname": "level3" }
             ],
             "colname": "level2"
         },
@@ -23,12 +23,14 @@
         {
             "name": "PREGRADO",
             "children": [
-                { "name": "mister_i", "group": "B", "value": 10, "colname": "level3" },
-                { "name": "mister_j", "group": "A", "value": 13, "colname": "level3" },
-                { "name": "mister_k", "group": "A", "value": 13, "colname": "level3" },
-                { "name": "mister_l", "group": "D", "value": 25, "colname": "level3" },
-                { "name": "mister_m", "group": "D", "value": 16, "colname": "level3" },
-                { "name": "mister_n", "group": "D", "value": 28, "colname": "level3" }
+                { "name": "mister_i", "group": "B", "value": 10, "colname": "level3" }
+            ],
+            "colname": "level2"
+        },
+        {
+            "name": "EXTRANJERO",
+            "children": [
+                { "name": "mister_extranjero", "group": "B", "value": 10, "colname": "level3" }
             ],
             "colname": "level2"
         }

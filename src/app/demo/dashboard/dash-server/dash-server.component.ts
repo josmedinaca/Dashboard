@@ -186,7 +186,7 @@ export class DashServerComponent implements OnInit {
   data(){
     // set the dimensions and margins of the graph
 var margin = {top: 0, right: 10, bottom: 10, left: 10},
-width = 400 - margin.left - margin.right,
+width = 900 - margin.left - margin.right,
 height = 400 - margin.top - margin.bottom;
 
 // append the svg object to the body of the page
@@ -216,8 +216,8 @@ d3.treemap()
  
 // prepare a color scale
 var color = d3.scaleOrdinal()
-  .domain(["PAES", "PEAMA", "PREGRADO"])
-  .range([ "#402D54", "#D18975", "#8FD175"])
+  .domain(["PAES", "PEAMA", "PREGRADO","EXTRANJERO"])
+  .range([ "#402D54", "#D18975", "#8FD175","#8FD100"])
 
 // And a opacity scale
 var opacity = d3.scaleLinear()
@@ -247,7 +247,7 @@ svg
     .attr("x", function(d){ return d.x0+5})    // +10 to adjust position (more right)
     .attr("y", function(d){ return d.y0+20})    // +20 to adjust position (lower)
     .text(function(d){ return d.data.name.replace('mister_','') })
-    .attr("font-size", "19px")
+    .attr("font-size", "14px")
     .attr("fill", "white")
 
 // and to add the text labels
