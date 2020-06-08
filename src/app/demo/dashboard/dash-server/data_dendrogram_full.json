@@ -29,7 +29,7 @@
             "colname": "level2"
         },
         {
-            "name": "INTERCAMBIO INTERNACIONAL",
+            "name": "INTERCAMBIO",
             "children": [
                 { "name": "Intercambio Internacional", "group": "B", "value": 10, "colname": "level3" }
             ],

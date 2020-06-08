@@ -216,7 +216,7 @@ d3.treemap()
  
 // prepare a color scale
 var color = d3.scaleOrdinal()
-  .domain(["PAES", "PEAMA", "PREGRADO","INTERCAMBIO INTERNACIONAL"])
+  .domain(["PAES", "PEAMA", "PREGRADO","INTERCAMBIO"])
   .range([ "#402D54", "#D18975", "#8FD175","#8FD100"])
 
 // And a opacity scale
@@ -309,7 +309,8 @@ svg
         return 360;
       }
        return d.y0+20})    // +20 to adjust position (lower)
-    .text(function(d){ return d.data.name })
+    .text(function(d){
+       return d.data.name })
     .attr("font-size", "14px")
     .attr("fill", "white")
 
@@ -341,7 +342,23 @@ svg
         return 316;
       }
        return d.y0+35})    // +20 to adjust position (lower)
-    .text(function(d){ return d.data.value*15 })
+    .text(function(d){
+      if(d.data.name == 'Indigena'){
+        return 209;
+      }
+      if(d.data.name == 'Mejor Bachiller'){
+        return 38;
+      }
+      if(d.data.name == 'Municipio'){
+        return 39;
+      }
+      if(d.data.name == 'Victimas'){
+        return 34;
+      }
+      if(d.data.name == 'Poblacion Afro'){
+        return 81;
+      }
+       return d.data.value*15 })
     .attr("font-size", "11px")
     .attr("fill", "white")
 
