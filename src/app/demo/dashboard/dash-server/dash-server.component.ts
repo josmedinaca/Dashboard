@@ -199,7 +199,7 @@ var svg = d3.select("#my_dataviz")
       "translate(" + margin.left + "," + margin.top + ")");
 
 // read json data
-d3.json("https://raw.githubusercontent.com/josmedinaca/Dashboard/master/src/fake-data/data_dendrogram_full.json?token=AFIPRNSRJBGNMLBU3MCUT6K645U4G", function(data) {
+d3.json("https://raw.githubusercontent.com/josmedinaca/Dashboard/master/src/app/demo/dashboard/dash-server/data_dendrogram_full.json?token=AFIPRNQ437ISCCZFSFJ6R4K645XZK", function(data) {
 
 // Give the data to this cluster layout:
 var root = d3.hierarchy(data).sum(function(d){ return d.value}) // Here the size of each leave is given in the 'value' field in input data
@@ -221,8 +221,8 @@ var color = d3.scaleOrdinal()
 
 // And a opacity scale
 var opacity = d3.scaleLinear()
-  .domain([10, 30])
-  .range([.5,1])
+.domain([10, 30])
+.range([.5,1])
 
 // use this information to add rectangles:
 svg
