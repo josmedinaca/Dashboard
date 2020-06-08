@@ -2,11 +2,11 @@
     "children": [{
             "name": "PAES",
             "children": [
-                { "name": "mister_Indígena", "group": "A", "value": 19.33333, "colname": "level3" },
-                { "name": "mister_MejorBachiller", "group": "A", "value": 2.5333, "colname": "level3" },
-                { "name": "mister_POBLACION AFROCOLOMBIANA, Y OTROS", "group": "C", "value": 5.4, "colname": "level3" },
+                { "name": "mister_Indígena", "group": "C", "value": 19.33333, "colname": "level3" },
+                { "name": "mister_MejorBachiller", "group": "C", "value": 2.5333, "colname": "level3" },
+                { "name": "mister_POBLACION AFRO", "group": "C", "value": 5.4, "colname": "level3" },
                 { "name": "mister_Municipio", "group": "C", "value": 2.6, "colname": "level3" },
-                { "name": "mister_Conflicto", "group": "C", "value": 2.266667, "colname": "level3" }
+                { "name": "mister_Victimas", "group": "C", "value": 2.266667, "colname": "level3" }
             ],
             "colname": "level2"
         },
