@@ -199,7 +199,7 @@ var svg = d3.select("#my_dataviz")
       "translate(" + margin.left + "," + margin.top + ")");
 
 // read json data
-d3.json("https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/data_dendrogram_full.json", function(data) {
+d3.json("https://raw.githubusercontent.com/josmedinaca/Dashboard/master/src/fake-data/data_dendrogram_full.json?token=AFIPRNSRJBGNMLBU3MCUT6K645U4G", function(data) {
 
 // Give the data to this cluster layout:
 var root = d3.hierarchy(data).sum(function(d){ return d.value}) // Here the size of each leave is given in the 'value' field in input data
