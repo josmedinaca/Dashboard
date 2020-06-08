@@ -2,21 +2,22 @@
     "children": [{
             "name": "PAES",
             "children": [
-                { "name": "mister_Indígena", "group": "A", "value": 10.45, "colname": "level3" },
-                { "name": "mister_MejorBachiller", "group": "A", "value": 1.9, "colname": "level3" },
-                { "name": "mister_POBLACION AFROCOLOMBIANA, Y OTROS", "group": "C", "value": 4.05, "colname": "level3" },
-                { "name": "mister_Municipio", "group": "C", "value": 1.95, "colname": "level3" },
-                { "name": "mister_Conflicto", "group": "C", "value": 1.7, "colname": "level3" }
+                { "name": "mister_Indígena", "group": "A", "value": 19.33333, "colname": "level3" },
+                { "name": "mister_MejorBachiller", "group": "A", "value": 2.5333, "colname": "level3" },
+                { "name": "mister_POBLACION AFROCOLOMBIANA, Y OTROS", "group": "C", "value": 5.4, "colname": "level3" },
+                { "name": "mister_Municipio", "group": "C", "value": 2.6, "colname": "level3" },
+                { "name": "mister_Conflicto", "group": "C", "value": 2.266667, "colname": "level3" }
             ],
             "colname": "level2"
         },
         {
             "name": "PEAMA",
             "children": [
-                { "name": "mister_e", "group": "C", "value": 14, "colname": "level3" },
-                { "name": "mister_f", "group": "A", "value": 11, "colname": "level3" },
-                { "name": "mister_g", "group": "B", "value": 15, "colname": "level3" },
-                { "name": "mister_h", "group": "B", "value": 16, "colname": "level3" }
+                { "name": "mister_Amazonia", "group": "C", "value": 7.2, "colname": "level3" },
+                { "name": "mister_Bogota", "group": "A", "value": 0.2, "colname": "level3" },
+                { "name": "mister_Caribe", "group": "B", "value": 1.66667, "colname": "level3" },
+                { "name": "mister_Orinoquia", "group": "B", "value": 10.8, "colname": "level3" },
+                { "name": "mister_Tumaco", "group": "B", "value": 6.3333, "colname": "level3" }
             ],
             "colname": "level2"
         },
