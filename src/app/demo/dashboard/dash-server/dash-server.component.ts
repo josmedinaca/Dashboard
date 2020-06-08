@@ -258,7 +258,7 @@ svg
   .append("text")
     .attr("x", function(d){ return d.x0+5})    // +10 to adjust position (more right)
     .attr("y", function(d){ return d.y0+35})    // +20 to adjust position (lower)
-    .text(function(d){ return d.data.value*10 })
+    .text(function(d){ return d.data.value*20 })
     .attr("font-size", "11px")
     .attr("fill", "white")
 

@@ -2,11 +2,11 @@
     "children": [{
             "name": "PAES",
             "children": [
-                { "name": "mister_Indígena", "group": "A", "value": 871, "colname": "level3" },
-                { "name": "mister_MejorBachiller", "group": "A", "value": 38, "colname": "level3" },
-                { "name": "mister_POBLACION AFROCOLOMBIANA, Y OTROS", "group": "C", "value": 420, "colname": "level3" },
-                { "name": "mister_d", "group": "C", "value": 19, "colname": "level3" },
-                { "name": "mister_w", "group": "C", "value": 19, "colname": "level3" }
+                { "name": "mister_Indígena", "group": "A", "value": 43.55, "colname": "level3" },
+                { "name": "mister_MejorBachiller", "group": "A", "value": 1.9, "colname": "level3" },
+                { "name": "mister_POBLACION AFROCOLOMBIANA, Y OTROS", "group": "C", "value": 21, "colname": "level3" },
+                { "name": "mister_d", "group": "C", "value": 0.95, "colname": "level3" },
+                { "name": "mister_w", "group": "C", "value": 0.95, "colname": "level3" }
             ],
             "colname": "level2"
         },
