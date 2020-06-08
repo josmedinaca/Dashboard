@@ -24,14 +24,14 @@
         {
             "name": "PREGRADO",
             "children": [
-                { "name": "mister_i", "group": "B", "value": 10, "colname": "level3" }
+                { "name": "Regular de Pregrado", "group": "B", "value": 10, "colname": "level3" }
             ],
             "colname": "level2"
         },
         {
-            "name": "EXTRANJERO",
+            "name": "INTERCAMBIO INTERNACIONAL",
             "children": [
-                { "name": "mister_extranjero", "group": "B", "value": 10, "colname": "level3" }
+                { "name": "Intercambio Internacional", "group": "B", "value": 10, "colname": "level3" }
             ],
             "colname": "level2"
         }

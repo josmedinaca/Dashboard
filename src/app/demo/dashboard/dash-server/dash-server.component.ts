@@ -216,7 +216,7 @@ d3.treemap()
  
 // prepare a color scale
 var color = d3.scaleOrdinal()
-  .domain(["PAES", "PEAMA", "PREGRADO","EXTRANJERO"])
+  .domain(["PAES", "PEAMA", "PREGRADO","INTERCAMBIO INTERNACIONAL"])
   .range([ "#402D54", "#D18975", "#8FD175","#8FD100"])
 
 // And a opacity scale
@@ -230,10 +230,53 @@ svg
   .data(root.leaves())
   .enter()
   .append("rect")
-    .attr('x', function (d) { return d.x0; })
-    .attr('y', function (d) { return d.y0; })
-    .attr('width', function (d) { return d.x1 - d.x0; })
-    .attr('height', function (d) { return  d.y1 - d.y0; })
+    .attr('x', function (d) { 
+      if(d.data.name == 'Poblacion Afro'){
+        return 211.99277883305575;
+      }
+      if(d.data.name == 'Municipio'){
+        return 0;
+      }
+      return d.x0; })
+    .attr('y', function (d) {
+      if(d.data.name == 'Poblacion Afro'){
+        return 56; 
+      }
+      if(d.data.name == 'Mejor Bachiller'){
+        return 280; 
+      }
+      if(d.data.name == 'Municipio'){
+        return 338;
+      }
+      return d.y0; })
+    .attr('width', function (d) {
+      if(d.data.name == 'Poblacion Afro'){
+        return 137.35350212826307; 
+      }      if(d.data.name == 'Municipio'){
+        return 208.99277883305575;
+      }
+      if(d.data.name == 'Mejor Bachiller'){
+        return 137.35350212826307; 
+      }
+
+       return d.x1 - d.x0; 
+      })
+    .attr('height', function (d) {
+      if(d.data.name == 'Indigena'){
+        return (d.y1 - d.y0)/1.2;
+      }
+      if(d.data.name == 'Mejor Bachiller'){
+        return 50;
+      }
+
+      if(d.data.name == 'Poblacion Afro'){
+        return 219.86945255405737;
+      }
+      if(d.data.name == 'Municipio'){
+        return 52;
+      }
+       return  d.y1 - d.y0; 
+      })
     .style("stroke", "black")
     .style("fill", function(d){ return color(d.parent.data.name)} )
     .style("opacity", function(d){ return opacity(d.data.value)})
@@ -244,8 +287,28 @@ svg
   .data(root.leaves())
   .enter()
   .append("text")
-    .attr("x", function(d){ return d.x0+5})    // +10 to adjust position (more right)
-    .attr("y", function(d){ return d.y0+20})    // +20 to adjust position (lower)
+    .attr("x", function(d){
+      if(d.data.name == 'Poblacion Afro'){
+        return 216.99277883305575;
+      }
+      if(d.data.name == 'Mejor Bachiller'){
+        return 216.99277883305575;
+      }
+      if(d.data.name == 'Municipio'){
+        return 5;
+      }
+     return d.x0+5})    // +10 to adjust position (more right)
+    .attr("y", function(d){
+      if(d.data.name == 'Poblacion Afro'){
+        return 76;
+      }
+      if(d.data.name == 'Mejor Bachiller'){
+        return 300;
+      }
+      if(d.data.name == 'Municipio'){
+        return 360;
+      }
+       return d.y0+20})    // +20 to adjust position (lower)
     .text(function(d){ return d.data.name })
     .attr("font-size", "14px")
     .attr("fill", "white")
@@ -256,8 +319,28 @@ svg
   .data(root.leaves())
   .enter()
   .append("text")
-    .attr("x", function(d){ return d.x0+5})    // +10 to adjust position (more right)
-    .attr("y", function(d){ return d.y0+35})    // +20 to adjust position (lower)
+    .attr("x", function(d){ 
+      if(d.data.name == 'Poblacion Afro'){
+        return 216.99277883305575;
+      }
+      if(d.data.name == 'Mejor Bachiller'){
+        return 216.99277883305575;
+      }
+      if(d.data.name == 'Municipio'){
+        return 5;
+      }
+      return d.x0+5})    // +10 to adjust position (more right)
+    .attr("y", function(d){
+      if(d.data.name == 'Poblacion Afro'){
+        return 90;
+      }
+      if(d.data.name == 'Municipio'){
+        return 375;
+      }
+      if(d.data.name == 'Mejor Bachiller'){
+        return 316;
+      }
+       return d.y0+35})    // +20 to adjust position (lower)
     .text(function(d){ return d.data.value*15 })
     .attr("font-size", "11px")
     .attr("fill", "white")
