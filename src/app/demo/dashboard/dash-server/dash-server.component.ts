@@ -216,7 +216,7 @@ d3.treemap()
  
 // prepare a color scale
 var color = d3.scaleOrdinal()
-  .domain(["PAES", "PEAMA", "REGULAR PREGRADO"])
+  .domain(["PAES", "PEAMA", "PREGRADO"])
   .range([ "#402D54", "#D18975", "#8FD175"])
 
 // And a opacity scale
