@@ -5,6 +5,7 @@ import {SolidGaugeWidgetChart} from './chart/solid-gauge-widget-chart';
 declare const L: any;
 declare const geo: any;
 declare const statesData: any;
+declare const pyramidBuilder: any;
 @Component({
   selector: 'app-sample-page',
   templateUrl: './sample-page.component.html',
@@ -19,6 +20,7 @@ export class SamplePageComponent implements OnInit {
     this.solidGaugeWidgetChart = SolidGaugeWidgetChart.chartData; }
 //
   ngOnInit() {
+    this.mypyramid();
     var map = L.map('map').setView([37.8, -96], 4);
 
 	L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
@@ -123,7 +125,18 @@ export class SamplePageComponent implements OnInit {
   }
 
  
-
+  mypyramid(){
+    var exampleData = [{ age: '0-9', male: 10, female: 12 }, { age: '10-19', male: 14, female: 15 }, { age: '20-29', male: 15, female: 18 }, { age: '30-39', male: 18, female: 18 }, { age: '40-49', male: 21, female: 22 }, {age: '50-59', male: 19, female: 24 }, { age: '60-69', male: 15, female: 14 }, {age: '70-79', male: 8, female: 10 }, { age: '80-89', male: 4, female: 5 }, {age: '90+', male: 2, female: 3 }];
+    var options = {
+      height: 300,
+      width: 400,
+      style: {
+        leftBarColor: "#229922",
+        rightBarColor: "#992222"
+      }
+    }
+    pyramidBuilder(exampleData, '#pyramid', options);
+  }
 
 
  }

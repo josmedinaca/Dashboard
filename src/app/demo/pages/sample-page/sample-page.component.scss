@@ -29,3 +29,73 @@
     margin-right: 8px;
     opacity: 0.7;
 }
+
+.navbar-green {
+    background-color: #252;
+    color: white;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.156863) 0px 3px 6px 0px, rgba(0, 0, 0, 0.227451) 0px 3px 6px 0px;
+}
+
+.navbar-green .navbar-toggle .icon-bar {
+    background-color: white;
+}
+
+.navbar-green a {
+    color: white;
+}
+
+.navbar-green a:hover,
+.nav>li>a:focus,
+.nav>li>a:hover,
+.navbar-green li.active {
+    background-color: #474 !important;
+}
+
+#brand:hover {
+    background-color: #252 !important;
+}
+
+#pyramid {
+    width: 400;
+    height: 300;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+}
+
+.newSection {
+    padding-top: 70px;
+}
+
+.bodyContainer {
+    background-color: #fff;
+    border-left: 1px lightgray solid;
+    border-right: 1px lightgray solid;
+    margin-top: -25px;
+}
+
+.headerSection {
+    background-color: #7b7;
+    padding-bottom: 40px;
+    padding-top: 100px;
+}
+
+.headerSection h1 {
+    color: #050;
+    text-shadow: 2px 2px 2px #5a5;
+}
+
+.headerSection h2 {
+    color: #dfd;
+    font-size: 24px;
+}
+
+.mainTitle {
+    font-size: 50px;
+    font-weight: light;
+}
+
+.footer {
+    height: 250px;
+}

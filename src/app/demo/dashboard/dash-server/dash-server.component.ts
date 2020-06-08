@@ -69,7 +69,7 @@ export class DashServerComponent implements OnInit {
       series: [
         {
           name: "brindados",
-          data: [21, 22, 10, 28, 16, 21, 13, 30, 16, 21, 13]
+          data: [197, 459, 157, 494, 734, 228, 234, 1106, 466, 95, 138]
         }
       ],
       chart: {
@@ -111,10 +111,10 @@ export class DashServerComponent implements OnInit {
         categories: [
           ["Artes"],
           [ "Ciencias"],
-          [ "C. Agrarias"],
-          ["C. Economicas"],
-          [ "C. Humanas"],
-          [ "C. Politicas"],
+          [ "Agrarias"],
+          ["Economicas"],
+          [ "Humanas"],
+          [ "Derecho y CP"],
           [ "Enfermeria"],
           [ "Ingenieria"],
           [ "Medicina"],
@@ -279,7 +279,7 @@ svg
   .append("text")
     .attr("x", 0)
     .attr("y", 14)
-    .text("Three group leaders and 14 employees")
+    .text("Niveles de subacceso")
     .attr("font-size", "19px")
     .attr("fill",  "grey" )
 

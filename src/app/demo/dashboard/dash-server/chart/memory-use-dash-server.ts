@@ -35,13 +35,13 @@ export class MemoryUseDashServer {
     },
     series: [{
       name: 'TOTAL',
-      data: [530, 270, 135, 60]
+      data: [102, 2046, 2717, 5]
     }, {
       name: 'MUJERES',
-      data: [380, 250, 110, 45]
+      data: [54, 872, 1172, 2]
     }, {
       name: 'HOMBRES',
-      data: [275, 210, 80, 15]
+      data: [48, 1174, 1545, 3]
     }],
     xaxis: {
       categories: ['Alojamiento', 'Paquetes Alimentarios', 'Almuerzos en alojamiento', 'Transporte'],

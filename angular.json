@@ -58,8 +58,7 @@
                             "src/scripts/d3.v3.js",
                             "src/scripts/topojson.v1.min.js",
                             "src/scripts/us-states.js",
-                            "node_modules/chart.js/dist/Chart.js",
-                            "node_modules/hammerjs/hammer.min.js"
+                            "src/scripts/popPyramid.js"
                         ]
                     },
                     "configurations": {
