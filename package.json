@@ -7,8 +7,6 @@
         "build": "ng build",
         "test": "ng test",
         "lint": "ng lint",
-<<<<<<< HEAD
-<<<<<<< HEAD
         "e2e": "ng e2e",
         "heroku-postbuild": "ng build --prod"
 
@@ -17,18 +15,14 @@
     "engines": {
         "node": "12.16.2",
         "npm": "6.14.4"
-=======
-        "e2e": "ng e2e"
->>>>>>> parent of b14c11f... deploy
-=======
-        "e2e": "ng e2e"
->>>>>>> parent of b14c11f... deploy
     },
     "private": true,
     "dependencies": {
         "@agm/core": "^1.0.0-beta.7",
         "@angular/animations": "~9.0.6",
         "@angular/cdk": "^9.2.4",
+        "@angular/cli": "~9.0.5",
+        "@angular/compiler-cli": "~9.0.6",
         "@angular/common": "~9.0.6",
         "@angular/compiler": "~9.0.6",
         "@angular/core": "~9.0.6",
@@ -102,7 +96,8 @@
         "sweetalert2": "^8.17.1",
         "tinymce": "^4.8.3",
         "tslib": "^1.10.0",
-        "zone.js": "~0.10.2"
+        "zone.js": "~0.10.2",
+        "typescript": "~3.7.5"
     },
     "devDependencies": {
         "@angular-devkit/build-angular": "~0.900.5",
