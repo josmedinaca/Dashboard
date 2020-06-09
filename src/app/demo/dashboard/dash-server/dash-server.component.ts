@@ -462,6 +462,12 @@ svg
       if(d.data.name == 'Caribe'){
         return 25;
       }
+      if(d.data.name == 'Regular de Pregrado'){
+        return 1503;
+      }
+      if(d.data.name == 'Intercambio Internacional'){
+        return 4;
+      }
        return d.data.value*15 })
     .attr("font-size", "11px")
     .attr("fill", "white")
