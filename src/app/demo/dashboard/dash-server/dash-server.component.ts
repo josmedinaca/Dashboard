@@ -237,6 +237,14 @@ svg
       if(d.data.name == 'Municipio'){
         return 0;
       }
+      if(d.data.name == 'Orinoquia'){
+        
+        return 443;
+      }
+      if(d.data.name == 'Tumaco'){
+        
+        return 443;
+      }
       return d.x0; })
     .attr('y', function (d) {
       if(d.data.name == 'Poblacion Afro'){
@@ -244,9 +252,24 @@ svg
       }
       if(d.data.name == 'Mejor Bachiller'){
         return 280; 
+      }      if(d.data.name == 'Orinoquia'){
+        
+        return 149;
       }
       if(d.data.name == 'Municipio'){
         return 338;
+      }
+      if(d.data.name == 'Tumaco'){
+        return 56;
+      }
+      if(d.data.name == 'Bogota'){
+        return 360;
+      }
+      if(d.data.name == 'Caribe'){
+        return 310;
+      }
+      if(d.data.name == 'Victimas'){
+        return 350;
       }
       return d.y0; })
     .attr('width', function (d) {
@@ -254,6 +277,28 @@ svg
         return 137.35350212826307; 
       }      if(d.data.name == 'Municipio'){
         return 208.99277883305575;
+      }
+      if(d.data.name == 'Amazonia'){
+        return 80;
+      }
+      if(d.data.name == 'Caribe'){
+        return 80;
+      }
+      if(d.data.name == 'Tumaco'){
+        return 200;
+      }
+      if(d.data.name == 'Bogota'){
+        return 80;
+      }
+      if(d.data.name == 'Regular de Pregrado'){
+        return d.x1 - d.x0 - 25;
+      }
+      if(d.data.name == 'Intercambio Internacional'){
+        return d.x1 - d.x0 - 25;
+      }
+
+      if(d.data.name == 'Orinoquia'){
+        return 200;
       }
       if(d.data.name == 'Mejor Bachiller'){
         return 137.35350212826307; 
@@ -263,10 +308,27 @@ svg
       })
     .attr('height', function (d) {
       if(d.data.name == 'Indigena'){
+       
         return (d.y1 - d.y0)/1.2;
+      }      if(d.data.name == 'Orinoquia'){
+       
+        return 241;
       }
+      if(d.data.name == 'Caribe'){
+        return 47;
+      }
+      if(d.data.name == 'Bogota'){
+        return 30;
+      }
+      if(d.data.name == 'Amazonia'){
+        return 250;
+      }
+      if(d.data.name == 'Victimas'){
+        return 40;
+      }
+
       if(d.data.name == 'Mejor Bachiller'){
-        return 50;
+        return 66;
       }
 
       if(d.data.name == 'Poblacion Afro'){
@@ -297,6 +359,12 @@ svg
       if(d.data.name == 'Municipio'){
         return 5;
       }
+      if(d.data.name == 'Orinoquia'){
+        return 448;
+      }
+      if(d.data.name == 'Tumaco'){
+        return 448;
+      }
      return d.x0+5})    // +10 to adjust position (more right)
     .attr("y", function(d){
       if(d.data.name == 'Poblacion Afro'){
@@ -307,6 +375,18 @@ svg
       }
       if(d.data.name == 'Municipio'){
         return 360;
+      }
+      if(d.data.name == 'Tumaco'){
+        return 76;
+      }
+      if(d.data.name == 'Victimas'){
+        return 365;
+      }
+      if(d.data.name == 'Caribe'){
+        return 328;
+      }
+      if(d.data.name == 'Bogota'){
+        return 375;
       }
        return d.y0+20})    // +20 to adjust position (lower)
     .text(function(d){
@@ -330,16 +410,34 @@ svg
       if(d.data.name == 'Municipio'){
         return 5;
       }
+      if(d.data.name == 'Tumaco'){
+        return 449.5;
+      }
+      if(d.data.name == 'Orinoquia'){
+        return 449.5;
+      }
       return d.x0+5})    // +10 to adjust position (more right)
     .attr("y", function(d){
       if(d.data.name == 'Poblacion Afro'){
         return 90;
       }
+      if(d.data.name == 'Tumaco'){
+        return 90;
+      }
       if(d.data.name == 'Municipio'){
         return 375;
       }
+      if(d.data.name == 'Caribe'){
+        return 343;
+      }
       if(d.data.name == 'Mejor Bachiller'){
         return 316;
+      }
+      if(d.data.name == 'Bogota'){
+        return 387;
+      }
+      if(d.data.name == 'Victimas'){
+        return 380;
       }
        return d.y0+35})    // +20 to adjust position (lower)
     .text(function(d){
@@ -357,6 +455,12 @@ svg
       }
       if(d.data.name == 'Poblacion Afro'){
         return 81;
+      }
+      if(d.data.name == 'Tumaco'){
+        return 95;
+      }
+      if(d.data.name == 'Caribe'){
+        return 25;
       }
        return d.data.value*15 })
     .attr("font-size", "11px")
