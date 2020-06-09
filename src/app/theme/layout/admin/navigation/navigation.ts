@@ -35,89 +35,29 @@ const NavigationItems = [
 
     ]
   },
-  {
-    id: 'navigation',
-    title: 'Navigation',
-    type: 'group',
-    icon: 'feather icon-monitor',
-    children: [
-
-
-
-    ]
-  },
-  {
-    id: 'ui-element',
-    title: 'UI Element',
-    type: 'group',
-    icon: 'feather icon-layers',
-    children: [
-    ]
-  },
-  {
-    id: 'table',
-    title: 'Table',
-    type: 'group',
-    icon: 'feather icon-list',
-    children: [
-
-
-    ]
-  },
+ 
   {
     id: 'other',
     title: 'Other',
     type: 'group',
     icon: 'feather icon-align-left',
     children: [
-        {
-        id: 'sample-page',
+      {
+        id: 'dashboard-home',
         title: 'Dashboard',
         type: 'item',
-        url: '/sample-page',
+        url: '/dashboard/home',
+        classes: 'nav-item',
+        icon: 'feather icon-activity'
+      }, 
+      {
+        id: 'sample-page',
+        title: 'PACS',
+        type: 'item',
+        url: '/pacs',
         classes: 'nav-item',
         icon: 'feather icon-sidebar'
       }
-    ]
-  },
-  {
-    id: 'chart-maps',
-    title: 'Otros datos',
-    type: 'group',
-    icon: 'feather icon-pie-chart',
-    children: [
-      {
-        id: 'charts',
-        title: 'Otros datos',
-        type: 'collapse',
-        icon: 'feather icon-pie-chart',
-        children: [
-          {
-            id: 'apex',
-            title: 'Transporte',
-            type: 'item',
-            url: '/charts/apex'
-          },
-          {
-            id: 'chart-js',
-            title: 'Alojamiento',
-            type: 'item',
-            url: '/charts/chart-js'
-          },
-          {
-            id: 'high-chart',
-            title: 'Datos-extra1',
-            type: 'item',
-            url: '/charts/high-chart'
-          },
-          {
-            id: 'peity',
-            title: 'Datos-extra2',
-            type: 'item',
-            url: '/charts/peity'
-          }
-        ]
-      },
     ]
   }
 ];

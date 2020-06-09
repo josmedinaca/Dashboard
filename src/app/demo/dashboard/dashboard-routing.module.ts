@@ -6,7 +6,7 @@ const routes: Routes = [
     path: '',
     children: [
       {
-        path: 'server',
+        path: 'home',
         loadChildren: () => import('./dash-server/dash-server.module').then(module => module.DashServerModule)
       },
       {

@@ -10,7 +10,7 @@ const routes: Routes = [
     children: [
       {
         path: '',
-        redirectTo: 'dashboard/server',
+        redirectTo: 'dashboard/home',
         pathMatch: 'full'
       },
       {
@@ -54,7 +54,7 @@ const routes: Routes = [
         loadChildren: () => import('./demo/pages/core-chart/core-chart.module').then(module => module.CoreChartModule)
       },
       {
-        path: 'sample-page',
+        path: 'pacs',
         loadChildren: () => import('./demo/pages/sample-page/sample-page.module').then(module => module.SamplePageModule)
       }
     ]
