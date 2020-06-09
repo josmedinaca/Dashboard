@@ -39,22 +39,22 @@ export class TaskDashStatistics {
     series: [
       {
         name: 'Hombres',
-        data: [50, 130, 80, 70, 180, 105, 250]
+        data: [712, 462]
       },
       {
         name: 'Mujeres',
-        data: [80, 100, 60, 200, 150, 100, 150]
+        data: [588, 284]
       },
       {
         name: 'Total',
-        data: [130, 230, 140, 270, 330, 205, 400]
+        data: [1300, 746]
       }
     ],
     grid: {
       borderColor: '#eee'
     },
     xaxis: {
-      categories: ['Fase 1', 'Fase 2', 'Fase 3', 'Fase 4', 'Fase 5', 'Fase 6', 'Fase 7'],
+      categories: ['Fase 1', 'Fase 2'],
     }
   };
 }

@@ -68,30 +68,36 @@ function pyramidBuilder(data, target, options) {
     legend.append('rect')
         .attr('class', 'bar left')
         .attr('x', (w / 2) - (margin.middle * 3))
-        .attr('y', 12)
+        .attr('y', 20)
         .attr('width', 12)
         .attr('height', 12);
-
+		
+    legend.append('text')
+        .attr('x', (w / 2) - (margin.middle*2.7))
+        .attr('y', 5)
+        .attr('dy', '0.32em')
+        .text('Distribucion de PBM');
+		
     legend.append('text')
         .attr('fill', '#000')
         .attr('x', (w / 2) - (margin.middle * 2))
-        .attr('y', 18)
+        .attr('y', 25)
         .attr('dy', '0.32em')
-        .text('Males');
+        .text('Hombres');
 
     legend.append('rect')
         .attr('class', 'bar right')
         .attr('x', (w / 2) + (margin.middle * 2))
-        .attr('y', 12)
+        .attr('y', 20)
         .attr('width', 12)
         .attr('height', 12);
 
     legend.append('text')
         .attr('fill', '#000')
         .attr('x', (w / 2) + (margin.middle * 3))
-        .attr('y', 18)
+        .attr('y', 25)
         .attr('dy', '0.32em')
-        .text('Females');
+        .text('Mujeres');
 
     var tooltipDiv = d3.select("body").append("div")
         .attr("class", "tooltip")
@@ -177,15 +183,8 @@ function pyramidBuilder(data, target, options) {
         .attr('transform', translation(rightBegin, 0))
         .call(yAxisRight);
 
-    pyramid.append('g')
-        .attr('class', 'axis x left')
-        .attr('transform', translation(0, h))
-        .call(xAxisLeft);
 
-    pyramid.append('g')
-        .attr('class', 'axis x right')
-        .attr('transform', translation(rightBegin, h))
-        .call(xAxisRight);
+
 
     // DRAW BARS
     leftBarGroup.selectAll('.bar.left')
@@ -204,9 +203,9 @@ function pyramidBuilder(data, target, options) {
             tooltipDiv.transition()
                 .duration(200)
                 .style("opacity", 0.9);
-            tooltipDiv.html("<strong>Males Age " + d.age + "</strong>" +
-                    "<br />  Population: " + prettyFormat(d.male) +
-                    "<br />" + (Math.round(percentage(d.male) * 1000) / 10) + "% of Total")
+            tooltipDiv.html("<strong>PBM Hombres " + d.age + "</strong>" +
+                    "<br />  Estudiantes: " + prettyFormat(d.male) +
+                    "<br />" + (Math.round(percentage(d.male) * 1000) / 10) + "% del Total")
                 .style("left", (d3.event.pageX) + "px")
                 .style("top", (d3.event.pageY - 28) + "px");
         })
@@ -232,9 +231,9 @@ function pyramidBuilder(data, target, options) {
             tooltipDiv.transition()
                 .duration(200)
                 .style("opacity", 0.9);
-            tooltipDiv.html("<strong> Females Age " + d.age + "</strong>" +
-                    "<br />  Population: " + prettyFormat(d.female) +
-                    "<br />" + (Math.round(percentage(d.female) * 1000) / 10) + "% of Total")
+            tooltipDiv.html("<strong> PBM Mujeres " + d.age + "</strong>" +
+                    "<br />  Estudiantes: " + prettyFormat(d.female) +
+                    "<br />" + (Math.round(percentage(d.female) * 1000) / 10) + "% del Total")
                 .style("left", (d3.event.pageX) + "px")
                 .style("top", (d3.event.pageY - 28) + "px");
         })
