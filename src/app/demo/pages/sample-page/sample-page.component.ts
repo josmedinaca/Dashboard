@@ -5,7 +5,7 @@ import {SolidGaugeWidgetChart} from './chart/solid-gauge-widget-chart';
 declare const L: any;
 declare const geo: any;
 declare const statesData: any;
-declare const pyramidBuilder: any;
+declare const pyramidBuilder: any;var mymap;
 @Component({
   selector: 'app-sample-page',
   templateUrl: './sample-page.component.html',
@@ -19,6 +19,10 @@ export class SamplePageComponent implements OnInit {
     this.taskDashStatistics = TaskDashStatistics.chartData;
     this.solidGaugeWidgetChart = SolidGaugeWidgetChart.chartData; }
 //
+
+
+
+
   ngOnInit() {
     this.mypyramid();
     var map = L.map('map').setView([4.639833,  -74.087736], 11);
@@ -119,7 +123,7 @@ export class SamplePageComponent implements OnInit {
 
 	map.attributionControl.addAttribution('Population data &copy; <a href="http://census.gov/">US Census Bureau</a>');
 
-
+	$(window).on("resize", function () { $("#map").height($(window).height()/1.6); map.invalidateSize(); }).trigger("resize");
 
 
   }
