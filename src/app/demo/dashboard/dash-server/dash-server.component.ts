@@ -192,11 +192,12 @@ height = 400 - margin.top - margin.bottom;
 // append the svg object to the body of the page
 var svg = d3.select("#my_dataviz")
 .append("svg")
-.attr("width", width + margin.left + margin.right)
+.attr("width", 780 + margin.left + margin.right)
 .attr("height", height + margin.top + margin.bottom)
 .append("g")
 .attr("transform",
-      "translate(" + margin.left + "," + margin.top + ")");
+      "translate(" + margin.left + "," + margin.top + ")")
+      .classed("svg-content-responsive", true); ;
 
 // read json data
 d3.json("https://raw.githubusercontent.com/josmedinaca/Dashboard/master/src/app/demo/dashboard/dash-server/data_dendrogram_full.json?token=AFIPRNQ437ISCCZFSFJ6R4K645XZK", function(data) {
@@ -232,19 +233,45 @@ svg
   .append("rect")
     .attr('x', function (d) { 
       if(d.data.name == 'Poblacion Afro'){
-        return 211.99277883305575;
+        return 175.99277883305575;
+      }
+      if(d.data.name == 'Mejor Bachiller'){
+        return 175.99277883305575;
+      }      if(d.data.name == 'Victimas'){
+        return 175.99277883305575;
       }
       if(d.data.name == 'Municipio'){
         return 0;
       }
       if(d.data.name == 'Orinoquia'){
         
-        return 443;
+        return 415;
       }
       if(d.data.name == 'Tumaco'){
         
-        return 443;
+        return 415;
       }
+      if(d.data.name == 'Amazonia'){
+        
+        return 330;
+      }
+      if(d.data.name == 'Caribe'){
+        
+        return 330;
+      }
+      if(d.data.name == 'Bogota'){
+        
+        return 330;
+      }
+      if(d.data.name == 'Regular de Pregrado'){
+        
+        return 580;
+      }
+      if(d.data.name == 'Intercambio Internacional'){
+        
+        return 580;
+      }
+
       return d.x0; })
     .attr('y', function (d) {
       if(d.data.name == 'Poblacion Afro'){
@@ -276,7 +303,10 @@ svg
       if(d.data.name == 'Poblacion Afro'){
         return 137.35350212826307; 
       }      if(d.data.name == 'Municipio'){
-        return 208.99277883305575;
+        return 170.99277883305575;
+      }
+      if(d.data.name == 'Indigena'){
+        return 170.99277883305575;
       }
       if(d.data.name == 'Amazonia'){
         return 80;
@@ -285,7 +315,7 @@ svg
         return 80;
       }
       if(d.data.name == 'Tumaco'){
-        return 200;
+        return 150;
       }
       if(d.data.name == 'Bogota'){
         return 80;
@@ -298,7 +328,7 @@ svg
       }
 
       if(d.data.name == 'Orinoquia'){
-        return 200;
+        return 150;
       }
       if(d.data.name == 'Mejor Bachiller'){
         return 137.35350212826307; 
@@ -351,19 +381,37 @@ svg
   .append("text")
     .attr("x", function(d){
       if(d.data.name == 'Poblacion Afro'){
-        return 216.99277883305575;
+        return 180.99277883305575;
       }
       if(d.data.name == 'Mejor Bachiller'){
-        return 216.99277883305575;
+        return 180.99277883305575;
+      }
+      if(d.data.name == 'Victimas'){
+        return 180.99277883305575;
       }
       if(d.data.name == 'Municipio'){
         return 5;
       }
       if(d.data.name == 'Orinoquia'){
-        return 448;
+        return 423;
       }
       if(d.data.name == 'Tumaco'){
-        return 448;
+        return 423;
+      }
+      if(d.data.name == 'Amazonia'){
+        return 335;
+      }
+      if(d.data.name == 'Caribe'){
+        return 335;
+      }
+      if(d.data.name == 'Bogota'){
+        return 335;
+      }
+      if(d.data.name == 'Regular de Pregrado'){
+        return 585;
+      }
+      if(d.data.name == 'Intercambio Internacional'){
+        return 585;
       }
      return d.x0+5})    // +10 to adjust position (more right)
     .attr("y", function(d){
@@ -402,19 +450,37 @@ svg
   .append("text")
     .attr("x", function(d){ 
       if(d.data.name == 'Poblacion Afro'){
-        return 216.99277883305575;
+        return 180.99277883305575;
       }
       if(d.data.name == 'Mejor Bachiller'){
-        return 216.99277883305575;
+        return 180.99277883305575;
+      }
+      if(d.data.name == 'Victimas'){
+        return 180.99277883305575;
       }
       if(d.data.name == 'Municipio'){
         return 5;
       }
       if(d.data.name == 'Tumaco'){
-        return 449.5;
+        return 425;
+      }
+      if(d.data.name == 'Bogota'){
+        return 337;
+      }
+      if(d.data.name == 'Caribe'){
+        return 337;
+      }
+      if(d.data.name == 'Amazonia'){
+        return 337;
       }
       if(d.data.name == 'Orinoquia'){
-        return 449.5;
+        return 425;
+      }
+      if(d.data.name == 'Regular de Pregrado'){
+        return 595;
+      }
+      if(d.data.name == 'Intercambio Internacional'){
+        return 595;
       }
       return d.x0+5})    // +10 to adjust position (more right)
     .attr("y", function(d){
@@ -478,7 +544,14 @@ svg
   .data(root.descendants().filter(function(d){return d.depth==1}))
   .enter()
   .append("text")
-    .attr("x", function(d){ return d.x0})
+    .attr("x", function(d){ 
+      if(d.data.name == 'PREGRADO'){
+        return 579;
+      }
+      if(d.data.name == 'INTERCAMBIO'){
+        return 579;
+      }
+      return d.x0})
     .attr("y", function(d){ return d.y0+21})
     .text(function(d){ return d.data.name })
     .attr("font-size", "19px")
@@ -493,8 +566,7 @@ svg
     .attr("font-size", "19px")
     .attr("fill",  "grey" )
 
-})
-  }
+}) }
  
   }
 
