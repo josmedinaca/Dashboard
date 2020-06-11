@@ -263,11 +263,11 @@ svg
         
         return 330;
       }
-      if(d.data.name == 'Regular de Pregrado'){
+      if(d.data.name == 'Pregrado'){
         
         return 580;
       }
-      if(d.data.name == 'Intercambio Internacional'){
+      if(d.data.name == 'Internacional'){
         
         return 580;
       }
@@ -320,11 +320,11 @@ svg
       if(d.data.name == 'Bogota'){
         return 80;
       }
-      if(d.data.name == 'Regular de Pregrado'){
-        return d.x1 - d.x0 - 25;
+      if(d.data.name == 'Pregrado'){
+        return 120;
       }
-      if(d.data.name == 'Intercambio Internacional'){
-        return d.x1 - d.x0 - 25;
+      if(d.data.name == 'Internacional'){
+        return 120;
       }
 
       if(d.data.name == 'Orinoquia'){
@@ -407,10 +407,10 @@ svg
       if(d.data.name == 'Bogota'){
         return 335;
       }
-      if(d.data.name == 'Regular de Pregrado'){
+      if(d.data.name == 'Pregrado'){
         return 585;
       }
-      if(d.data.name == 'Intercambio Internacional'){
+      if(d.data.name == 'Internacional'){
         return 585;
       }
      return d.x0+5})    // +10 to adjust position (more right)
@@ -476,10 +476,10 @@ svg
       if(d.data.name == 'Orinoquia'){
         return 425;
       }
-      if(d.data.name == 'Regular de Pregrado'){
+      if(d.data.name == 'Pregrado'){
         return 595;
       }
-      if(d.data.name == 'Intercambio Internacional'){
+      if(d.data.name == 'Internacional'){
         return 595;
       }
       return d.x0+5})    // +10 to adjust position (more right)
@@ -528,10 +528,10 @@ svg
       if(d.data.name == 'Caribe'){
         return 25;
       }
-      if(d.data.name == 'Regular de Pregrado'){
+      if(d.data.name == 'Pregrado'){
         return 1503;
       }
-      if(d.data.name == 'Intercambio Internacional'){
+      if(d.data.name == 'Internacional'){
         return 4;
       }
        return d.data.value*15 })
