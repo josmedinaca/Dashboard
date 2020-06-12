@@ -121,7 +121,7 @@ export class SamplePageComponent implements OnInit {
 		onEachFeature: onEachFeature
 	}).addTo(map);
 
-	map.attributionControl.addAttribution('Population data &copy; <a href="http://census.gov/">US Census Bureau</a>');
+	map.attributionControl.addAttribution('Population data &copy; <a href="http://census.gov/">Bienestar Census Form</a>');
 
 	$(window).on("resize", function () { $("#map").height($(window).height()/1.6); map.invalidateSize(); }).trigger("resize");
 
