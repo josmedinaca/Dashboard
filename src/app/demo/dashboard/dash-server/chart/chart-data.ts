@@ -3185,9 +3185,9 @@ export class ChartDB {
       height: 320,
       type: 'pie',
     },
-    labels: ['Team A', 'Team B', 'Team C', 'Team D', 'Team E'],
-    series: [44, 55, 13, 43, 22],
-    colors: ['#4680ff', '#0e9e4a', '#00acc1', '#ffa21d', '#ff5252'],
+    labels: ['Hombres', 'Mujeres'],
+    series: [105, 75],
+    colors: ['#4680ff', '#ff5252'],
     legend: {
       show: true,
       position: 'bottom',

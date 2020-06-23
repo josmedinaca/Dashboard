@@ -1,0 +1,62 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<div class="row align-items-center page-header">
+    <div class="col-md-12">
+        <app-breadcrumb></app-breadcrumb>
+    </div>
+</div>
+
+
+
+
+<div class="row">
+    <div class="col-xl-12">
+        <app-card [hidHeader]="true" cardClass="o-income">
+            <div class="row">
+                <div class="col-lg-6 col-md-6">
+                    <div class="d-flex panel-main m-b-10 no-block  panel-refresh">
+                        <h5 class="card-title m-b-0 align-self-center">Almuerzos entregados</h5>
+
+                    </div>
+                    <app-apex-chart chartID="memory-use-dah-server" [chartConfig]="this.memoryUseDashServer"></app-apex-chart>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <div class="d-flex panel-main m-b-10 no-block  panel-refresh">
+                        <h5 class="card-title m-b-0 align-self-center">Estudiantes beneficiados</h5>
+
+                    </div>
+                    <app-apex-chart chartID="memory-use-dah-server2" [chartConfig]="this.memoryUseDashServer2"></app-apex-chart>
+                </div>
+            </div>
+        </app-card>
+    </div>
+</div>
+
+<div class="row">
+    <div id="chart" class="col-sm-5">
+        <app-card [hidHeader]="true" cardClass="o-income">
+            <h5 class="card-title m-b-0 align-self-center">Niveles de subacceso</h5>
+            <apx-chart [series]="chartOptions.series" [chart]="chartOptions.chart" [plotOptions]="chartOptions.plotOptions" [labels]="chartOptions.labels" [legend]="chartOptions.legend" [colors]="chartOptions.colors" [responsive]="chartOptions.responsive"></apx-chart>
+        </app-card>
+    </div>
+    <div class="col-lg-3 col-md-6">
+        <app-card [hidHeader]="true">
+            <div class="d-flex m-b-6 no-block">
+                <h5 class="card-title m-b-0 align-self-center">Niveles de PBM</h5>
+                <div class="ml-auto text-light-blue">
+                </div>
+            </div>
+            <ul class="list-inline m-b-30 text-uppercase lp-5 font-medium font-12">
+                <li><i class="fa fa-square m-r-5 " id="ND"></i> 0-5 </li>
+                <li><i class="fa fa-square m-r-5 " id="ND2"></i> 6-10 </li>
+                <li><i class="fa fa-square m-r-5 " id="ND3"></i> 11-15</li>
+                <li><i class="fa fa-square m-r-5 " id="ND4"></i> 16+</li>
+            </ul>
+            <app-apex-chart chartID="visitor-gender-dash-analytics" [chartConfig]="this.visitorGenderDashAnalytics"></app-apex-chart>
+        </app-card>
+    </div>
+    <div class="col-md-4">
+        <app-card cardTitle="Distribucion de estudiantes por sexo" [options]="false">
+            <app-apex-chart chartID="pie-chart-1-cac" [chartConfig]="this.chartDB.pie1CAC"></app-apex-chart>
+        </app-card>
+    </div>
+</div>

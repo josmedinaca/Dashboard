@@ -56,6 +56,10 @@ const routes: Routes = [
       {
         path: 'pacs',
         loadChildren: () => import('./demo/pages/sample-page/sample-page.module').then(module => module.SamplePageModule)
+      },
+      {
+        path: 'almuerzos',
+        loadChildren: () => import('./demo/pages/almuerzos/almuerzos-page.module').then(module => module.AlmuerzosPageModule)
       }
     ]
   }

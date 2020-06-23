@@ -57,6 +57,14 @@ const NavigationItems = [
         url: '/pacs',
         classes: 'nav-item',
         icon: 'feather icon-sidebar'
+      },
+      {
+        id: 'almuerzos-page',
+        title: 'Almuerzos CRU',
+        type: 'item',
+        url: '/almuerzos',
+        classes: 'nav-item',
+        icon: 'feather icon-gitlab'
       }
     ]
   }
