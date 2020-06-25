@@ -18,13 +18,14 @@ import {VisitorGenderDashAnalytics} from './chart/visitor-gender-dash-analytics'
 import {ApexChartService} from '../../../theme/shared/components/chart/apex-chart/apex-chart.service';
 import {ChartDB} from './chart/chart-data';
 
+declare const Highcharts: any;
+declare const sunburst: any;
 
-declare const d3: any;
 type ApexXAxis = {
   type?: "category" | "datetime" | "numeric";
   categories?: any;
   labels?: {
-    style?: {
+    style?: { 
       colors?: string | string[];
       fontSize?: string; 
     };
@@ -181,392 +182,195 @@ export class DashServerComponent implements OnInit {
   }
   
   ngOnInit() {
-    this.data();
+    this.sunburst();
   }
-  data(){
-    // set the dimensions and margins of the graph
-var margin = {top: 0, right: 10, bottom: 10, left: 10},
-width = 900 - margin.left - margin.right,
-height = 400 - margin.top - margin.bottom;
-
-// append the svg object to the body of the page
-var svg = d3.select("#my_dataviz")
-.append("svg")
-.attr("width", 780 + margin.left + margin.right)
-.attr("height", height + margin.top + margin.bottom)
-.append("g")
-.attr("transform",
-      "translate(" + margin.left + "," + margin.top + ")")
-      .classed("svg-content-responsive", true); ;
-
-// read json data
-d3.json("https://raw.githubusercontent.com/josmedinaca/Dashboard/master/src/app/demo/dashboard/dash-server/data_dendrogram_full.json?token=AFIPRNQ437ISCCZFSFJ6R4K645XZK", function(data) {
-
-// Give the data to this cluster layout:
-var root = d3.hierarchy(data).sum(function(d){ return d.value}) // Here the size of each leave is given in the 'value' field in input data
-
-// Then d3.treemap computes the position of each element of the hierarchy
-d3.treemap()
-  .size([width, height])
-  .paddingTop(28)
-  .paddingRight(7)
-  .paddingInner(3)      // Padding between each rectangle
-  //.paddingOuter(6)
-  //.padding(20)
-  (root)
- 
-// prepare a color scale
-var color = d3.scaleOrdinal()
-  .domain(["PAES", "PEAMA", "PREGRADO","INTERCAMBIO"])
-  .range([ "#402D54", "#D18975", "#8FD175","#8FD100"])
-
-// And a opacity scale
-var opacity = d3.scaleLinear()
-.domain([10, 30])
-.range([.5,1])
-
-// use this information to add rectangles:
-svg
-  .selectAll("rect")
-  .data(root.leaves())
-  .enter()
-  .append("rect")
-    .attr('x', function (d) { 
-      if(d.data.name == 'Poblacion Afro'){
-        return 175.99277883305575;
-      }
-      if(d.data.name == 'Mejor Bachiller'){
-        return 175.99277883305575;
-      }      if(d.data.name == 'Victimas'){
-        return 175.99277883305575;
-      }
-      if(d.data.name == 'Municipio'){
-        return 0;
-      }
-      if(d.data.name == 'Orinoquia'){
+  sunburst(){
+    var data = [{
+      id: '0.0',
+      parent: '',
+      name: 'Subaccesos'
+    }, {
+      id: '1.1',
+      parent: '0.0',
+      name: 'PEAMA',
+      color: '#B5DDF4'
+    }, {
+      id: '1.3',
+      parent: '0.0',
+      name: 'PAES',
+      color:'#F1B6B6'
+    }, {
+      id: '1.4',
+      parent: '0.0',
+      name: 'PREGRADO',
+      color:'#CDF1B6',
+      
+    }, {
+      id: '1.5',
+      parent: '0.0',
+      name: 'INTERNACIONAL',
+      color:'#EDF1B6',
+    },
+    
+    /* PEAMA */
+    {
+      id: '2.1',
+      parent: '1.1',
+      name: 'Amazonia',
+      value: 604957438
+    }, 
+    
+    {
+      id: '2.5',
+      parent: '1.1',
+      name: 'Tumaco',
+      value: 190886311
+    },
+    
+    {
+      id: '2.3',
+      parent: '1.1',
+      name: 'Caribe',
+      value: 197553151
+    },
+    
+    {
+      id: '2.2',
+      parent: '1.1',
+      name: 'Bogota',
+      value: 181339988
+    },
+    
+    {
+      id: '2.4',
+      parent: '1.1',
+      name: 'Orinoquia',
+      value : 181339988
+    },
+    
+    
+    
+    /***********/
+    
+    /* PAES */
+    {
+      id: '2.9',
+      parent: '1.3',
+      name: 'Indigena',
+      value: 209288278
+    }
+    ,
+    
+    {
+      id: '2.8',
+      parent: '1.3',
+      name: 'Municipio',
+      value: 324459463
+    },
+    
+    {
+      id: '2.7',
+      parent: '1.3',
+      name: 'Poblacion Afro',
+      value: 129163276
+    },
+    
+    {
+      id: '2.6',
+      parent: '1.3',
+      name: 'Mejor Bachiller',
+      value: 111484636
+    },
+    
+    {
+      id: '2.71',
+      parent: '1.3',
+      name: 'Victimas',
+      value: 111484636
+    }, 
+    /***********/
+    
+    /* Asia */
+    
+    /***********/
+    
+    /* Pregrado */
+    {
+      id: '2.15',
+      parent: '1.4',
+      name: 'Regular pregrado',
+      value: 143989754
+    },
+    /***********/
+    
+    /* INTERNACIONAL */
+    {
+      id: '2.19',
+      parent: '1.5',
+      name: 'Intercambio internacional',
+      value: 124450561
+    }
+    
+    ];
+    
+    
+    // Splice in transparent for the center circle
+    Highcharts.getOptions().colors.splice(0, 0, 'transparent');
+    
+    
+    Highcharts.chart('ch', {
+    
+      chart: {
+        height: '65%'
+      },
+    
+      title: {
+        text: 'Niveles de subacceso'
+      },
+      series: [{
+        type: "sunburst",
+        data: data,
+        allowDrillToNode: true,
+        cursor: 'pointer',
+        dataLabels: {
+          format: '{point.name}',
+          filter: {
+            property: 'innerArcLength',
+            operator: '>',
+            value: 16
+          },
+          rotationMode: 'circular'
+        },
+        levels: [{
+          level: 1,
+          levelIsConstant: false,
+          dataLabels: {
+            filter: {
+              property: 'outerArcLength',
+              operator: '>',
+              value: 64
+            }
+          }
+        }, {
+          level: 2,
+          colorByPoint: true
+        },
+        {
+          level: 3,
+          colorVariation: {
+            key: 'brightness',
+            to: -0.5
+          }
         
-        return 415;
-      }
-      if(d.data.name == 'Tumaco'){
-        
-        return 415;
-      }
-      if(d.data.name == 'Amazonia'){
-        
-        return 330;
-      }
-      if(d.data.name == 'Caribe'){
-        
-        return 330;
-      }
-      if(d.data.name == 'Bogota'){
-        
-        return 330;
-      }
-      if(d.data.name == 'Pregrado'){
-        
-        return 580;
-      }
-      if(d.data.name == 'Internacional'){
-        
-        return 580;
-      }
-
-      return d.x0; })
-    .attr('y', function (d) {
-      if(d.data.name == 'Poblacion Afro'){
-        return 56; 
-      }
-      if(d.data.name == 'Mejor Bachiller'){
-        return 280; 
-      }      if(d.data.name == 'Orinoquia'){
-        
-        return 149;
-      }
-      if(d.data.name == 'Municipio'){
-        return 338;
-      }
-      if(d.data.name == 'Tumaco'){
-        return 56;
-      }
-      if(d.data.name == 'Bogota'){
-        return 360;
-      }
-      if(d.data.name == 'Caribe'){
-        return 310;
-      }
-      if(d.data.name == 'Victimas'){
-        return 350;
-      }
-      return d.y0; })
-    .attr('width', function (d) {
-      if(d.data.name == 'Poblacion Afro'){
-        return 137.35350212826307; 
-      }      if(d.data.name == 'Municipio'){
-        return 170.99277883305575;
-      }
-      if(d.data.name == 'Indigena'){
-        return 170.99277883305575;
-      }
-      if(d.data.name == 'Amazonia'){
-        return 80;
-      }
-      if(d.data.name == 'Caribe'){
-        return 80;
-      }
-      if(d.data.name == 'Tumaco'){
-        return 150;
-      }
-      if(d.data.name == 'Bogota'){
-        return 80;
-      }
-      if(d.data.name == 'Pregrado'){
-        return 120;
-      }
-      if(d.data.name == 'Internacional'){
-        return 120;
-      }
-
-      if(d.data.name == 'Orinoquia'){
-        return 150;
-      }
-      if(d.data.name == 'Mejor Bachiller'){
-        return 137.35350212826307; 
-      }
-
-       return d.x1 - d.x0; 
-      })
-    .attr('height', function (d) {
-      if(d.data.name == 'Indigena'){
-       
-        return (d.y1 - d.y0)/1.2;
-      }      if(d.data.name == 'Orinoquia'){
-       
-        return 241;
-      }
-      if(d.data.name == 'Caribe'){
-        return 47;
-      }
-      if(d.data.name == 'Bogota'){
-        return 30;
-      }
-      if(d.data.name == 'Amazonia'){
-        return 250;
-      }
-      if(d.data.name == 'Victimas'){
-        return 40;
-      }
-
-      if(d.data.name == 'Mejor Bachiller'){
-        return 66;
-      }
-
-      if(d.data.name == 'Poblacion Afro'){
-        return 219.86945255405737;
-      }
-      if(d.data.name == 'Municipio'){
-        return 52;
-      }
-       return  d.y1 - d.y0; 
-      })
-    .style("stroke", "black")
-    .style("fill", function(d){ return color(d.parent.data.name)} )
-    .style("opacity", function(d){ return opacity(d.data.value)})
-
-// and to add the text labels
-svg
-  .selectAll("text")
-  .data(root.leaves())
-  .enter()
-  .append("text")
-    .attr("x", function(d){
-      if(d.data.name == 'Poblacion Afro'){
-        return 180.99277883305575;
-      }
-      if(d.data.name == 'Mejor Bachiller'){
-        return 180.99277883305575;
-      }
-      if(d.data.name == 'Victimas'){
-        return 180.99277883305575;
-      }
-      if(d.data.name == 'Municipio'){
-        return 5;
-      }
-      if(d.data.name == 'Orinoquia'){
-        return 423;
-      }
-      if(d.data.name == 'Tumaco'){
-        return 423;
-      }
-      if(d.data.name == 'Amazonia'){
-        return 335;
-      }
-      if(d.data.name == 'Caribe'){
-        return 335;
-      }
-      if(d.data.name == 'Bogota'){
-        return 335;
-      }
-      if(d.data.name == 'Pregrado'){
-        return 585;
-      }
-      if(d.data.name == 'Internacional'){
-        return 585;
-      }
-     return d.x0+5})    // +10 to adjust position (more right)
-    .attr("y", function(d){
-      if(d.data.name == 'Poblacion Afro'){
-        return 76;
-      }
-      if(d.data.name == 'Mejor Bachiller'){
-        return 300;
-      }
-      if(d.data.name == 'Municipio'){
-        return 360;
-      }
-      if(d.data.name == 'Tumaco'){
-        return 76;
-      }
-      if(d.data.name == 'Victimas'){
-        return 365;
-      }
-      if(d.data.name == 'Caribe'){
-        return 328;
-      }
-      if(d.data.name == 'Bogota'){
-        return 375;
-      }
-       return d.y0+20})    // +20 to adjust position (lower)
-    .text(function(d){
-       return d.data.name })
-    .attr("font-size", "14px")
-    .attr("fill", "white")
-
-// and to add the text labels
-svg
-  .selectAll("vals")
-  .data(root.leaves())
-  .enter()
-  .append("text")
-    .attr("x", function(d){ 
-      if(d.data.name == 'Poblacion Afro'){
-        return 180.99277883305575;
-      }
-      if(d.data.name == 'Mejor Bachiller'){
-        return 180.99277883305575;
-      }
-      if(d.data.name == 'Victimas'){
-        return 180.99277883305575;
-      }
-      if(d.data.name == 'Municipio'){
-        return 5;
-      }
-      if(d.data.name == 'Tumaco'){
-        return 425;
-      }
-      if(d.data.name == 'Bogota'){
-        return 337;
-      }
-      if(d.data.name == 'Caribe'){
-        return 337;
-      }
-      if(d.data.name == 'Amazonia'){
-        return 337;
-      }
-      if(d.data.name == 'Orinoquia'){
-        return 425;
-      }
-      if(d.data.name == 'Pregrado'){
-        return 595;
-      }
-      if(d.data.name == 'Internacional'){
-        return 595;
-      }
-      return d.x0+5})    // +10 to adjust position (more right)
-    .attr("y", function(d){
-      if(d.data.name == 'Poblacion Afro'){
-        return 90;
-      }
-      if(d.data.name == 'Tumaco'){
-        return 90;
-      }
-      if(d.data.name == 'Municipio'){
-        return 375;
-      }
-      if(d.data.name == 'Caribe'){
-        return 343;
-      }
-      if(d.data.name == 'Mejor Bachiller'){
-        return 316;
-      }
-      if(d.data.name == 'Bogota'){
-        return 387;
-      }
-      if(d.data.name == 'Victimas'){
-        return 380;
-      }
-       return d.y0+35})    // +20 to adjust position (lower)
-    .text(function(d){
-      if(d.data.name == 'Indigena'){
-        return 209;
-      }
-      if(d.data.name == 'Mejor Bachiller'){
-        return 38;
-      }
-      if(d.data.name == 'Municipio'){
-        return 39;
-      }
-      if(d.data.name == 'Victimas'){
-        return 34;
-      }
-      if(d.data.name == 'Poblacion Afro'){
-        return 81;
-      }
-      if(d.data.name == 'Tumaco'){
-        return 95;
-      }
-      if(d.data.name == 'Caribe'){
-        return 25;
-      }
-      if(d.data.name == 'Pregrado'){
-        return 1503;
-      }
-      if(d.data.name == 'Internacional'){
-        return 4;
-      }
-       return d.data.value*15 })
-    .attr("font-size", "11px")
-    .attr("fill", "white")
-
-// Add title for the 3 groups
-svg
-  .selectAll("titles")
-  .data(root.descendants().filter(function(d){return d.depth==1}))
-  .enter()
-  .append("text")
-    .attr("x", function(d){ 
-      if(d.data.name == 'PREGRADO'){
-        return 579;
-      }
-      if(d.data.name == 'INTERCAMBIO'){
-        return 579;
-      }
-      return d.x0})
-    .attr("y", function(d){ return d.y0+21})
-    .text(function(d){ return d.data.name })
-    .attr("font-size", "19px")
-    .attr("fill",  function(d){ return color(d.data.name)} )
-
-// Add title for the 3 groups
-svg
-  .append("text")
-    .attr("x", 0)
-    .attr("y", 14)
-    .text("Niveles de subacceso")
-    .attr("font-size", "19px")
-    .attr("fill",  "grey" )
-
-}) }
+        }]
+    
+      }],
+      tooltip: {
+        headerFormat: "",
+        pointFormat: 'Existen <b>{point.value}</b> <b> estudiantes</b> '
+      }
+    });
+  }
  
   }
 

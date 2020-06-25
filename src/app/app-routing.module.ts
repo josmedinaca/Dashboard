@@ -60,6 +60,10 @@ const routes: Routes = [
       {
         path: 'almuerzos',
         loadChildren: () => import('./demo/pages/almuerzos/almuerzos-page.module').then(module => module.AlmuerzosPageModule)
+      },
+      {
+        path: 'alojamientos',
+        loadChildren: () => import('./demo/pages/alojamientos/alojamientos-page.module').then(module => module.AlojamientosPageModule)
       }
     ]
   }

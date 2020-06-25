@@ -65,6 +65,15 @@ const NavigationItems = [
         url: '/almuerzos',
         classes: 'nav-item',
         icon: 'feather icon-gitlab'
+      },
+      
+      {
+        id: 'alojamientos-page',
+        title: 'Alojamientos',
+        type: 'item',
+        url: '/alojamientos',
+        classes: 'nav-item',
+        icon: 'feather icon-grid'
       }
     ]
   }

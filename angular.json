@@ -33,10 +33,6 @@
                             "src/fake-data"
                         ],
                         "styles": [
-                            "node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss",
-                            "node_modules/@fortawesome/fontawesome-free/scss/solid.scss",
-                            "node_modules/@fortawesome/fontawesome-free/scss/regular.scss",
-                            "node_modules/@fortawesome/fontawesome-free/scss/brands.scss",
                             "node_modules/angular-bootstrap-md/assets/scss/mdb.scss",
                             "node_modules/animate.css/animate.css",
                             "./node_modules/leaflet/dist/leaflet.css",
@@ -58,7 +54,9 @@
                             "src/scripts/d3.v3.js",
                             "src/scripts/topojson.v1.min.js",
                             "src/scripts/us-states.js",
-                            "src/scripts/popPyramid.js"
+                            "src/scripts/popPyramid.js",
+                            "src/scripts/highcharts.js",
+                            "src/scripts/sunburst.js"
                         ]
                     },
                     "configurations": {
