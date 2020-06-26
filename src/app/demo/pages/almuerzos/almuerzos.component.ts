@@ -157,7 +157,7 @@ sunburst(){
   Highcharts.getOptions().colors.splice(0, 0, 'transparent');
   
   
-  Highcharts.chart('ch', {
+  Highcharts.chart('chx', {
   
     chart: {
       height: '65%'

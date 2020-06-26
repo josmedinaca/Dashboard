@@ -34,18 +34,18 @@ export class MemoryUseDashServer {
       colors: ['transparent']
     },
     series: [{
-      name: 'Total Almuerzos brindados',
-      data: [3017]
+      name: 'Total estudiantes apoyados',
+      data: [3017,3017,3017,3017,3017]
     }, {
-      name: 'Total Almuerzos hombres',
-      data: [1781]
+      name: 'Total estudiantes hombres',
+      data: [1781,3017,3017,3017,3017]
     }, {
-      name: 'Total Almuerzos mujeres',
-      data: [1236]
+      name: 'Total estudiantes mujeres',
+      data: [1236,3017,3017,3017,3017]
     }
   ],
     xaxis: {
-      categories: ['Almuerzos entregados'],
+      categories: ['Rockefeller', 'CRU', 'HIJAS DEL CORAZON', 'MARIA INMACULADA', 'SOLERIUM'],
     },
     yaxis: {
       title: {
