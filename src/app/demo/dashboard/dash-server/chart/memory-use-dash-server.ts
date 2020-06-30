@@ -27,7 +27,7 @@ export class MemoryUseDashServer {
         vertical: 8
       }
     },
-    colors: ['#ffb74e', '#fe365f', '#4782fa'],
+    colors: ['#ffb74e'],
     stroke: {
       show: true,
       width: 2,
@@ -36,12 +36,6 @@ export class MemoryUseDashServer {
     series: [{
       name: 'TOTAL',
       data: [102, 2046, 2717, 5]
-    }, {
-      name: 'MUJERES',
-      data: [54, 872, 1172, 2]
-    }, {
-      name: 'HOMBRES',
-      data: [48, 1174, 1545, 3]
     }],
     xaxis: {
       categories: ['Alojamiento', 'Paquetes Alimentarios', 'Almuerzos en alojamiento', 'Transporte'],
