@@ -27,16 +27,13 @@ export class MemoryUseDashServer2 {
         vertical: 8
       }
     },
-    colors: ['#ffb74e', '#fe365f', '#4782fa'],
+    colors: ['#fe365f', '#4782fa'],
     stroke: {
       show: true,
       width: 2,
       colors: ['transparent']
     },
-    series: [{
-      name: 'Total estudiantes',
-      data: [180]
-    }, {
+    series: [ {
       name: 'Total estudiantes hombres',
       data: [105]
     }, {

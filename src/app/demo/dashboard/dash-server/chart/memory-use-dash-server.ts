@@ -1,7 +1,7 @@
 export class MemoryUseDashServer {
   public static chartData = {
     chart: {
-      height: 300,
+      height: 390,
       type: 'bar',
     },
     plotOptions: {
@@ -35,14 +35,14 @@ export class MemoryUseDashServer {
     },
     series: [{
       name: 'TOTAL',
-      data: [102, 2046, 2717, 5]
+      data: [124392372, 390100000, 13740500, 5270000]
     }],
     xaxis: {
       categories: ['Alojamiento', 'Paquetes Alimentarios', 'Almuerzos en alojamiento', 'Transporte'],
     },
     yaxis: {
       title: {
-        text: ' (beneficiarios)'
+        text: '$'+' COP'
       }
     },
     fill: {
@@ -55,7 +55,7 @@ export class MemoryUseDashServer {
     },
     tooltip: {
       y: {
-        formatter: (val) => val + ' beneficiarios'
+        formatter: (val) => '$'+ val.toLocaleString('en') + ' COP'
       }
     }
   };

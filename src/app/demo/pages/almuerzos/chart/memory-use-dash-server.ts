@@ -27,16 +27,13 @@ export class MemoryUseDashServer {
         vertical: 8
       }
     },
-    colors: ['#ffb74e', '#fe365f', '#4782fa'],
+    colors: [ '#fe365f', '#4782fa'],
     stroke: {
       show: true,
       width: 2,
       colors: ['transparent']
     },
     series: [{
-      name: 'Total Almuerzos brindados',
-      data: [3017]
-    }, {
       name: 'Total Almuerzos hombres',
       data: [1781]
     }, {

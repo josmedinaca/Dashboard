@@ -39,105 +39,52 @@ export class AlojamientosPageComponent implements OnInit {
 
 
   ngOnInit(){this.sunburst();
-    var map = L.map('container').setView([4.627958, -74.095583], 11);
+    var mymap = L.map('container').setView([4.633694, -74.082380], 13);
 
     L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
       maxZoom: 18,
       attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
-        '<a href="http://bienestar.bogota.unal.edu.co/gestion.php">UNAL</a>, ' +
+        '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
         'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-      id: 'mapbox/light-v9',
+      id: 'mapbox/streets-v11',
       tileSize: 512,
       zoomOffset: -1
-    }).addTo(map);
+    }).addTo(mymap);
   
+    var greenIcon = L.icon({
+      iconUrl: 'assets/images/house.png',
+      //shadowUrl: 'https://leafletjs.com/examples/custom-icons/leaf-shadow.png',
   
-    // control that shows state info on hover
-    var info = L.control();
+      iconSize:     [60, 60], // size of the icon
+      //shadowSize:   [50, 64], // size of the shadow
+      iconAnchor:   [44, 59], // point of the icon which will correspond to marker's location
+      //shadowAnchor: [4, 62],  // the same for the shadow
+      popupAnchor:  [-8, -60] // point from which the popup should open relative to the iconAnchor
+  });
+
+    L.marker([4.631557, -74.085065],{icon: greenIcon}).addTo(mymap)
+      .bindPopup("<b>CUPOS UNIVERSITARIOS ROCKEFELLER</b><br />I am a popup.").openPopup();
   
-    info.onAdd = function (map) {
-      this._div = L.DomUtil.create('div', 'info');
-      this.update();
-      return this._div;
-    };
+      
+      L.marker([4.627131, -74.086893],{icon: greenIcon}).addTo(mymap)
+      .bindPopup("<b>CORPORACIÓN DE RESIDENCIAS UNIVERSITARIAS - CRU</b><br />I am a popup.").openPopup();
+
+      
+
+      L.marker([4.673301, -74.098931],{icon: greenIcon}).addTo(mymap)
+      .bindPopup("<b>HIJAS DEL CORAZON MISERICORDIOSO DE MARIA-OBRA SAN RAFAEL</b><br />I am a popup.").openPopup();
+
+      
+      L.marker([4.612189, -74.066226],{icon: greenIcon}).addTo(mymap)
+      .bindPopup("<b>CONGREGACION RELIGIOSAS DE MARIA INMACULADA</b><br />I am a popup.").openPopup();
+
+      
+
+      L.marker([4.643603, -74.065900],{icon: greenIcon}).addTo(mymap)
+      .bindPopup("<b>SOLERIUM  - Edificio Studio 56</b><br />I am a popup.").openPopup();
+    var popup = L.popup();
   
-    info.update = function (props) {
-      this._div.innerHTML = '<style> .info {    padding: 6px 8px; font: 14px/16px Arial, Helvetica, sans-serif;     background: white;  background: rgba(255, 255, 255, 0.8); box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);border-radius: 5px;} </style>'
-      +'<h4>Informacion de PACS</h4>' +  (props ?
-        '<b>' + props.name + '</b><br />' +'Estudiantes hombres: <b>'+ props.hombres + '</b><br />' + 'Estudiantes mujeres: <b>'+props.mujeres +'</b><br />' + 'Total estudiantes:  <b>'+props.total +'</b><br />' + 'Tiendas: <b>'+props.tiendas +'</b><br />'
-        : 'Ubique su cursor en una localidad');
-    };
-  
-    info.addTo(map);
-  
-  
-    // get color depending on population density value
-    function getColor(d) {
-      return d > 350 ? '#800026' :
-          d > 250  ? '#BD0026' :
-          d > 150  ? '#E31A1C' :
-          d > 100  ? '#FC4E2A' :
-          d > 50   ? '#FD8D3C' :
-          d > 25   ? '#FEB24C' :
-          d > 10   ? '#FED976' :
-                '#FFEDA0';
-    }
-  
-    function style(feature) {
-      return {
-        weight: 2,
-        opacity: 1,
-        color: 'white',
-        dashArray: '3',
-        fillOpacity: 0.7,
-        fillColor: getColor(feature.properties.total)
-      };
-    }
-  
-    function highlightFeature(e) {
-      var layer = e.target;
-  
-      layer.setStyle({
-        weight: 5,
-        color: '#666',
-        dashArray: '',
-        fillOpacity: 0.7
-      });
-  
-      if (!L.Browser.ie && !L.Browser.opera && !L.Browser.edge) {
-        layer.bringToFront();
-      }
-  
-      info.update(layer.feature.properties);
-    }
-  
-    var geojson;
-  
-    function resetHighlight(e) {
-      geojson.resetStyle(e.target);
-      info.update();
-    }
-  
-    function zoomToFeature(e) {
-      map.fitBounds(e.target.getBounds());
-    }
-  
-    function onEachFeature(feature, layer) {
-      layer.on({
-        mouseover: highlightFeature,
-        mouseout: resetHighlight,
-        click: zoomToFeature
-      });
-    }
-  
-    geojson = L.geoJson(statesData, {
-      style: style,
-      onEachFeature: onEachFeature
-    }).addTo(map);
-  
-    map.attributionControl.addAttribution('Population data &copy; <a href="http://census.gov/">Bienestar Census Form</a>');
-  
-    $(window).on("resize", function () { $("#container").height($(window).height()/1.3); map.invalidateSize(); }).trigger("resize");
+    $(window).on("resize", function () { $("#container").height($(window).height()/1.3); mymap.invalidateSize(); }).trigger("resize");
   
   
   }
