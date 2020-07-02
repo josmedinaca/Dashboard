@@ -9,9 +9,9 @@
     <div class="col-lg-3 col-md-6">
         <app-card [hidHeader]="true" blockClass="p-30">
             <div class="d-flex pt-3 pb-2 no-block">
-                <div class="align-self-center mr-5 ml-4"><img src="assets/images/icon/avatar.png" alt="" title="" width="55"></div>
+                <div class="align-self-center mr-5 ml-4"><img src="assets/images/icon/avatar.png" alt="" title="" width="50"></div>
                 <div class="align-slef-center mr-auto">
-                    <h2 class="m-b-2 text-uppercase font-30 font-medium lp-5 text-danger">992</h2>
+                    <h3 class="m-b-2 text-uppercase font-30 font-medium lp-5 text-danger">1309</h3>
                     <h6 class="text-muted m-b-0">Estudiantes mujeres</h6>
                 </div>
             </div>
@@ -20,9 +20,9 @@
     <div class="col-lg-3 col-md-6">
         <app-card [hidHeader]="true" blockClass="p-30">
             <div class="d-flex pt-3 pb-2 no-block">
-                <div class="align-self-center mr-5 ml-4"><img src="assets/images/icon/boy.png" alt="" title="" width="55"></div>
+                <div class="align-self-center mr-5 ml-4"><img src="assets/images/icon/boy.png" alt="" title="" width="50"></div>
                 <div class="align-slef-center mr-auto">
-                    <h2 class="m-b-2 text-uppercase font-30 font-medium lp-5 text-primary">1309</h2>
+                    <h3 class="m-b-2 text-uppercase font-30 font-medium lp-5 text-primary">1339</h3>
                     <h6 class="text-muted m-b-0">Estudiantes hombres</h6>
                 </div>
             </div>
@@ -33,9 +33,9 @@
     <div class="col-lg-3 col-md-6">
         <app-card [hidHeader]="true" blockClass="p-30">
             <div class="d-flex pt-3 pb-2 no-block">
-                <div class="align-self-center mr-5 ml-4"><img src="assets/images/icon/search.png" alt="" title="" width="55"></div>
+                <div class="align-self-center mr-5 ml-4"><img src="assets/images/icon/search.png" alt="" title="" width="50"></div>
                 <div class="align-slef-center mr-auto">
-                    <h2 class="m-b-2 text-uppercase font-30 font-medium lp-5 text-warning">2046</h2>
+                    <h3 class="m-b-2 text-uppercase font-30 font-medium lp-5 text-warning">3901</h3>
                     <h6 class="text-muted m-b-0">PACS Entregados</h6>
                 </div>
             </div>
@@ -44,10 +44,10 @@
     <div class="col-lg-3 col-md-6">
         <app-card [hidHeader]="true" blockClass="p-30">
             <div class="d-flex pt-3 pb-2 no-block">
-                <div class="align-self-center mr-5 ml-4"><img src="assets/images/icon/money.png" alt="" title="" width="55"></div>
+                <div class="align-self-center  mr-3 ml-2"><img src="assets/images/icon/money.png" alt="" title="" width="50"></div>
                 <div class="align-slef-center mr-auto">
-                    <h2 class="m-b-2 text-uppercase font-30 font-medium lp-5 text-warning">0</h2>
-                    <h6 class="text-muted m-b-0">Total dinero gastado</h6>
+                    <h3 class="m-b-2 text-uppercase font-30 font-medium lp-5 text-warning">$390,100,000</h3>
+                    <h6 class="text-muted m-b-0">Total dinero gastado en PACS</h6>
                 </div>
             </div>
         </app-card>
@@ -63,9 +63,11 @@
 
 
     <div class="col-md-10 col-xl-4">
-        <app-card cardTitle="Mensajes de estudiantes" cardClass="invite-card" blockClass="text-center">
+        <app-card cardTitle="Mensajes de estudiantes" [hidHeader]="true" cardClass="invite-card" blockClass="text-center">
             <!-- Section: Testimonials v.2 -->
+            <h4 class="card-title m-b-0 align-self-center">Mensajes de estudiantes</h4>
             <section class="text-center my-5">
+
                 <!-- Section heading -->
                 <!--Carousel Wrapper-->
                 <mdb-carousel [isControls]="true" [animation]="'slide'" class="testimonial-carousel">
@@ -79,8 +81,9 @@
                             </div>
                             <!--Content-->
                             <p>
-                                <mdb-icon fas icon="quote-left"></mdb-icon> Lo reclamé, todo muy bien, sólo me queda por decirles muchas gracias, no se imaginan cuánto nos ayudan. </p>
-
+                                <mdb-icon fas icon="quote-left"></mdb-icon>Lo reclamé, todo muy bien, sólo me queda por decirles muchas gracias, no se imaginan cuánto nos ayudan.</p>
+                            <h4 class="font-weight-bold">Lennis Mariana</h4>
+                            <h6 class="font-weight-bold my-3"> Facultad de Ciencias</h6>
                         </div>
                     </mdb-slide>
                     <!--/First slide-->
@@ -89,13 +92,14 @@
                         <div class="testimonial">
                             <!--Avatar-->
                             <div class="avatar mx-auto mb-4">
-                                <img src="../../../../assets/images/woman.png" class="rounded-circle img-fluid" alt="Second sample avatar image">
+                                <img src="../../../../assets/images/man.png" class="rounded-circle img-fluid" alt="Second sample avatar image">
                             </div>
                             <!--Content-->
                             <p>
                                 <mdb-icon fas icon="quote-left"></mdb-icon>Quiero agradecer el esfuerzo que han realizado para hacernos llegar este apoyo.En realidad, esto es de gran ayuda. Muchísimas gracias</p>
 
-
+                            <h4 class="font-weight-bold">Ricardo Eduardo</h4>
+                            <h6 class="font-weight-bold my-3"> Facultad de Ciencias</h6>
                         </div>
                     </mdb-slide>
                     <!--/Second slide-->
@@ -108,23 +112,9 @@
                             </div>
                             <!--Content-->
                             <p>
-                                <mdb-icon fas icon="quote-left"></mdb-icon> Queria comunicar que si recibi el paquete alimentario, muy completo, los productos que nos enviaron de buena calidad y adicional a eso las recetas que enviaron me parecieron una opcion ideal, agradezco muchísimo
-                                la ayuda que nos brindan a los estudiantes en estos momentos tan dificiles.</p>
-
-
-                        </div>
-                    </mdb-slide>
-                    <mdb-slide>
-                        <div class="testimonial">
-                            <!--Avatar-->
-                            <div class="avatar mx-auto mb-4">
-                                <img src="../../../../assets/images/woman.png" class="rounded-circle img-fluid">
-                            </div>
-                            <!--Content-->
-                            <p>
-                                <mdb-icon fas icon="quote-left"></mdb-icon> Les quiero agradecer por está ayuda, ya la estaba necesitando. Traigan un cálido abrazo de mi parte, muchísimas gracias. .
-                            </p>
-
+                                <mdb-icon fas icon="quote-left"></mdb-icon>Ya recogí mi paquete alimentario me fue muy bien, muchas gracias.Es una gran ayuda. Ustedes siempre han sido una gran ayuda desde primer semestre.</p>
+                            <h4 class="font-weight-bold">Esteban</h4>
+                            <h6 class="font-weight-bold my-3"> Facultad de Ingeniería</h6>
 
                         </div>
                     </mdb-slide>
@@ -136,10 +126,23 @@
                             </div>
                             <!--Content-->
                             <p>
-                                <mdb-icon fas icon="quote-left"></mdb-icon> El dia de hoy recibi el Paquete Alimentario Complementario. Estoy muy agradecida con ustedes y la Universidad Nacional de Colombia por este esfuerzo que estan realizan por sus estudiantes. Es y seguira siendo
-                                la mejor Universidad de Colombia .
-                            </p>
+                                <mdb-icon fas icon="quote-left"></mdb-icon>Hola, espero estén muy bien. Les quiero agradecer por esto,en serio es muy significativo para mí; además de que en esta época sirve y mucho.Gracias por pensar en los estudiantes con este gesto tan bonito</p>
+                            <h4 class="font-weight-bold">Laura Sarai</h4>
+                            <h6 class="font-weight-bold my-3"> Facultad de Ciencias Humanas</h6>
 
+                        </div>
+                    </mdb-slide>
+                    <mdb-slide>
+                        <div class="testimonial">
+                            <!--Avatar-->
+                            <div class="avatar mx-auto mb-4">
+                                <img src="../../../../assets/images/woman.png" class="rounded-circle img-fluid">
+                            </div>
+                            <!--Content-->
+                            <p>
+                                <mdb-icon fas icon="quote-left"></mdb-icon>Muchas gracias por el mercado, de verdad que con esto ayudan a muchos estudiantes que ahorita nos es un poco difícil conseguir los alimentos, infinitas gracias!</p>
+                            <h4 class="font-weight-bold">Ana Maria</h4>
+                            <h6 class="font-weight-bold my-3"> Facultad de Ciencias</h6>
 
                         </div>
                     </mdb-slide>
@@ -151,11 +154,37 @@
                             </div>
                             <!--Content-->
                             <p>
-                                <mdb-icon fas icon="quote-left"></mdb-icon> Buenas tardes, amablemente quiero informar que ya lo reclamé, el mismo domingo. Quiero agradecer al programa y a la cooperativa porque realmente me pareció fabuloso y muy completo, me sorprendió gratamente ver
-                                que era un mercado tan grande que le es de gran ayuda a mi familia en estos momentos dificiles donde somos 4 y solo hay una fuente de ingreso. Agradezco enormemente a ustedes y espero que les sea multiplicado y puedan ayudar
-                                muchos estudiantes. .
-                            </p>
+                                <mdb-icon fas icon="quote-left"></mdb-icon>muy agradecido con ustedes con el mercado. Que bonito es tener esta clase de detalles por parte de la Universidad. Ya lo recogí </p>
+                            <h4 class="font-weight-bold">William Camilo</h4>
+                            <h6 class="font-weight-bold my-3"> Facultad de Ciencias Económicas</h6>
 
+                        </div>
+                    </mdb-slide>
+                    <mdb-slide>
+                        <div class="testimonial">
+                            <!--Avatar-->
+                            <div class="avatar mx-auto mb-4">
+                                <img src="../../../../assets/images/woman.png" class="rounded-circle img-fluid">
+                            </div>
+                            <!--Content-->
+                            <p>
+                                <mdb-icon fas icon="quote-left"></mdb-icon>Nuevamente mil gracias por todas las gestiones que han hecho para que esto sea posible también gracias por las recomendaciones dadas para el autocuidado.</p>
+                            <h4 class="font-weight-bold">Heidi Nataly</h4>
+                            <h6 class="font-weight-bold my-3"> Facultad de Ciencias Económicas</h6>
+
+                        </div>
+                    </mdb-slide>
+                    <mdb-slide>
+                        <div class="testimonial">
+                            <!--Avatar-->
+                            <div class="avatar mx-auto mb-4">
+                                <img src="../../../../assets/images/woman.png" class="rounded-circle img-fluid">
+                            </div>
+                            <!--Content-->
+                            <p>
+                                <mdb-icon fas icon="quote-left"></mdb-icon>Hola, pude reclamar el mercado y en casa estamos felices; es de gran ayuda para mi, pues soy cabeza de hogar y esto es una solución alimentaria perfecta. Gracias por todo </p>
+                            <h4 class="font-weight-bold">Adriana Caterin</h4>
+                            <h6 class="font-weight-bold my-3"> Facultad de Derecho</h6>
 
                         </div>
                     </mdb-slide>
@@ -167,25 +196,9 @@
                             </div>
                             <!--Content-->
                             <p>
-                                <mdb-icon fas icon="quote-left"></mdb-icon> Gracias a Dios, tuve la oportunidad de reclamar el paquete el pasado sábado, dicho paquete nos ha parecido a mi familia y a mì bastante completo, es ciertamente mas de lo que esperábamos. Aprovecho para agradecer
-                                grandemente a ustedes y a la universidad por esta bendición. .
-                            </p>
-
-
-                        </div>
-                    </mdb-slide>
-                    <mdb-slide>
-                        <div class="testimonial">
-                            <!--Avatar-->
-                            <div class="avatar mx-auto mb-4">
-                                <img src="../../../../assets/images/woman.png" class="rounded-circle img-fluid">
-                            </div>
-                            <!--Content-->
-                            <p>
-                                <mdb-icon fas icon="quote-left"></mdb-icon> Ya recibí el paquete alimentario, me pareció grande, bueno y muy completo; en cuanto a la entrega me pareció muy organizada, rápida y con todas sus medidas de seguridad.Adicional me gustaría agradecer a todas
-                                las personas que colaboraron en el proceso de este paquete alimentario. .
-                            </p>
-
+                                <mdb-icon fas icon="quote-left"></mdb-icon>quiero agradecer a la universidad y a ustedes por su gestión frente a esta coyuntura. Me lleve una gran sorpresa por todo lo que se me ofreció, la atención fue ideal y muy rápida. Reitero mi más profundo agradecimiento.</p>
+                            <h4 class="font-weight-bold">Dumar Sebastian</h4>
+                            <h6 class="font-weight-bold my-3"> Facultad de Artes</h6>
 
                         </div>
                     </mdb-slide>
@@ -193,28 +206,13 @@
                         <div class="testimonial">
                             <!--Avatar-->
                             <div class="avatar mx-auto mb-4">
-                                <img src="../../../../assets/images/woman.png" class="rounded-circle img-fluid">
+                                <img src="../../../../assets/images/man.png" class="rounded-circle img-fluid">
                             </div>
                             <!--Content-->
                             <p>
-                                <mdb-icon fas icon="quote-left"></mdb-icon> Muchas gracias por la ayuda no tienen idea lo mucho que me servirá. De verdad muchas gracias  .
-                            </p>
-
-
-                        </div>
-                    </mdb-slide>
-                    <mdb-slide>
-                        <div class="testimonial">
-                            <!--Avatar-->
-                            <div class="avatar mx-auto mb-4">
-                                <img src="../../../../assets/images/woman.png" class="rounded-circle img-fluid">
-                            </div>
-                            <!--Content-->
-                            <p>
-                                <mdb-icon fas icon="quote-left"></mdb-icon> Quería contarles que sí recibí el paquete alimentario. Además, quiero agradecerles inmensamente por esa gran ayuda. Es la primera vez, desde que estoy en la UNAL, que recibo algo a parte de mi bonita educación
-                                y eso me hizo realmente feliz. Estoy muy agradecida con ustedes por su gran labor. Espero puedan extender mi agradecimiento a las personas que hacen parte de esta causa, a todos ellos muchísimas gracias. .
-                            </p>
-
+                                <mdb-icon fas icon="quote-left"></mdb-icon>Efectivamente me dirigí al sitio. Fue exitosa la entrega. Les agradezco mucho que me hayan informado también por teléfono! Muchas gracias</p>
+                            <h4 class="font-weight-bold">Gerzan Ricardo</h4>
+                            <h6 class="font-weight-bold my-3"> Facultad de Enfermería</h6>
 
                         </div>
                     </mdb-slide>
@@ -239,6 +237,13 @@
 
 </div>
 
+<br>
+
+<div class="col-lg-13" id="chart">
+    <app-card cardTitle="PACs entregados por facultades" [options]="false">
+        <apx-chart [series]="chartOptions.series" [chart]="chartOptions.chart" [dataLabels]="chartOptions.dataLabels" [plotOptions]="chartOptions.plotOptions" [yaxis]="chartOptions.yaxis" [xaxis]="chartOptions.xaxis" [legend]="chartOptions.legend" [colors]="chartOptions.colors"></apx-chart>
+    </app-card>
+</div>
 
 
 <div class="row">
@@ -261,9 +266,8 @@
         </app-card>
     </div>
     <div class="col-md-6 col-xl-4">
-        <app-card [hidHeader]="true">
-            <div id="pyramid"></div>
-        </app-card>
+        <div id="pyramid"></div>
+
 
 
 

@@ -35,17 +35,17 @@ export class MemoryUseDashServer {
     },
     series: [{
       name: 'Total estudiantes apoyados',
-      data: [3017,3017,3017,3017,3017]
+      data: [33,232,4,20,20]
     }, {
       name: 'Total estudiantes hombres',
-      data: [1781,3017,3017,3017,3017]
+      data: [18,129,0,0,12]
     }, {
       name: 'Total estudiantes mujeres',
-      data: [1236,3017,3017,3017,3017]
+      data: [15,103,4,20,8]
     }
   ],
     xaxis: {
-      categories: ['Rockefeller', 'CRU', 'HIJAS DEL CORAZON', 'MARIA INMACULADA', 'SOLERIUM'],
+      categories: ['Rockefeller', 'CRU', 'SAN RAFAEL', 'MARIA INMACULADA', 'SOLERIUM'],
     },
     yaxis: {
       title: {

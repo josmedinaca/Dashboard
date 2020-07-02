@@ -1,21 +1,124 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit ,ViewChild} from '@angular/core';
 import {TaskDashStatistics} from './chart/task-dash-statistics';
 import {SolidGaugeWidgetChart} from './chart/solid-gauge-widget-chart';
-
+import {
+	ApexChart,
+	ApexAxisChartSeries,
+	ChartComponent,
+	ApexDataLabels,
+	ApexPlotOptions,
+	ApexYAxis,
+	ApexLegend
+  } from 'ng-apexcharts';
+  import {ApexChartService} from '../../../theme/shared/components/chart/apex-chart/apex-chart.service';
 declare const L: any;
 declare const geo: any;
 declare const statesData: any;
 declare const pyramidBuilder: any;var mymap;
+type ApexXAxis = {
+	type?: "category" | "datetime" | "numeric";
+	categories?: any;
+	labels?: {
+	  style?: { 
+		colors?: string | string[];
+		fontSize?: string; 
+	  };
+	};
+  };
+  
+export type ChartOptions = {
+	series: ApexAxisChartSeries;
+	chart: ApexChart;
+	dataLabels: ApexDataLabels;
+	plotOptions: ApexPlotOptions;
+	yaxis: ApexYAxis;
+	xaxis: ApexXAxis;
+	colors: string[];
+	legend: ApexLegend;
+  };
 @Component({
   selector: 'app-sample-page',
   templateUrl: './sample-page.component.html',
   styleUrls: ['./sample-page.component.scss'],
 })
 export class SamplePageComponent implements OnInit {
-
+	@ViewChild("chart") chart: ChartComponent;
+	public chartOptions: Partial<ChartOptions>;
   public taskDashStatistics: any;
   public solidGaugeWidgetChart: any;
-  constructor() {
+  constructor(public apexEvent?: ApexChartService) {
+	this.chartOptions = {
+		series: [
+		  {
+			name: "brindados",
+			data: [210, 549, 142, 427, 793, 281, 206, 671, 367, 163, 92]
+		  }
+		],
+		chart: {
+		  height: 350,
+		  type: "bar",
+		  events: {
+			click: function(chart, w, e) {
+			  // console.log(chart, w, e)
+			}
+		  }
+		},
+		colors: [
+		  "#008FFB",
+		  "#00E396",
+		  "#FEB019",
+		  "#FF4560",
+		  "#775DD0",
+		  "#546E7A",
+		  "#26a69a",
+		  "#D10CE8",
+		  "#775DD0",
+		  "#546E7A",
+		  "#26a69a",
+		  "#D10CE8"
+		],
+		plotOptions: {
+		  bar: {
+			columnWidth: "45%",
+			distributed: true
+		  }
+		},
+		dataLabels: {
+		  enabled: false
+		},
+		legend: {
+		  show: false
+		},
+		xaxis: {
+		  categories: [
+			["Artes"],
+			[ "Ciencias"],
+			[ "Agrarias"],
+			["Economicas"],
+			[ "Humanas"],
+			[ "Derecho y CP"],
+			[ "Enfermeria"],
+			[ "Ingenieria"],
+			[ "Medicina"],
+			[ "M. Veterinaria y Z."],
+			[ "Odontologia"]
+		  ],
+		  labels: {
+			style: {
+			  colors: [
+				"#008FFB",
+				"#00E396",
+				"#FEB019",
+				"#FF4560",
+				"#775DD0",
+				"#546E7A",
+				"#26a69a"
+			  ],
+			  fontSize: "12px"
+			}
+		  }
+		}
+	  };
     this.taskDashStatistics = TaskDashStatistics.chartData;
     this.solidGaugeWidgetChart = SolidGaugeWidgetChart.chartData; }
 //

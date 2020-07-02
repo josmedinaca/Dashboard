@@ -65,35 +65,35 @@ sunburst(){
     id: '2.1',
     parent: '1.1',
     name: 'Amazonia',
-    value: 604957438
+    value: 16
   }, 
   
   {
     id: '2.5',
     parent: '1.1',
     name: 'Tumaco',
-    value: 190886311
+    value: 27
   },
   
   {
     id: '2.3',
     parent: '1.1',
     name: 'Caribe',
-    value: 197553151
+    value: 4
   },
   
   {
     id: '2.2',
     parent: '1.1',
     name: 'Bogota',
-    value: 181339988
+    value: 0
   },
   
   {
     id: '2.4',
     parent: '1.1',
     name: 'Orinoquia',
-    value : 181339988
+    value : 17
   },
   
   
@@ -105,7 +105,7 @@ sunburst(){
     id: '2.9',
     parent: '1.3',
     name: 'Indigena',
-    value: 209288278
+    value: 41
   }
   ,
   
@@ -113,28 +113,28 @@ sunburst(){
     id: '2.8',
     parent: '1.3',
     name: 'Municipio',
-    value: 324459463
+    value: 5
   },
   
   {
     id: '2.7',
     parent: '1.3',
     name: 'Poblacion Afro',
-    value: 129163276
+    value: 26
   },
   
   {
     id: '2.6',
     parent: '1.3',
     name: 'Mejor Bachiller',
-    value: 111484636
+    value: 0
   },
   
   {
     id: '2.71',
     parent: '1.3',
     name: 'Victimas',
-    value: 111484636
+    value: 2
   }, 
   /***********/
   
@@ -147,7 +147,7 @@ sunburst(){
     id: '2.15',
     parent: '1.4',
     name: 'Regular pregrado',
-    value: 143989754
+    value: 42
   }
   
   ];
@@ -206,7 +206,7 @@ sunburst(){
     }],
     tooltip: {
       headerFormat: "",
-      pointFormat: 'Existen <b>{point.value}</b> <b> estudiantes</b> '
+      pointFormat: '<b>{point.name}</b> tiene <b> {point.value}</b> <b> estudiantes</b> '
     }
   });
 }

@@ -63,28 +63,28 @@ export class AlojamientosPageComponent implements OnInit {
   });
 
     L.marker([4.631557, -74.085065],{icon: greenIcon}).addTo(mymap)
-      .bindPopup("<b>CUPOS UNIVERSITARIOS ROCKEFELLER</b><br />I am a popup.").openPopup();
+      .bindPopup("<b>CUPOS UNIVERSITARIOS ROCKEFELLER</b><br />Total estudiantes: 33").openPopup();
   
       
       L.marker([4.627131, -74.086893],{icon: greenIcon}).addTo(mymap)
-      .bindPopup("<b>CORPORACIÓN DE RESIDENCIAS UNIVERSITARIAS - CRU</b><br />I am a popup.").openPopup();
+      .bindPopup("<b>CORPORACIÓN DE RESIDENCIAS UNIVERSITARIAS - CRU</b><br />Total estudiantes: 232").openPopup();
 
       
 
       L.marker([4.673301, -74.098931],{icon: greenIcon}).addTo(mymap)
-      .bindPopup("<b>HIJAS DEL CORAZON MISERICORDIOSO DE MARIA-OBRA SAN RAFAEL</b><br />I am a popup.").openPopup();
+      .bindPopup("<b>HIJAS DEL CORAZON MISERICORDIOSO DE MARIA-OBRA SAN RAFAEL</b><br />Total estudiantes: 4").openPopup();
 
       
       L.marker([4.612189, -74.066226],{icon: greenIcon}).addTo(mymap)
-      .bindPopup("<b>CONGREGACION RELIGIOSAS DE MARIA INMACULADA</b><br />I am a popup.").openPopup();
+      .bindPopup("<b>CONGREGACION RELIGIOSAS DE MARIA INMACULADA</b><br />Total estudiantes: 20").openPopup();
 
       
 
       L.marker([4.643603, -74.065900],{icon: greenIcon}).addTo(mymap)
-      .bindPopup("<b>SOLERIUM  - Edificio Studio 56</b><br />I am a popup.").openPopup();
+      .bindPopup("<b>SOLERIUM  - Edificio Studio 56</b><br />Total estudiantes: 20").openPopup();
     var popup = L.popup();
   
-    $(window).on("resize", function () { $("#container").height($(window).height()/1.3); mymap.invalidateSize(); }).trigger("resize");
+    $(window).on("resize", function () { $("#container").height($(window).height()/1.16); mymap.invalidateSize(); }).trigger("resize");
   
   
   }
