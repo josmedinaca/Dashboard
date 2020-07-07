@@ -70,7 +70,7 @@ export class DashServerComponent implements OnInit {
       series: [
         {
           name: "brindados",
-          data: [197, 459, 157, 494, 734, 228, 234, 1106, 466, 95, 138]
+          data: [352, 860, 257, 818, 1332, 426, 378, 1680, 746, 211, 218]
         }
       ],
       chart: {
@@ -193,17 +193,17 @@ export class DashServerComponent implements OnInit {
       id: '1.1',
       parent: '0.0',
       name: 'PEAMA',
-      color: '#B5DDF4'
+      color: '#775DD0'
     }, {
       id: '1.3',
       parent: '0.0',
       name: 'PAES',
-      color:'#F1B6B6'
+      color:'#FF4560'
     }, {
       id: '1.4',
       parent: '0.0',
       name: 'PREGRADO',
-      color:'#CDF1B6',
+      color:'#00E396',
       
     }, {
       id: '1.5',
@@ -217,14 +217,14 @@ export class DashServerComponent implements OnInit {
       id: '2.1',
       parent: '1.1',
       name: 'Amazonia',
-      value: 111
+      value: 119
     }, 
     
     {
       id: '2.5',
       parent: '1.1',
       name: 'Tumaco',
-      value: 95
+      value: 103
     },
     
     {
@@ -245,7 +245,7 @@ export class DashServerComponent implements OnInit {
       id: '2.4',
       parent: '1.1',
       name: 'Orinoquia',
-      value : 163
+      value : 167
     },
     
     
@@ -257,7 +257,7 @@ export class DashServerComponent implements OnInit {
       id: '2.9',
       parent: '1.3',
       name: 'Indigena',
-      value: 220
+      value: 232
     }
     ,
     
@@ -265,14 +265,14 @@ export class DashServerComponent implements OnInit {
       id: '2.8',
       parent: '1.3',
       name: 'Municipio',
-      value: 41
+      value: 45
     },
     
     {
       id: '2.7',
       parent: '1.3',
       name: 'Poblacion Afro',
-      value: 84
+      value: 89
     },
     
     {
@@ -286,7 +286,7 @@ export class DashServerComponent implements OnInit {
       id: '2.71',
       parent: '1.3',
       name: 'Victimas',
-      value: 39
+      value: 42
     }, 
     /***********/
     
@@ -299,7 +299,7 @@ export class DashServerComponent implements OnInit {
       id: '2.15',
       parent: '1.4',
       name: 'Regular pregrado',
-      value: 1856
+      value: 1921
     },
     /***********/
     

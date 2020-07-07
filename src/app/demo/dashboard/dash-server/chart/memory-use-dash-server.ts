@@ -35,7 +35,7 @@ export class MemoryUseDashServer {
     },
     series: [{
       name: 'TOTAL',
-      data: [124392372, 390100000, 13740500, 5270000]
+      data: [124392372, 408700000, 13740500, 5270000]
     }],
     xaxis: {
       categories: ['Alojamiento', 'Paquetes Alimentarios', 'Almuerzos en alojamiento', 'Transporte'],

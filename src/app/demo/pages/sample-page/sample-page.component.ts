@@ -51,7 +51,7 @@ export class SamplePageComponent implements OnInit {
 		series: [
 		  {
 			name: "brindados",
-			data: [210, 549, 142, 427, 793, 281, 206, 671, 367, 163, 92]
+			data: [223, 570, 150, 448, 834, 294, 212, 707, 383, 170, 96]
 		  }
 		],
 		chart: {
