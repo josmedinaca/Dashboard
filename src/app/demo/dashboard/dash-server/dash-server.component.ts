@@ -70,7 +70,7 @@ export class DashServerComponent implements OnInit {
       series: [
         {
           name: "brindados",
-          data: [352, 860, 257, 818, 1332, 426, 378, 1680, 746, 211, 218]
+          data: [404, 964, 290, 950, 1508, 479, 448, 2001, 922, 228, 272]
         }
       ],
       chart: {
@@ -217,21 +217,21 @@ export class DashServerComponent implements OnInit {
       id: '2.1',
       parent: '1.1',
       name: 'Amazonia',
-      value: 119
+      value: 140
     }, 
     
     {
       id: '2.5',
       parent: '1.1',
       name: 'Tumaco',
-      value: 103
+      value: 130
     },
     
     {
       id: '2.3',
       parent: '1.1',
       name: 'Caribe',
-      value: 27
+      value: 29
     },
     
     {
@@ -245,7 +245,7 @@ export class DashServerComponent implements OnInit {
       id: '2.4',
       parent: '1.1',
       name: 'Orinoquia',
-      value : 167
+      value : 183
     },
     
     
@@ -257,7 +257,7 @@ export class DashServerComponent implements OnInit {
       id: '2.9',
       parent: '1.3',
       name: 'Indigena',
-      value: 232
+      value: 259
     }
     ,
     
@@ -265,14 +265,14 @@ export class DashServerComponent implements OnInit {
       id: '2.8',
       parent: '1.3',
       name: 'Municipio',
-      value: 45
+      value: 48
     },
     
     {
       id: '2.7',
       parent: '1.3',
       name: 'Poblacion Afro',
-      value: 89
+      value: 110
     },
     
     {
@@ -286,7 +286,7 @@ export class DashServerComponent implements OnInit {
       id: '2.71',
       parent: '1.3',
       name: 'Victimas',
-      value: 42
+      value: 43
     }, 
     /***********/
     
@@ -299,7 +299,7 @@ export class DashServerComponent implements OnInit {
       id: '2.15',
       parent: '1.4',
       name: 'Regular pregrado',
-      value: 1921
+      value: 1832
     },
     /***********/
     
