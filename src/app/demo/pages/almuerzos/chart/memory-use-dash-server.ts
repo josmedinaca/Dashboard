@@ -35,10 +35,10 @@ export class MemoryUseDashServer {
     },
     series: [{
       name: 'Total Almuerzos hombres',
-      data: [1781]
+      data: [4955]
     }, {
       name: 'Total Almuerzos mujeres',
-      data: [1236]
+      data: [3470]
     }
   ],
     xaxis: {

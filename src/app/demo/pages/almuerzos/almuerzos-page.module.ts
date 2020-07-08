@@ -10,6 +10,7 @@ import {SharedModule} from '../../../theme/shared/shared.module';
     CommonModule,
     AlmuerzosPageRoutingModule,
     SharedModule,
+    NgApexchartsModule,
     NgApexchartsModule
   ]
 })

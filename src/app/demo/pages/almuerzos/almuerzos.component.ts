@@ -1,4 +1,13 @@
 import { Component, OnInit , ViewChild} from '@angular/core';
+import {
+  ApexChart,
+  ApexAxisChartSeries,
+  ChartComponent,
+  ApexDataLabels,
+  ApexPlotOptions,
+  ApexYAxis,
+  ApexLegend
+} from 'ng-apexcharts';
 import {TaskDashStatistics} from './chart/task-dash-statistics';
 import {SolidGaugeWidgetChart} from './chart/solid-gauge-widget-chart';
 import {MemoryUseDashServer} from './chart/memory-use-dash-server';
@@ -8,13 +17,36 @@ import { ChartDB } from '../../dashboard/dash-server/chart/chart-data';
 
 declare const Highcharts: any;
 declare const sunburst: any;
+
+type ApexXAxis = {
+  type?: "category" | "datetime" | "numeric";
+  categories?: any;
+  labels?: {
+    style?: { 
+      colors?: string | string[];
+      fontSize?: string; 
+    };
+  };
+};
+
+export type ChartOptions = {
+  series: ApexAxisChartSeries;
+  chart: ApexChart;
+  dataLabels: ApexDataLabels;
+  plotOptions: ApexPlotOptions;
+  yaxis: ApexYAxis;
+  xaxis: ApexXAxis;
+  colors: string[];
+  legend: ApexLegend;
+};
 @Component({
   selector: 'app-almuerzos-page',
   templateUrl: './almuerzos-page.component.html',
   styleUrls: ['./almuerzos.component.scss'],
 })
 export class AlmuerzosPageComponent implements OnInit {
-
+  @ViewChild("chart") chart: ChartComponent;
+  public chartOptions: Partial<ChartOptions>;
   public chartDB: any;
   public visitorGenderDashAnalytics: any;
 	public memoryUseDashServer: any;
@@ -28,6 +60,79 @@ export class AlmuerzosPageComponent implements OnInit {
   this.memoryUseDashServer = MemoryUseDashServer.chartData; 
   this.memoryUseDashServer2 = MemoryUseDashServer2.chartData;
   this.chartDB = ChartDB;
+
+  this.chartOptions = {
+    series: [
+      {
+        name: "brindados",
+        data: [379, 778, 284, 881, 1320, 292, 388, 2722, 933, 108, 340]
+      }
+    ],
+    chart: {
+      height: 350,
+      type: "bar",
+      events: {
+        click: function(chart, w, e) {
+          // console.log(chart, w, e)
+        }
+      }
+    },
+    colors: [
+      "#008FFB",
+      "#00E396",
+      "#FEB019",
+      "#FF4560",
+      "#775DD0",
+      "#546E7A",
+      "#26a69a",
+      "#D10CE8",
+      "#775DD0",
+      "#546E7A",
+      "#26a69a",
+      "#D10CE8"
+    ],
+    plotOptions: {
+      bar: {
+        columnWidth: "45%",
+        distributed: true
+      }
+    },
+    dataLabels: {
+      enabled: false
+    },
+    legend: {
+      show: false
+    },
+    xaxis: {
+      categories: [
+        ["Artes"],
+        [ "Ciencias"],
+        [ "Agrarias"],
+        ["Economicas"],
+        [ "Humanas"],
+        [ "Derecho y CP"],
+        [ "Enfermeria"],
+        [ "Ingenieria"],
+        [ "Medicina"],
+        [ "M. Veterinaria y Z."],
+        [ "Odontologia"]
+      ],
+      labels: {
+        style: {
+          colors: [
+            "#008FFB",
+            "#00E396",
+            "#FEB019",
+            "#FF4560",
+            "#775DD0",
+            "#546E7A",
+            "#26a69a"
+          ],
+          fontSize: "12px"
+        }
+      }
+    }
+  };
 }
 //
 
@@ -46,17 +151,17 @@ sunburst(){
     id: '1.1',
     parent: '0.0',
     name: 'PEAMA',
-    color: '#B5DDF4'
+    color: '#775DD0'
   }, {
     id: '1.3',
     parent: '0.0',
     name: 'PAES',
-    color:'#F1B6B6'
+    color:'#FF4560'
   }, {
     id: '1.4',
     parent: '0.0',
     name: 'PREGRADO',
-    color:'#CDF1B6',
+    color:'#00E396',
     
   }, 
   
@@ -65,14 +170,14 @@ sunburst(){
     id: '2.1',
     parent: '1.1',
     name: 'Amazonia',
-    value: 16
+    value: 18
   }, 
   
   {
     id: '2.5',
     parent: '1.1',
     name: 'Tumaco',
-    value: 27
+    value: 28
   },
   
   {
@@ -105,7 +210,7 @@ sunburst(){
     id: '2.9',
     parent: '1.3',
     name: 'Indigena',
-    value: 41
+    value: 51
   }
   ,
   

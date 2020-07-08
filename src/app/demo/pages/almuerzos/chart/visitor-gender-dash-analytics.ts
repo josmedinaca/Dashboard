@@ -1,7 +1,7 @@
 export class VisitorGenderDashAnalytics {
   public static chartData = {
     chart: {
-      height: 195,
+      height: 300,
       type: 'donut',
     },
     dataLabels: {
@@ -15,7 +15,7 @@ export class VisitorGenderDashAnalytics {
       }
     },
     labels: ['0-5', '6-10', '11-15','16+'],
-    series: [148, 25, 6,1],
+    series: [156, 29, 6,2],
     legend: {
       show: false
     },

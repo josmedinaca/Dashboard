@@ -30,31 +30,27 @@ export class TaskDashStatistics {
     },
     markers: {
       size: 1.5,
-      strokeColors: ['#7ad835', '#4886ff', '#ffb74e'],
+      strokeColors: ['#7ad835', '#4886ff'],
       hover: {
         size: 3
       }
     },
-    colors: ['#7ad835', '#4886ff', '#ffb74e'],
+    colors: ['#7ad835', '#4886ff'],
     series: [
       {
-        name: 'Hombres',
-        data: [712, 462]
+        name: 'Estudiantes apoyados',
+        data: [265, 1767, 513]
       },
       {
-        name: 'Mujeres',
-        data: [588, 284]
-      },
-      {
-        name: 'Total',
-        data: [1300, 746]
+        name: 'PACS',
+        data: [269, 1777, 2197]
       }
     ],
     grid: {
       borderColor: '#eee'
     },
     xaxis: {
-      categories: ['Fase 1', 'Fase 2'],
+      categories: ['Abril', 'Mayo', 'Junio'],
     }
   };
 }

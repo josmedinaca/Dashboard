@@ -35,10 +35,10 @@ export class MemoryUseDashServer2 {
     },
     series: [ {
       name: 'Total estudiantes hombres',
-      data: [105]
+      data: [109]
     }, {
       name: 'Total estudiantes mujeres',
-      data: [75]
+      data: [85]
     }
   ],
     xaxis: {
