@@ -64,6 +64,15 @@ const routes: Routes = [
       {
         path: 'alojamientos',
         loadChildren: () => import('./demo/pages/alojamientos/alojamientos-page.module').then(module => module.AlojamientosPageModule)
+      },
+      {
+        path: 'transferencias-monetarias',
+        loadChildren: () => import('./demo/pages/economico/economico-page.module').then(module => module.EconomicoPageModule)
+      }
+      ,
+      {
+        path: 'jea',
+        loadChildren: () => import('./demo/pages/jea/jea.module').then(module => module.JeaPageModule)
       }
     ]
   }

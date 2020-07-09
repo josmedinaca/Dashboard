@@ -74,6 +74,25 @@ const NavigationItems = [
         url: '/alojamientos',
         classes: 'nav-item',
         icon: 'feather icon-grid'
+      },
+      
+      {
+        id: 'economico-page',
+        title: 'Transferencias monetarias',
+        type: 'item',
+        url: '/transferencias-monetarias',
+        classes: 'nav-item',
+        icon: 'feather icon-file-plus'
+      }
+      ,
+      
+      {
+        id: 'jea-page',
+        title: 'Apoyos JeA',
+        type: 'item',
+        url: '/jea',
+        classes: 'nav-item',
+        icon: 'feather icon-file-plus'
       }
     ]
   }
