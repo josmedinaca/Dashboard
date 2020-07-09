@@ -67,7 +67,7 @@ export class AlojamientosPageComponent implements OnInit {
   
       
       L.marker([4.627131, -74.086893],{icon: greenIcon}).addTo(mymap)
-      .bindPopup("<b>CORPORACIÓN DE RESIDENCIAS UNIVERSITARIAS - CRU</b><br />Total estudiantes: 232").openPopup();
+      .bindPopup("<b>CORPORACIÓN DE RESIDENCIAS UNIVERSITARIAS - CRU</b><br />Total estudiantes: 235").openPopup();
 
       
 
@@ -97,17 +97,17 @@ export class AlojamientosPageComponent implements OnInit {
       id: '1.1',
       parent: '0.0',
       name: 'PEAMA',
-      color: '#B5DDF4'
+      color: '#775DD0'
     }, {
       id: '1.3',
       parent: '0.0',
       name: 'PAES',
-      color:'#F1B6B6'
+      color:'#FF4560'
     }, {
       id: '1.4',
       parent: '0.0',
       name: 'PREGRADO',
-      color:'#CDF1B6',
+      color:'#00E396',
       
     }, 
     
@@ -116,35 +116,35 @@ export class AlojamientosPageComponent implements OnInit {
       id: '2.1',
       parent: '1.1',
       name: 'Amazonia',
-      value: 604957438
+      value: 40
     }, 
     
     {
       id: '2.5',
       parent: '1.1',
       name: 'Tumaco',
-      value: 190886311
+      value: 52
     },
     
     {
       id: '2.3',
       parent: '1.1',
       name: 'Caribe',
-      value: 197553151
+      value: 2
     },
     
     {
       id: '2.2',
       parent: '1.1',
       name: 'Bogota',
-      value: 181339988
+      value: 0
     },
     
     {
       id: '2.4',
       parent: '1.1',
       name: 'Orinoquia',
-      value : 181339988
+      value : 34
     },
     
     
@@ -156,7 +156,7 @@ export class AlojamientosPageComponent implements OnInit {
       id: '2.9',
       parent: '1.3',
       name: 'Indigena',
-      value: 209288278
+      value: 55
     }
     ,
     
@@ -164,28 +164,28 @@ export class AlojamientosPageComponent implements OnInit {
       id: '2.8',
       parent: '1.3',
       name: 'Municipio',
-      value: 324459463
+      value: 9
     },
     
     {
       id: '2.7',
       parent: '1.3',
       name: 'Poblacion Afro',
-      value: 129163276
+      value: 33
     },
     
     {
       id: '2.6',
       parent: '1.3',
       name: 'Mejor Bachiller',
-      value: 111484636
+      value: 0
     },
     
     {
       id: '2.71',
       parent: '1.3',
       name: 'Victimas',
-      value: 111484636
+      value: 4
     }, 
     /***********/
     
@@ -198,7 +198,7 @@ export class AlojamientosPageComponent implements OnInit {
       id: '2.15',
       parent: '1.4',
       name: 'Regular pregrado',
-      value: 143989754
+      value: 83
     }
     
     ];
@@ -257,7 +257,7 @@ export class AlojamientosPageComponent implements OnInit {
       }],
       tooltip: {
         headerFormat: "",
-        pointFormat: 'Existen <b>{point.value}</b> <b> estudiantes</b> '
+        pointFormat: '<b>{point.name}</b> tiene <b> {point.value}</b> <b> estudiantes</b> '
       }
     });
   }
