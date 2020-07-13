@@ -73,6 +73,10 @@ const routes: Routes = [
       {
         path: 'jea',
         loadChildren: () => import('./demo/pages/jea/jea.module').then(module => module.JeaPageModule)
+      },
+      {
+        path: 'transporte',
+        loadChildren: () => import('./demo/pages/transporte/transporte-page.module').then(module => module.TransportePageModule)
       }
     ]
   }

@@ -74,6 +74,13 @@ const NavigationItems = [
         url: '/alojamientos',
         classes: 'nav-item',
         icon: 'feather icon-grid'
+      },      {
+        id: 'transporte-page',
+        title: 'Transporte',
+        type: 'item',
+        url: '/transporte',
+        classes: 'nav-item',
+        icon: 'feather icon-gitlab'
       },
       
       {
