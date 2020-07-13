@@ -80,7 +80,7 @@ const NavigationItems = [
         type: 'item',
         url: '/transporte',
         classes: 'nav-item',
-        icon: 'feather icon-gitlab'
+        icon: 'feather icon-clipboard'
       },
       
       {

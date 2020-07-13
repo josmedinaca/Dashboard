@@ -39,7 +39,7 @@ export class TransportePageComponent implements OnInit {
 
 
   ngOnInit(){this.sunburst();
-    var mymap = L.map('container').setView([4.633694, -74.082380], 13);
+    var mymap = L.map('containerxfa').setView([4.633694, -74.082380], 13);
 
     L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
       maxZoom: 18,
@@ -52,7 +52,7 @@ export class TransportePageComponent implements OnInit {
     }).addTo(mymap);
   
     var greenIcon = L.icon({
-      iconUrl: 'assets/images/house.png',
+      iconUrl: 'assets/images/icon/hospital.png',
       //shadowUrl: 'https://leafletjs.com/examples/custom-icons/leaf-shadow.png',
   
       iconSize:     [60, 60], // size of the icon
@@ -62,29 +62,16 @@ export class TransportePageComponent implements OnInit {
       popupAnchor:  [-8, -60] // point from which the popup should open relative to the iconAnchor
   });
 
-    L.marker([4.631557, -74.085065],{icon: greenIcon}).addTo(mymap)
-      .bindPopup("<b>CUPOS UNIVERSITARIOS ROCKEFELLER</b><br />Total estudiantes: 33").openPopup();
+    L.marker([4.647325, -74.097445],{icon: greenIcon}).addTo(mymap)
+      .bindPopup("<b>Hospital de la policía</b>").openPopup();
   
       
-      L.marker([4.627131, -74.086893],{icon: greenIcon}).addTo(mymap)
-      .bindPopup("<b>CORPORACIÓN DE RESIDENCIAS UNIVERSITARIAS - CRU</b><br />Total estudiantes: 235").openPopup();
+      L.marker([4.593474, -74.088544],{icon: greenIcon}).addTo(mymap)
+      .bindPopup("<b>Hospital de la Misericordia</b>").openPopup();
 
-      
-
-      L.marker([4.673301, -74.098931],{icon: greenIcon}).addTo(mymap)
-      .bindPopup("<b>HIJAS DEL CORAZON MISERICORDIOSO DE MARIA-OBRA SAN RAFAEL</b><br />Total estudiantes: 4").openPopup();
-
-      
-      L.marker([4.612189, -74.066226],{icon: greenIcon}).addTo(mymap)
-      .bindPopup("<b>CONGREGACION RELIGIOSAS DE MARIA INMACULADA</b><br />Total estudiantes: 20").openPopup();
-
-      
-
-      L.marker([4.643603, -74.065900],{icon: greenIcon}).addTo(mymap)
-      .bindPopup("<b>SOLERIUM  - Edificio Studio 56</b><br />Total estudiantes: 20").openPopup();
     var popup = L.popup();
   
-    $(window).on("resize", function () { $("#container").height($(window).height()/1.16); mymap.invalidateSize(); }).trigger("resize");
+    $(window).on("resize", function () { $("#containerxfa").height($(window).height()/1.16); mymap.invalidateSize(); }).trigger("resize");
   
   
   }
@@ -109,28 +96,32 @@ export class TransportePageComponent implements OnInit {
       name: 'PREGRADO',
       color:'#00E396',
       
-    }, 
-    
+    }, {
+      id: '1.5',
+      parent: '0.0',
+      name: 'POSGRADO',
+      color: '#775DD0'
+     },
     /* PEAMA */
     {
       id: '2.1',
       parent: '1.1',
       name: 'Amazonia',
-      value: 40
+      value: 0
     }, 
     
     {
       id: '2.5',
       parent: '1.1',
       name: 'Tumaco',
-      value: 52
+      value: 0
     },
     
     {
       id: '2.3',
       parent: '1.1',
       name: 'Caribe',
-      value: 2
+      value: 0
     },
     
     {
@@ -144,7 +135,7 @@ export class TransportePageComponent implements OnInit {
       id: '2.4',
       parent: '1.1',
       name: 'Orinoquia',
-      value : 34
+      value : 0
     },
     
     
@@ -156,7 +147,7 @@ export class TransportePageComponent implements OnInit {
       id: '2.9',
       parent: '1.3',
       name: 'Indigena',
-      value: 55
+      value: 0
     }
     ,
     
@@ -164,14 +155,14 @@ export class TransportePageComponent implements OnInit {
       id: '2.8',
       parent: '1.3',
       name: 'Municipio',
-      value: 9
+      value: 0
     },
     
     {
       id: '2.7',
       parent: '1.3',
       name: 'Poblacion Afro',
-      value: 33
+      value: 1
     },
     
     {
@@ -185,7 +176,7 @@ export class TransportePageComponent implements OnInit {
       id: '2.71',
       parent: '1.3',
       name: 'Victimas',
-      value: 4
+      value: 0
     }, 
     /***********/
     
@@ -198,9 +189,15 @@ export class TransportePageComponent implements OnInit {
       id: '2.15',
       parent: '1.4',
       name: 'Regular pregrado',
-      value: 83
+      value: 4
     }
-    
+    ,
+    {
+      id: '2.16',
+      parent: '1.5',
+      name: 'Regular posgrado',
+      value: 31
+    }
     ];
     
     

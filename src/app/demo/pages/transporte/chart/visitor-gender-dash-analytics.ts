@@ -14,8 +14,8 @@ export class VisitorGenderDashAnalytics {
         }
       }
     },
-    labels: ['0-5', '6-10', '11-15','16+'],
-    series: [260, 42, 7,3],
+    labels: ['11-20', '21-30', '31-40','41+'],
+    series: [6, 5, 5,20],
     legend: {
       show: false
     },
