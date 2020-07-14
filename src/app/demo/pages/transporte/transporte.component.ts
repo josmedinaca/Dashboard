@@ -39,7 +39,7 @@ export class TransportePageComponent implements OnInit {
 
 
   ngOnInit(){this.sunburst();
-    var mymap = L.map('containerxfa').setView([4.633694, -74.082380], 13);
+    var mymap = L.map('containerxfd2a').setView([4.633694, -74.082380], 13);
 
     L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
       maxZoom: 18,
@@ -71,7 +71,7 @@ export class TransportePageComponent implements OnInit {
 
     var popup = L.popup();
   
-    $(window).on("resize", function () { $("#containerxfa").height($(window).height()/1.16); mymap.invalidateSize(); }).trigger("resize");
+    $(window).on("resize", function () { $("#containerxfd2a").height($(window).height()/1.16); mymap.invalidateSize(); }).trigger("resize");
   
   
   }
@@ -205,7 +205,7 @@ export class TransportePageComponent implements OnInit {
     Highcharts.getOptions().colors.splice(0, 0, 'transparent');
     
     
-    Highcharts.chart('chxa', {
+    Highcharts.chart('chxadwsx', {
     
       chart: {
         height: '65%'
