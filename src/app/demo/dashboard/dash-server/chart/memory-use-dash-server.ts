@@ -1,7 +1,7 @@
 export class MemoryUseDashServer {
   public static chartData = {
     chart: {
-      height: 390,
+      height: 490,
       type: 'bar',
     },
     plotOptions: {
@@ -35,7 +35,7 @@ export class MemoryUseDashServer {
     },
     series: [{
       name: 'TOTAL',
-      data: [249838107, 424300000, 39350000, 5580000]
+      data: [249838107, 424300000, 39350000, 6600000]
     }],
     xaxis: {
       categories: ['Alojamiento', 'Paquetes Alimentarios', 'Almuerzos en alojamiento', 'Transporte'],

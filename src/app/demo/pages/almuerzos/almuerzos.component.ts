@@ -64,7 +64,7 @@ export class AlmuerzosPageComponent implements OnInit {
   this.chartOptions = {
     series: [
       {
-        name: "brindados",
+        name: "entregados",
         data: [379, 778, 284, 881, 1320, 292, 388, 2722, 933, 108, 340]
       }
     ],
@@ -269,7 +269,7 @@ sunburst(){
     },
   
     title: {
-      text: 'Niveles de subacceso'
+      text: 'Numero de estudiantes beneficiarios por subacceso'
     },
     series: [{
       type: "sunburst",

@@ -35,7 +35,7 @@ export class MemoryUseDashServer2 {
     },
     series: [ {
       name: 'Total estudiantes hombres',
-      data: [109]
+      data: [108]
     }, {
       name: 'Total estudiantes mujeres',
       data: [85]

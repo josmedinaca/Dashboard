@@ -50,7 +50,7 @@ export class SamplePageComponent implements OnInit {
 	this.chartOptions = {
 		series: [
 		  {
-			name: "brindados",
+			name: "entregados",
 			data: [229, 591, 157, 462, 857, 304, 225, 737, 397, 185, 99]
 		  }
 		],
@@ -152,7 +152,7 @@ export class SamplePageComponent implements OnInit {
 
 	info.update = function (props) {
     this._div.innerHTML = '<style> .info {    padding: 6px 8px; font: 14px/16px Arial, Helvetica, sans-serif;     background: white;  background: rgba(255, 255, 255, 0.8); box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);border-radius: 5px;} </style>'
-    +'<h4>Informacion de PACS</h4>' +  (props ?
+    +'<h5>Estudiantes beneficiarios por localidad</h5>' +  (props ?
 			'<b>' + props.name + '</b><br />' +'Estudiantes hombres: <b>'+ props.hombres + '</b><br />' + 'Estudiantes mujeres: <b>'+props.mujeres +'</b><br />' + 'Total estudiantes:  <b>'+props.total +'</b><br />' + 'Tiendas: <b>'+props.tiendas +'</b><br />'+ 'PACS: <b>'+props.PACS+'</b><br />'
 			: 'Ubique su cursor en una localidad');
 	};

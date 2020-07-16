@@ -103,81 +103,81 @@ export class TransportePageComponent implements OnInit {
       color: '#775DD0'
      },
     /* PEAMA */
-    {
-      id: '2.1',
-      parent: '1.1',
-      name: 'Amazonia',
-      value: 0
-    }, 
+    // {
+    //   id: '2.1',
+    //   parent: '1.1',
+    //   name: 'Amazonia',
+    //   value: 0
+    // }, 
     
-    {
-      id: '2.5',
-      parent: '1.1',
-      name: 'Tumaco',
-      value: 0
-    },
+    // {
+    //   id: '2.5',
+    //   parent: '1.1',
+    //   name: 'Tumaco',
+    //   value: 0
+    // },
     
-    {
-      id: '2.3',
-      parent: '1.1',
-      name: 'Caribe',
-      value: 0
-    },
+    // {
+    //   id: '2.3',
+    //   parent: '1.1',
+    //   name: 'Caribe',
+    //   value: 0
+    // },
     
-    {
-      id: '2.2',
-      parent: '1.1',
-      name: 'Bogota',
-      value: 0
-    },
+    // {
+    //   id: '2.2',
+    //   parent: '1.1',
+    //   name: 'Bogota',
+    //   value: 0
+    // },
     
-    {
-      id: '2.4',
-      parent: '1.1',
-      name: 'Orinoquia',
-      value : 0
-    },
+    // {
+    //   id: '2.4',
+    //   parent: '1.1',
+    //   name: 'Orinoquia',
+    //   value : 0
+    // },
     
     
     
-    /***********/
+    // /***********/
     
-    /* PAES */
-    {
-      id: '2.9',
-      parent: '1.3',
-      name: 'Indigena',
-      value: 0
-    }
-    ,
+    // /* PAES */
+    // {
+    //   id: '2.9',
+    //   parent: '1.3',
+    //   name: 'Indigena',
+    //   value: 0
+    // }
+    // ,
     
-    {
-      id: '2.8',
-      parent: '1.3',
-      name: 'Municipio',
-      value: 0
-    },
+    // {
+    //   id: '2.8',
+    //   parent: '1.3',
+    //   name: 'Municipio',
+    //   value: 0
+    // },
     
-    {
-      id: '2.7',
-      parent: '1.3',
-      name: 'Poblacion Afro',
-      value: 1
-    },
+    // {
+    //   id: '2.7',
+    //   parent: '1.3',
+    //   name: 'Poblacion Afro',
+    //   value: 0
+    // },
     
-    {
-      id: '2.6',
-      parent: '1.3',
-      name: 'Mejor Bachiller',
-      value: 0
-    },
+    // {
+    //   id: '2.6',
+    //   parent: '1.3',
+    //   name: 'Mejor Bachiller',
+    //   value: 0
+    // },
     
-    {
-      id: '2.71',
-      parent: '1.3',
-      name: 'Victimas',
-      value: 0
-    }, 
+    // {
+    //   id: '2.71',
+    //   parent: '1.3',
+    //   name: 'Victimas',
+    //   value: 0
+    // }, 
     /***********/
     
     /* Asia */
@@ -185,18 +185,18 @@ export class TransportePageComponent implements OnInit {
     /***********/
     
     /* Pregrado */
-    {
-      id: '2.15',
-      parent: '1.4',
-      name: 'Regular pregrado',
-      value: 4
-    }
-    ,
+    // {
+    //   id: '2.15',
+    //   parent: '1.4',
+    //   name: 'Regular pregrado',
+    //   value: 0
+    // }
+    // ,
     {
       id: '2.16',
       parent: '1.5',
       name: 'Regular posgrado',
-      value: 31
+      value: 44
     }
     ];
     
@@ -212,7 +212,7 @@ export class TransportePageComponent implements OnInit {
       },
     
       title: {
-        text: 'Niveles de subacceso'
+        text: 'Numero de estudiantes beneficiarios por subacceso'
       },
       series: [{
         type: "sunburst",

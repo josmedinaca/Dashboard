@@ -22,7 +22,7 @@ CREATE TABLE IF NOT EXISTS "dashboard"."public"."alimentacion" (
   "facultad" VARCHAR(100) NOT NULL,
   "sexo" VARCHAR(100) NOT NULL,
   "pbm" integer NOT NULL,
-  "totalAlmuerzos" VARCHAR(100) NOT NULL,
+  "total_almuerzos" decimal NOT NULL,
   "valor" decimal NOT NULL
 );
 
@@ -35,7 +35,7 @@ CREATE TABLE IF NOT EXISTS "dashboard"."public"."alojamiento" (
   "subacceso" VARCHAR(100) NOT NULL,
   "sexo" VARCHAR(100) NOT NULL,
   "pbm" integer NOT NULL,
-  "valor" VARCHAR(100) NOT NULL
+  "valor" decimal NOT NULL
 );
 
 CREATE TABLE IF NOT EXISTS "dashboard"."public"."transporte" (
@@ -44,8 +44,8 @@ CREATE TABLE IF NOT EXISTS "dashboard"."public"."transporte" (
   "facultad" VARCHAR(100) NOT NULL,
   "subacceso" VARCHAR(100) NOT NULL,
   "sexo" VARCHAR(100) NOT NULL,
-  "pbm" VARCHAR(100) NOT NULL,
-  "valor" VARCHAR(100) NOT NULL
+  "pbm" integer NOT NULL,
+  "valor" decimal NOT NULL
 );
 
 CREATE TABLE IF NOT EXISTS "dashboard"."public"."transferencia" (
@@ -98,4 +98,23 @@ SELECT * from
     FROM "pac" ) as nam  where fecha_entregado LIKE '%/04/%'  ;
 	
 	
+-----Total almuerzos-----
+select sum (total_almuerzos) as total from alimentacion;
+
+----Almuerzos x Genero---
+select sum (total_almuerzos) as total from alimentacion where sexo = 'F';
+
+
+---Estudiantes apoyados sin repetir en almuerzos ---
+
+select * from (SELECT DISTINCT ON (doc) * 
+    FROM "alimentacion") as nam where sexo = 'F';
+
+
+--Estudiantes apoyados sin repetir por subacceso en almuerzos--
+
+select * from (SELECT DISTINCT ON (doc) * 
+    FROM "alimentacion") as nam where subacceso = 'PAES - INDÍGENA';
+
+
 

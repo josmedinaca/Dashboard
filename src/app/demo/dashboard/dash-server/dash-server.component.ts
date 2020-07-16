@@ -69,8 +69,8 @@ export class DashServerComponent implements OnInit {
     this.chartOptions = {
       series: [
         {
-          name: "brindados",
-          data: [404, 964, 290, 950, 1508, 479, 448, 2001, 922, 228, 272]
+          name: "entregados",
+          data: [638, 1427, 455, 1417, 2272, 630, 689, 3619, 1438, 304, 473]
         }
       ],
       chart: {
@@ -211,20 +211,26 @@ export class DashServerComponent implements OnInit {
       name: 'INTERNACIONAL',
       color:'#EDF1B6',
     },
+    {
+      id: '1.6',
+      parent: '0.0',
+      name: 'POSGRADO',
+      color: '#FEB019'
+     },
     
     /* PEAMA */
     {
       id: '2.1',
       parent: '1.1',
       name: 'Amazonia',
-      value: 140
+      value: 141
     }, 
     
     {
       id: '2.5',
       parent: '1.1',
       name: 'Tumaco',
-      value: 130
+      value: 139
     },
     
     {
@@ -238,14 +244,14 @@ export class DashServerComponent implements OnInit {
       id: '2.2',
       parent: '1.1',
       name: 'Bogota',
-      value: 7
+      value: 8
     },
     
     {
       id: '2.4',
       parent: '1.1',
       name: 'Orinoquia',
-      value : 183
+      value : 187
     },
     
     
@@ -257,7 +263,7 @@ export class DashServerComponent implements OnInit {
       id: '2.9',
       parent: '1.3',
       name: 'Indigena',
-      value: 259
+      value: 269
     }
     ,
     
@@ -265,21 +271,21 @@ export class DashServerComponent implements OnInit {
       id: '2.8',
       parent: '1.3',
       name: 'Municipio',
-      value: 48
+      value: 50
     },
     
     {
       id: '2.7',
       parent: '1.3',
       name: 'Poblacion Afro',
-      value: 110
+      value: 111
     },
     
     {
       id: '2.6',
       parent: '1.3',
       name: 'Mejor Bachiller',
-      value: 39
+      value: 40
     },
     
     {
@@ -299,7 +305,7 @@ export class DashServerComponent implements OnInit {
       id: '2.15',
       parent: '1.4',
       name: 'Regular pregrado',
-      value: 1832
+      value: 2042
     },
     /***********/
     
@@ -309,6 +315,12 @@ export class DashServerComponent implements OnInit {
       parent: '1.5',
       name: 'Intercambio internacional',
       value: 4
+    },
+    {
+      id: '2.16',
+      parent: '1.6',
+      name: 'Regular posgrado',
+      value: 45
     }
     
     ];
@@ -325,7 +337,7 @@ export class DashServerComponent implements OnInit {
       },
     
       title: {
-        text: 'Niveles de subacceso'
+        text: 'Numero de estudiantes beneficiarios por subacceso'
       },
       series: [{
         type: "sunburst",

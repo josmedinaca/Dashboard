@@ -44,7 +44,7 @@ const NavigationItems = [
     children: [
       {
         id: 'dashboard-home',
-        title: 'Dashboard',
+        title: 'Resumen Apoyos AGFSE',
         type: 'item',
         url: '/dashboard/home',
         classes: 'nav-item',
@@ -83,23 +83,75 @@ const NavigationItems = [
         icon: 'feather icon-clipboard'
       },
       
-      {
-        id: 'economico-page',
-        title: 'Transferencias monetarias',
-        type: 'item',
-        url: '/transferencias-monetarias',
-        classes: 'nav-item',
-        icon: 'feather icon-file-plus'
-      }
-      ,
+      // {
+      //   id: 'economico-page',
+      //   title: 'Transferencias monetarias',
+      //   type: 'item',
+      //   url: '/transferencias-monetarias',
+      //   classes: 'nav-item',
+      //   icon: 'feather icon-file-plus'
+      // }
+      // ,
       
+      // {
+      //   id: 'jea-page',
+      //   title: 'Apoyos JeA',
+      //   type: 'item',
+      //   url: '/jea',
+      //   classes: 'nav-item',
+      //   icon: 'feather icon-file-plus'
+      // },
+
+      // {
+      //   id: 'other',
+      //   type: 'group',
+      //   icon: 'feather icon-align-left',
+      //   children: [
+      //     {
+      //       id: 'menu-level',
+      //       title: 'Apoyos externos                             ‏‏‎  ‏‏‎  ‏‏‎     ',
+      //       type: 'collapse',
+      //       icon: 'feather icon-menu',
+      //       children: [
+      //         {
+      //           id: 'economico-page',
+      //           title: 'Transferencias monetarias',
+      //           type: 'item',
+      //           url: '/transferencias-monetarias',
+      //           external: true
+      //         },
+      //         {
+      //           id: 'jea-page',
+      //           title: 'Apoyos JeA',
+      //           type: 'item',
+      //           url: '/jea',
+      //           external: true
+      //         }
+      //       ]
+      //     }
+      //   ]
+      // }
+
       {
-        id: 'jea-page',
-        title: 'Apoyos JeA',
-        type: 'item',
-        url: '/jea',
-        classes: 'nav-item',
-        icon: 'feather icon-file-plus'
+        id: 'other',
+        title: 'Apoyos externos',
+        type: 'collapse',
+        icon: 'feather icon-menu',
+        children: [
+          
+          {
+            id: 'jea-page',
+            title: 'Jovenes en Accion',
+            type: 'item',
+            url: '/jea'
+          },
+          {
+            id: 'economico-page',
+            title: 'Transferencias Bienestar Nacional',
+            type: 'item',
+            url: '/transferencias-monetarias'
+          }
+        ]
       }
     ]
   }

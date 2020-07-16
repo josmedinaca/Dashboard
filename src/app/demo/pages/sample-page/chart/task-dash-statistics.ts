@@ -39,7 +39,7 @@ export class TaskDashStatistics {
     series: [
       {
         name: 'Estudiantes apoyados',
-        data: [265, 1767, 513]
+        data: [173, 1071, 1315]
       },
       {
         name: 'PACS',

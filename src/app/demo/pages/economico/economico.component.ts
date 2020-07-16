@@ -266,7 +266,7 @@ sunburst(){
     },
   
     title: {
-      text: 'Niveles de subacceso'
+      text: 'Numero de estudiantes beneficiarios por subacceso'
     },
     series: [{
       type: "sunburst",

@@ -7,7 +7,7 @@ export class MemoryUseDashServer {
     plotOptions: {
       bar: {
         horizontal: false,
-        columnWidth: '40%'
+        columnWidth: '50%'
       },
     },
     dataLabels: {
@@ -27,18 +27,15 @@ export class MemoryUseDashServer {
         vertical: 8
       }
     },
-    colors: ['#ffb74e', '#fe365f', '#4782fa'],
+    colors: ['#fe365f', '#4782fa'],
     stroke: {
       show: true,
       width: 2,
       colors: ['transparent']
     },
-    series: [{
-      name: 'Total estudiantes apoyados',
-      data: [33,232,4,20,20]
-    }, {
+    series: [ {
       name: 'Total estudiantes hombres',
-      data: [18,129,0,0,12]
+      data: [18,132,0,0,12]
     }, {
       name: 'Total estudiantes mujeres',
       data: [15,103,4,20,8]
@@ -49,7 +46,7 @@ export class MemoryUseDashServer {
     },
     yaxis: {
       title: {
-        text: ' (almuerzos)'
+        text: ' (Estudiantes)'
       }
     },
     fill: {
