@@ -75,27 +75,23 @@
 </div>
 
 <div class="row">
-    <div class="col-lg-8 col-md-6">
+    <div class="col-lg-7 col-md-6">
         <figure class="highcharts-figure">
             <div id="chx"></div>
 
         </figure>
 
     </div>
-    <div class="col-lg-4 col-md-6">
-        <app-card [hidHeader]="true">
-            <div class="d-flex m-b-6 no-block">
-                <h5 class="card-title m-b-0 align-self-center">Estudiantes beneficiarios por pbm</h5>
-                <div class="ml-auto text-light-blue">
-                </div>
+    <div class="col-md-6 col-xl-5">
+        <div class="card" style="width: auto;">
+            <div class="card-body">
+                <h5 class="card-title text-center text-uppercase">Estudiantes beneficiarios segun su PBM y sexo</h5>
+                <div id="pyramid2"></div>
             </div>
-            <ul class="list-inline m-b-30 text-uppercase lp-5 font-medium font-12">
-                <li><i class="fa fa-square m-r-5 " id="ND"></i> 0-5 </li>
-                <li><i class="fa fa-square m-r-5 " id="ND2"></i> 6-10 </li>
-                <li><i class="fa fa-square m-r-5 " id="ND3"></i> 11-15</li>
-                <li><i class="fa fa-square m-r-5 " id="ND4"></i> 16+</li>
-            </ul>
-            <app-apex-chart chartID="visitor-gender-dash-analytics" [chartConfig]="this.visitorGenderDashAnalytics"></app-apex-chart>
-        </app-card>
+
+        </div>
+
+
+
     </div>
 </div>

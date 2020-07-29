@@ -56,7 +56,10 @@
                             "src/scripts/us-states.js",
                             "src/scripts/popPyramid.js",
                             "src/scripts/highcharts.js",
-                            "src/scripts/sunburst.js"
+                            "src/scripts/sunburst.js",
+                            "src/scripts/core.js",
+                            "src/scripts/charts.js",
+                            "src/scripts/animated.js"
                         ]
                     },
                     "configurations": {

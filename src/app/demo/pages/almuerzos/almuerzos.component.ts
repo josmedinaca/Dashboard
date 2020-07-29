@@ -17,6 +17,9 @@ import { ChartDB } from '../../dashboard/dash-server/chart/chart-data';
 
 declare const Highcharts: any;
 declare const sunburst: any;
+declare const am4core:any ;
+declare const am4charts : any;
+declare const am4themes_animated : any;
 
 type ApexXAxis = {
   type?: "category" | "datetime" | "numeric";
@@ -141,6 +144,7 @@ export class AlmuerzosPageComponent implements OnInit {
 
 ngOnInit() {
   this.sunburst();
+  this.mypyramid2();
 }
 sunburst(){
   var data = [{
@@ -265,7 +269,7 @@ sunburst(){
   Highcharts.chart('chx', {
   
     chart: {
-      height: '65%'
+      height: '78%'
     },
   
     title: {
@@ -315,8 +319,184 @@ sunburst(){
     }
   });
 }
- 
+mypyramid2(){
 
+
+  // Themes begin
+  am4core.useTheme(am4themes_animated);
+  // Themes end
+  
+  var mainContainer = am4core.create("pyramid2", am4core.Container);
+  mainContainer.width = am4core.percent(100);
+  mainContainer.height = am4core.percent(100);
+  mainContainer.layout = "horizontal";
+  
+  var usData = [
+    {
+      "PBM": "0 a 5",
+      "male": 10175713,
+      "female": 9736305
+    },
+    {
+      "PBM": "6 a 9",
+      "male": 10470147,
+      "female": 10031835
+    },
+    {
+      "PBM": "10 a 14",
+      "male": 10561873,
+      "female": 10117913
+    },
+    {
+      "PBM": "15 a 19",
+      "male": 6447043,
+      "female": 6142996
+    },
+    {
+      "PBM": "20 a 24",
+      "male": 9349745,
+      "female": 8874664
+    },
+    {
+      "PBM": "25 a 30",
+      "male": 6722248,
+      "female": 6422017
+    },
+    {
+      "PBM": "30 a 34",
+      "male": 10625791,
+      "female": 10557848
+    },
+    {
+      "PBM": "35 a 39",
+      "male": 9899569,
+      "female": 9956213
+    },
+    {
+      "PBM": "40 a 44",
+      "male": 10330986,
+      "female": 10465142
+    },
+    {
+      "PBM": "45 a 49",
+      "male": 10571984,
+      "female": 10798384
+    },
+    {
+      "PBM": "50 a 54",
+      "male": 11051409,
+      "female": 11474081
+    },
+    {
+      "PBM": "55 a 59",
+      "male": 10173646,
+      "female": 10828301
+    },
+    {
+      "PBM": "60 a 64",
+      "male": 8824852,
+      "female": 9590829
+    },
+    {
+      "PBM": "65 a 69",
+      "male": 6876271,
+      "female": 7671175
+    },
+    {
+      "PBM": "70 a 74",
+      "male": 4867513,
+      "female": 5720208
+    },
+    {
+      "PBM": "75 a 79",
+      "male": 3416432,
+      "female": 4313697
+    },
+    {
+      "PBM": "80 a 84",
+      "male": 2378691,
+      "female": 3432738
+    },
+    {
+      "PBM": "85+",
+      "male": 2000771,
+      "female": 3937981
+    }
+  ];
+  
+  var maleChart = mainContainer.createChild(am4charts.XYChart);
+  maleChart.paddingRight = 0;
+  maleChart.data = JSON.parse(JSON.stringify(usData));
+  
+  // Create axes
+  var maleCategoryAxis = maleChart.yAxes.push(new am4charts.CategoryAxis());
+  maleCategoryAxis.dataFields.category = "PBM";
+  maleCategoryAxis.renderer.grid.template.location = 0;
+  //maleCategoryAxis.renderer.inversed = true;
+  maleCategoryAxis.renderer.minGridDistance = 15;
+  
+  var maleValueAxis = maleChart.xAxes.push(new am4charts.ValueAxis());
+  maleValueAxis.renderer.inversed = true;
+  maleValueAxis.min = 0;
+  maleValueAxis.max = 10;
+  maleValueAxis.strictMinMax = true;
+  
+  maleValueAxis.numberFormatter = new am4core.NumberFormatter();
+  maleValueAxis.numberFormatter.numberFormat = "#.#'%'";
+  
+  // Create series
+  var maleSeries = maleChart.series.push(new am4charts.ColumnSeries());
+  maleSeries.dataFields.valueX = "male";
+  maleSeries.dataFields.valueXShow = "percent";
+  maleSeries.calculatePercent = true;
+  maleSeries.dataFields.categoryY = "PBM";
+  maleSeries.interpolationDuration = 1000;
+  maleSeries.columns.template.tooltipText = "Males, PBM {categoryY}: {valueX} ({valueX.percent.formatNumber('#.0')}%)";
+  //maleSeries.sequencedInterpolation = true;
+  
+  
+  var femaleChart = mainContainer.createChild(am4charts.XYChart);
+  femaleChart.paddingLeft = 0;
+  femaleChart.data = JSON.parse(JSON.stringify(usData));
+  
+  // Create axes
+  var femaleCategoryAxis = femaleChart.yAxes.push(new am4charts.CategoryAxis());
+  femaleCategoryAxis.renderer.opposite = true;
+  femaleCategoryAxis.dataFields.category = "PBM";
+  femaleCategoryAxis.renderer.grid.template.location = 0;
+  femaleCategoryAxis.renderer.minGridDistance = 15;
+  
+  var femaleValueAxis = femaleChart.xAxes.push(new am4charts.ValueAxis());
+  femaleValueAxis.min = 0;
+  femaleValueAxis.max = 10;
+  femaleValueAxis.strictMinMax = true;
+  femaleValueAxis.numberFormatter = new am4core.NumberFormatter();
+  femaleValueAxis.numberFormatter.numberFormat = "#.#'%'";
+  femaleValueAxis.renderer.minLabelPosition = 0.01;
+  
+  // Create series
+  var femaleSeries = femaleChart.series.push(new am4charts.ColumnSeries());
+  femaleSeries.dataFields.valueX = "female";
+  femaleSeries.dataFields.valueXShow = "percent";
+  femaleSeries.calculatePercent = true;
+  femaleSeries.fill = femaleChart.colors.getIndex(4);
+  femaleSeries.stroke = femaleSeries.fill;
+  //femaleSeries.sequencedInterpolation = true;
+  femaleSeries.columns.template.tooltipText = "Females, PBM{categoryY}: {valueX} ({valueX.percent.formatNumber('#.0')}%)";
+  femaleSeries.dataFields.categoryY = "PBM";
+  femaleSeries.interpolationDuration = 1000;
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    }
 
 
  }

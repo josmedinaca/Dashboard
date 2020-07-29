@@ -1,7 +1,7 @@
 export class TaskDashStatistics {
   public static chartData = {
     chart: {
-      height: 350,
+      height: 455,
       type: 'line',
       zoom: {
         enabled: false
@@ -39,11 +39,11 @@ export class TaskDashStatistics {
     series: [
       {
         name: 'Estudiantes apoyados',
-        data: [173, 1071, 1315]
+        data: [174, 1028, 1379]
       },
       {
         name: 'PACS',
-        data: [269, 1777, 2197]
+        data: [269, 1777, 2253]
       }
     ],
     grid: {

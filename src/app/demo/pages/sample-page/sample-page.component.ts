@@ -15,6 +15,9 @@ declare const L: any;
 declare const geo: any;
 declare const statesData: any;
 declare const pyramidBuilder: any;var mymap;
+declare const am4core:any ;
+declare const am4charts : any;
+declare const am4themes_animated : any;
 type ApexXAxis = {
 	type?: "category" | "datetime" | "numeric";
 	categories?: any;
@@ -51,7 +54,7 @@ export class SamplePageComponent implements OnInit {
 		series: [
 		  {
 			name: "entregados",
-			data: [229, 591, 157, 462, 857, 304, 225, 737, 397, 185, 99]
+			data: [235, 598, 158, 464, 870, 307, 229, 745, 400, 192, 101]
 		  }
 		],
 		chart: {
@@ -127,7 +130,7 @@ export class SamplePageComponent implements OnInit {
 
 
   ngOnInit() {
-    this.mypyramid();
+    this.mypyramid2();
     var map = L.map('map').setView([4.627958, -74.095583], 11);
 
 	L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
@@ -153,7 +156,7 @@ export class SamplePageComponent implements OnInit {
 	info.update = function (props) {
     this._div.innerHTML = '<style> .info {    padding: 6px 8px; font: 14px/16px Arial, Helvetica, sans-serif;     background: white;  background: rgba(255, 255, 255, 0.8); box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);border-radius: 5px;} </style>'
     +'<h5>Estudiantes beneficiarios por localidad</h5>' +  (props ?
-			'<b>' + props.name + '</b><br />' +'Estudiantes hombres: <b>'+ props.hombres + '</b><br />' + 'Estudiantes mujeres: <b>'+props.mujeres +'</b><br />' + 'Total estudiantes:  <b>'+props.total +'</b><br />' + 'Tiendas: <b>'+props.tiendas +'</b><br />'+ 'PACS: <b>'+props.PACS+'</b><br />'
+			'<b>' + props.name + '</b><br />'  + 'Total estudiantes beneficarios:  <b>'+props.total +'</b><br />' + 'Tiendas: <b>'+props.tiendas +'</b><br />'+ 'PACS: <b>'+props.PACS+'</b><br />'
 			: 'Ubique su cursor en una localidad');
 	};
 
@@ -232,18 +235,187 @@ export class SamplePageComponent implements OnInit {
   }
 
  
-  mypyramid(){
-    var exampleData = [{ age: '0-9', male: 670, female: 394 }, { age: '10-19', male: 343, female: 293 }, { age: '20-29', male: 68, female: 51 }, { age: '30-39', male: 41, female: 58 }, { age: '40-49', male: 19, female: 37 }, {age: '50-59', male: 12, female: 17 }];
-    var options = {
-      height: 300,
-      width: 400,
-      style: {
-        leftBarColor: "#229922",
-        rightBarColor: "#992222"
+
+
+  mypyramid2(){
+
+
+    // Themes begin
+    am4core.useTheme(am4themes_animated);
+    // Themes end
+    
+    var mainContainer = am4core.create("pyramid", am4core.Container);
+    mainContainer.width = am4core.percent(100);
+    mainContainer.height = am4core.percent(100);
+    mainContainer.layout = "horizontal";
+    
+    var usData = [
+      {
+        "PBM": "0 a 5",
+        "male": 275,
+        "female": 171
+      },
+      {
+        "PBM": "6 a 9",
+        "male": 466,
+        "female": 276
+      },
+      {
+        "PBM": "10 a 14",
+        "male": 323,
+        "female": 257
+      },
+      {
+        "PBM": "15 a 19",
+        "male": 158,
+        "female": 168
+      },
+      {
+        "PBM": "20 a 24",
+        "male": 69,
+        "female": 61
+      },
+      {
+        "PBM": "25 a 30",
+        "male": 39,
+        "female": 43
+      },
+      {
+        "PBM": "30 a 34",
+        "male": 31,
+        "female": 37
+      },
+      {
+        "PBM": "35 a 39",
+        "male": 21,
+        "female": 37
+      },
+      {
+        "PBM": "40 a 44",
+        "male": 11,
+        "female": 32
+      },
+      {
+        "PBM": "45 a 49",
+        "male": 12,
+        "female": 15
+      },
+      {
+        "PBM": "50 a 54",
+        "male": 10,
+        "female": 14
+      },
+      {
+        "PBM": "55 a 59",
+        "male": 8,
+        "female": 10
+      },
+      {
+        "PBM": "60 a 64",
+        "male": 7,
+        "female": 6
+      },
+      {
+        "PBM": "65 a 69",
+        "male": 4,
+        "female": 5
+      },
+      {
+        "PBM": "70 a 74",
+        "male": 1,
+        "female": 9
+      },
+      {
+        "PBM": "75 a 79",
+        "male": 0,
+        "female": 2
+      },
+      {
+        "PBM": "80 a 84",
+        "male": 1,
+        "female": 2
+      },
+      {
+        "PBM": "85+",
+        "male": 7,
+        "female": 10
       }
-    }
-    pyramidBuilder(exampleData, '#pyramid', options);
-  }
+    ];
+    
+    var maleChart = mainContainer.createChild(am4charts.XYChart);
+    maleChart.paddingRight = 0;
+    maleChart.data = JSON.parse(JSON.stringify(usData));
+    
+    // Create axes
+    var maleCategoryAxis = maleChart.yAxes.push(new am4charts.CategoryAxis());
+    maleCategoryAxis.dataFields.category = "PBM";
+    maleCategoryAxis.renderer.grid.template.location = 0;
+    //maleCategoryAxis.renderer.inversed = true;
+    maleCategoryAxis.renderer.minGridDistance = 20;
+    
+    var maleValueAxis = maleChart.xAxes.push(new am4charts.ValueAxis());
+    maleValueAxis.renderer.inversed = true;
+    maleValueAxis.min = 0;
+    maleValueAxis.max = 40;
+    maleValueAxis.strictMinMax = true;
+    
+    maleValueAxis.numberFormatter = new am4core.NumberFormatter();
+	maleValueAxis.numberFormatter.numberFormat = "#.#'%'";
+	
+    
+    // Create series
+    var maleSeries = maleChart.series.push(new am4charts.ColumnSeries());
+    maleSeries.dataFields.valueX = "male";
+    maleSeries.dataFields.valueXShow = "percent";
+    maleSeries.calculatePercent = true;
+    maleSeries.dataFields.categoryY = "PBM";
+    maleSeries.interpolationDuration = 1000;
+    maleSeries.columns.template.tooltipText = "Hombres, PBM {categoryY}: {valueX} ({valueX.percent.formatNumber('#.0')}%)";
+    //maleSeries.sequencedInterpolation = true;
+    
+    
+    var femaleChart = mainContainer.createChild(am4charts.XYChart);
+    femaleChart.paddingLeft = 0;
+    femaleChart.data = JSON.parse(JSON.stringify(usData));
+    
+    // Create axes
+    var femaleCategoryAxis = femaleChart.yAxes.push(new am4charts.CategoryAxis());
+    femaleCategoryAxis.renderer.opposite = true;
+    femaleCategoryAxis.dataFields.category = "PBM";
+    femaleCategoryAxis.renderer.grid.template.location = 0;
+    femaleCategoryAxis.renderer.minGridDistance = 20;
+    
+    var femaleValueAxis = femaleChart.xAxes.push(new am4charts.ValueAxis());
+    femaleValueAxis.min = 0;
+    femaleValueAxis.max = 40;
+    femaleValueAxis.strictMinMax = true;
+    femaleValueAxis.numberFormatter = new am4core.NumberFormatter();
+    femaleValueAxis.numberFormatter.numberFormat = "#.#'%'";
+    femaleValueAxis.renderer.minLabelPosition = 0.01;
+    
+    // Create series
+    var femaleSeries = femaleChart.series.push(new am4charts.ColumnSeries());
+    femaleSeries.dataFields.valueX = "female";
+    femaleSeries.dataFields.valueXShow = "percent";
+    femaleSeries.calculatePercent = true;
+    femaleSeries.fill = femaleChart.colors.getIndex(4);
+    femaleSeries.stroke = femaleSeries.fill;
+    //femaleSeries.sequencedInterpolation = true;
+    femaleSeries.columns.template.tooltipText = "Mujeres, PBM {categoryY}: {valueX} ({valueX.percent.formatNumber('#.0')}%)";
+    femaleSeries.dataFields.categoryY = "PBM";
+    femaleSeries.interpolationDuration = 1000;
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      }
 
 
  }

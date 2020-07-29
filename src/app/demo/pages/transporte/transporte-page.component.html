@@ -16,47 +16,36 @@
 </div>
 
 <div class="row">
-    <div class="col-lg-3 col-md-6">
+    <div class="col-lg-4 col-md-6">
         <app-card [hidHeader]="true" blockClass="p-30">
             <div class="d-flex pt-3 pb-2 no-block">
                 <div class="align-self-center mr-4 ml-4"><img src="assets/images/icon/team.png" alt="" title="" width="50"></div>
                 <div class="align-slef-center mr-auto">
-                    <h3 class="m-b-2 text-uppercase font-30 font-medium lp-5 text-danger">44</h3>
+                    <h3 class="m-b-2 text-uppercase font-30 font-medium lp-5 text-danger">66</h3>
                     <h6 class="text-muted m-b-0">Total estudiantes</h6>
                 </div>
             </div>
         </app-card>
     </div>
-    <div class="col-lg-3 col-md-6">
+    <div class="col-lg-4 col-md-6">
         <app-card [hidHeader]="true" blockClass="p-30">
             <div class="d-flex pt-3 pb-2 no-block">
                 <div class="align-self-center mr-4 ml-4"><img src="assets/images/icon/inventory.png" alt="" title="" width="50"></div>
                 <div class="align-slef-center mr-auto">
-                    <h3 class="m-b-2 text-uppercase font-30 font-medium lp-5 text-primary">44</h3>
+                    <h3 class="m-b-2 text-uppercase font-30 font-medium lp-5 text-primary">80</h3>
                     <h6 class="text-muted m-b-0">Total Apoyos</h6>
                 </div>
             </div>
         </app-card>
     </div>
-    <div class="col-lg-3 col-md-6">
-        <app-card [hidHeader]="true" blockClass="p-30">
-            <div class="d-flex pt-3 pb-2 no-block">
-                <div class="align-self-center mr-4 ml-4"><img src="assets/images/icon/transaction.png" alt="" title="" width="50"></div>
-                <div class="align-slef-center mr-auto">
-                    <h3 class="m-b-2 text-uppercase font-30 font-medium lp-5 text-warning">$150,000</h3>
-                    <h6 class="text-muted m-b-0 ">Valor transferencia</h6>
-                </div>
-            </div>
-        </app-card>
-    </div>
 
 
-    <div class="col-lg-3 col-md-6">
+    <div class="col-lg-4 col-md-6">
         <app-card [hidHeader]="true" blockClass="p-30">
             <div class="d-flex pt-3 pb-2 no-block">
                 <div class="align-self-center mr-3 ml-2"><img src="assets/images/icon/money.png" alt="" title="" width="50"></div>
                 <div class="align-slef-center mr-auto">
-                    <h3 class="m-b-2 text-uppercase font-30 font-medium lp-5 text-warning">$6,600,000</h3>
+                    <h3 class="m-b-2 text-uppercase font-30 font-medium lp-5 text-warning">$12,180,000</h3>
                     <h6 class="text-muted m-b-0">Total dinero gastado</h6>
                 </div>
             </div>
@@ -82,28 +71,24 @@
 
 
 <div class="row">
-    <div class="col-lg-8 col-md-6">
+    <div class="col-lg-7 col-md-6">
         <figure class="highcharts-figure">
             <div id="chxadwsx"></div>
 
         </figure>
 
     </div>
-    <div class="col-lg-4 col-md-6">
-        <app-card [hidHeader]="true">
-            <div class="d-flex m-b-6 no-block">
-                <h5 class="card-title m-b-0 align-self-center">Estudiantes beneficiarios por pbm</h5>
-                <div class="ml-auto text-light-blue">
-                </div>
+    <div class="col-md-6 col-xl-5">
+        <div class="card" style="width: auto;">
+            <div class="card-body">
+                <h5 class="card-title text-center text-uppercase">Estudiantes beneficiarios segun su PBM y sexo</h5>
+                <div id="pyramid4"></div>
             </div>
-            <ul class="list-inline m-b-30 text-uppercase lp-5 font-medium font-12">
-                <li><i class="fa fa-square m-r-5 " id="ND"></i> 0-5 </li>
-                <li><i class="fa fa-square m-r-5 " id="ND2"></i> 6-10 </li>
-                <li><i class="fa fa-square m-r-5 " id="ND3"></i> 11-15</li>
-                <li><i class="fa fa-square m-r-5 " id="ND4"></i> 16+</li>
-            </ul>
-            <app-apex-chart chartID="visitor-gender-dash-analytics" [chartConfig]="this.visitorGenderDashAnalytics"></app-apex-chart>
-        </app-card>
+
+        </div>
+
+
+
     </div>
 
 </div>

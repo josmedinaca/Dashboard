@@ -70,7 +70,7 @@ export class DashServerComponent implements OnInit {
       series: [
         {
           name: "entregados",
-          data: [638, 1427, 455, 1417, 2272, 630, 689, 3619, 1438, 304, 473]
+          data: [659, 1463, 463, 1456, 2334, 650, 686, 3757, 1509, 316, 492]
         }
       ],
       chart: {
@@ -183,6 +183,7 @@ export class DashServerComponent implements OnInit {
   
   ngOnInit() {
     this.sunburst();
+    
   }
   sunburst(){
     var data = [{
@@ -230,7 +231,7 @@ export class DashServerComponent implements OnInit {
       id: '2.5',
       parent: '1.1',
       name: 'Tumaco',
-      value: 139
+      value: 140
     },
     
     {
@@ -263,7 +264,7 @@ export class DashServerComponent implements OnInit {
       id: '2.9',
       parent: '1.3',
       name: 'Indigena',
-      value: 269
+      value: 272
     }
     ,
     
@@ -278,7 +279,7 @@ export class DashServerComponent implements OnInit {
       id: '2.7',
       parent: '1.3',
       name: 'Poblacion Afro',
-      value: 111
+      value: 112
     },
     
     {
@@ -305,7 +306,7 @@ export class DashServerComponent implements OnInit {
       id: '2.15',
       parent: '1.4',
       name: 'Regular pregrado',
-      value: 2042
+      value: 2066
     },
     /***********/
     
@@ -320,7 +321,7 @@ export class DashServerComponent implements OnInit {
       id: '2.16',
       parent: '1.6',
       name: 'Regular posgrado',
-      value: 45
+      value: 61
     }
     
     ];

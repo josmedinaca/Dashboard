@@ -11,7 +11,7 @@
             <div class="d-flex pt-3 pb-2 no-block">
                 <div class="align-self-center mr-5 ml-4"><img src="assets/images/icon/avatar.png" alt="" title="" width="50"></div>
                 <div class="align-slef-center mr-auto">
-                    <h3 class="m-b-2 text-uppercase font-30 font-medium lp-5 text-danger">1138</h3>
+                    <h3 class="m-b-2 text-uppercase font-30 font-medium lp-5 text-danger">1146</h3>
                     <h6 class="text-muted m-b-0">Estudiantes mujeres</h6>
                 </div>
             </div>
@@ -22,7 +22,7 @@
             <div class="d-flex pt-3 pb-2 no-block">
                 <div class="align-self-center mr-5 ml-4"><img src="assets/images/icon/boy.png" alt="" title="" width="50"></div>
                 <div class="align-slef-center mr-auto">
-                    <h3 class="m-b-2 text-uppercase font-30 font-medium lp-5 text-primary">1421</h3>
+                    <h3 class="m-b-2 text-uppercase font-30 font-medium lp-5 text-primary">1435</h3>
                     <h6 class="text-muted m-b-0">Estudiantes hombres</h6>
                 </div>
             </div>
@@ -35,7 +35,7 @@
             <div class="d-flex pt-3 pb-2 no-block">
                 <div class="align-self-center mr-5 ml-4"><img src="assets/images/icon/search.png" alt="" title="" width="50"></div>
                 <div class="align-slef-center mr-auto">
-                    <h3 class="m-b-2 text-uppercase font-30 font-medium lp-5 text-warning">4243</h3>
+                    <h3 class="m-b-2 text-uppercase font-30 font-medium lp-5 text-warning">4299</h3>
                     <h6 class="text-muted m-b-0">PACS Entregados</h6>
                 </div>
             </div>
@@ -46,14 +46,25 @@
             <div class="d-flex pt-3 pb-2 no-block">
                 <div class="align-self-center  mr-0 ml-2"><img src="assets/images/icon/money.png" alt="" title="" width="40"></div>
                 <div class="align-slef-center mr-auto">
-                    <h3 class="m-b-2 text-uppercase font-30 font-medium lp-5 text-warning">$424,300,000</h3>
+                    <h3 class="m-b-2 text-uppercase font-30 font-medium lp-5 text-warning">$429,900,000</h3>
                     <h6 class="text-muted m-b-0">Total dinero gastado en PACS</h6>
                 </div>
             </div>
         </app-card>
     </div>
 </div>
+<div class="row">
+    <div class="col-lg-12">
+        <app-card [hidHeader]="true" blockClass="p-30">
 
+            <h4 class="text-center">* Incluye el monto por valor de
+                <span class="text-warning">$100,000,000</span> aportado por la <em>COOPERATIVA DE PROFESORES DE LA UNIVERSIDAD NACIONAL</em> a quienes agradecemos su generosa donación</h4>
+            <div class="row ">
+                <img src="assets/images/coop.jpg" class="mx-auto d-block" alt="" title="" height="70">
+            </div>
+        </app-card>
+    </div>
+</div>
 <div class="row">
 
     <div class="col-sm-8">
@@ -247,12 +258,12 @@
 
 
 <div class="row">
-    <div class="col-sm-8">
+    <div class="col-sm-6">
         <app-card [hidHeader]="true">
             <div class="row">
                 <div class="col-lg-6 col-md-6">
                     <div class="d-flex m-b-10 no-block">
-                        <h5 class="card-title m-b-0 align-self-center text-uppercase">Entregas de paquetes alimentarios complementarios</h5>
+                        <h5 class="card-title m-b-0 align-self-center text-uppercase">Entregas de PACS</h5>
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-6 text-right">
@@ -265,9 +276,14 @@
             <app-apex-chart chartID="task-dah-statistics" [chartConfig]="this.taskDashStatistics"></app-apex-chart>
         </app-card>
     </div>
-    <div class="col-md-6 col-xl-4">
-        <div id="pyramid"></div>
+    <div class="col-md-6 col-xl-6">
+        <div class="card" style="width: auto;">
+            <div class="card-body">
+                <h5 class="card-title text-center text-uppercase">Estudiantes beneficiarios segun su PBM y sexo</h5>
+                <div id="pyramid"></div>
+            </div>
 
+        </div>
 
 
 

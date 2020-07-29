@@ -3,7 +3,7 @@ var statesData = {
     "features": [{
             "type": "Feature",
             "id": "01",
-            "properties": { "name": "Antonio Nariño", "hombres": 10, "mujeres": 3, "total": 13, "tiendas": 2, "PACS": 43 },
+            "properties": { "name": "Antonio Nariño", "total": 20, "tiendas": 2, "PACS": 32 },
             "geometry": {
                 "type": "MultiPolygon",
                 "coordinates": [
@@ -81,7 +81,7 @@ var statesData = {
         {
             "type": "Feature",
             "id": "02",
-            "properties": { "name": "Tunjuelito", "hombres": 71, "mujeres": 58, "total": 129, "tiendas": 1, "PACS": 278 },
+            "properties": { "name": "Tunjuelito", "total": 49, "tiendas": 1, "PACS": 85 },
             "geometry": {
                 "type": "MultiPolygon",
                 "coordinates": [
@@ -1001,7 +1001,7 @@ var statesData = {
         {
             "type": "Feature",
             "id": "04",
-            "properties": { "name": "Rafael Uribe Uribe", "hombres": 7, "mujeres": 4, "total": 11, "tiendas": 2, "PACS": 68 },
+            "properties": { "name": "Rafael Uribe Uribe", "total": 90, "tiendas": 2, "PACS": 151 },
             "geometry": {
                 "type": "MultiPolygon",
                 "coordinates": [
@@ -1956,7 +1956,7 @@ var statesData = {
         {
             "type": "Feature",
             "id": "05",
-            "properties": { "name": "Candelaria", "hombres": 20, "mujeres": 8, "total": 28, "tiendas": 2, "PACS": 58 },
+            "properties": { "name": "Candelaria", "total": 8, "tiendas": 2, "PACS": 15 },
             "geometry": {
                 "type": "MultiPolygon",
                 "coordinates": [
@@ -15171,7 +15171,7 @@ var statesData = {
         {
             "type": "Feature",
             "id": "06",
-            "properties": { "name": "Barrios Unidos", "hombres": 14, "mujeres": 19, "total": 33, "tiendas": 5, "PACS": 54 },
+            "properties": { "name": "Barrios Unidos", "total": 55, "tiendas": 5, "PACS": 86 },
             "geometry": {
                 "type": "MultiPolygon",
                 "coordinates": [
@@ -15256,7 +15256,7 @@ var statesData = {
         {
             "type": "Feature",
             "id": "08",
-            "properties": { "name": "Teusaquillo", "hombres": 211, "mujeres": 160, "total": 371, "tiendas": 21, "PACS": 603 },
+            "properties": { "name": "Teusaquillo", "total": 434, "tiendas": 21, "PACS": 684 },
             "geometry": {
                 "type": "MultiPolygon",
                 "coordinates": [
@@ -15324,7 +15324,7 @@ var statesData = {
         {
             "type": "Feature",
             "id": "09",
-            "properties": { "name": "Puente Aranda", "hombres": 21, "mujeres": 19, "total": 40, "tiendas": 8, "PACS": 85 },
+            "properties": { "name": "Puente Aranda", "total": 76, "tiendas": 8, "PACS": 124 },
             "geometry": {
                 "type": "MultiPolygon",
                 "coordinates": [
@@ -15394,7 +15394,7 @@ var statesData = {
         {
             "type": "Feature",
             "id": "10",
-            "properties": { "name": "Los Martires", "hombres": 13, "mujeres": 7, "total": 20, "tiendas": 8, "PACS": 72 },
+            "properties": { "name": "Los Martires", "total": 46, "tiendas": 8, "PACS": 73 },
             "geometry": {
                 "type": "MultiPolygon",
                 "coordinates": [
@@ -15537,7 +15537,7 @@ var statesData = {
         {
             "type": "Feature",
             "id": "11",
-            "properties": { "name": "Usaquen", "hombres": 45, "mujeres": 41, "total": 86, "tiendas": 39, "PACS": 118 },
+            "properties": { "name": "Usaquen", "total": 71, "tiendas": 39, "PACS": 112 },
             "geometry": {
                 "type": "MultiPolygon",
                 "coordinates": [
@@ -16762,7 +16762,7 @@ var statesData = {
         {
             "type": "Feature",
             "id": "12",
-            "properties": { "name": "Chapinero", "hombres": 28, "mujeres": 28, "total": 56, "tiendas": 45, "PACS": 69 },
+            "properties": { "name": "Chapinero", "total": 28, "tiendas": 45, "PACS": 46 },
             "geometry": {
                 "type": "MultiPolygon",
                 "coordinates": [
@@ -18946,7 +18946,7 @@ var statesData = {
         {
             "type": "Feature",
             "id": "13",
-            "properties": { "name": "Santa Fe", "hombres": 4, "mujeres": 6, "total": 10, "tiendas": 13, "PACS": 52 },
+            "properties": { "name": "Santa Fe", "total": 30, "tiendas": 13, "PACS": 53 },
             "geometry": {
                 "type": "MultiPolygon",
                 "coordinates": [
@@ -35015,7 +35015,7 @@ var statesData = {
         {
             "type": "Feature",
             "id": "15",
-            "properties": { "name": "San Cristobal", "hombres": 127, "mujeres": 81, "total": 208, "tiendas": 13, "PACS": 433 },
+            "properties": { "name": "San Cristobal", "total": 144, "tiendas": 13, "PACS": 194 },
             "geometry": {
                 "type": "MultiPolygon",
                 "coordinates": [
@@ -38552,7 +38552,7 @@ var statesData = {
         {
             "type": "Feature",
             "id": "16",
-            "properties": { "name": "Bosa", "hombres": 163, "mujeres": 126, "total": 289, "tiendas": 2, "PACS": 463 },
+            "properties": { "name": "Bosa", "total": 212, "tiendas": 2, "PACS": 355 },
             "geometry": {
                 "type": "MultiPolygon",
                 "coordinates": [
@@ -39345,7 +39345,7 @@ var statesData = {
         {
             "type": "Feature",
             "id": "17",
-            "properties": { "name": "Kennedy", "hombres": 119, "mujeres": 83, "total": 202, "tiendas": 12, "PACS": 489 },
+            "properties": { "name": "Kennedy", "total": 282, "tiendas": 12, "PACS": 470 },
             "geometry": {
                 "type": "MultiPolygon",
                 "coordinates": [
@@ -40222,7 +40222,7 @@ var statesData = {
         {
             "type": "Feature",
             "id": "18",
-            "properties": { "name": "Fontibon", "hombres": 81, "mujeres": 66, "total": 147, "tiendas": 19, "PACS": 143 },
+            "properties": { "name": "Fontibon", "total": 78, "tiendas": 19, "PACS": 129 },
             "geometry": {
                 "type": "MultiPolygon",
                 "coordinates": [
@@ -40829,7 +40829,7 @@ var statesData = {
         {
             "type": "Feature",
             "id": "19",
-            "properties": { "name": "Engativa", "hombres": 88, "mujeres": 58, "total": 146, "tiendas": 8, "PACS": 427 },
+            "properties": { "name": "Engativa", "total": 262, "tiendas": 8, "PACS": 435 },
             "geometry": {
                 "type": "MultiPolygon",
                 "coordinates": [
@@ -41310,7 +41310,7 @@ var statesData = {
         {
             "type": "Feature",
             "id": "20",
-            "properties": { "name": "Suba", "hombres": 81, "mujeres": 50, "total": 131, "tiendas": 24, "PACS": 383 },
+            "properties": { "name": "Suba", "total": 242, "tiendas": 24, "PACS": 419 },
             "geometry": {
                 "type": "MultiPolygon",
                 "coordinates": [
@@ -42237,7 +42237,7 @@ var statesData = {
         {
             "type": "Feature",
             "id": "21",
-            "properties": { "name": "Ciudad Bolivar", "hombres": 0, "mujeres": 0, "total": 0, "tiendas": 0, "PACS": 0 },
+            "properties": { "name": "Ciudad Bolivar", "total": 193, "tiendas": 0, "PACS": 346 },
             "geometry": {
                 "type": "MultiPolygon",
                 "coordinates": [
@@ -48291,7 +48291,7 @@ var statesData = {
         {
             "type": "Feature",
             "id": "22",
-            "properties": { "name": "Sumapaz", "hombres": 0, "mujeres": 0, "total": 0, "tiendas": 0, "PACS": 0 },
+            "properties": { "name": "Sumapaz", "total": 0, "tiendas": 0, "PACS": 0 },
             "geometry": {
                 "type": "MultiPolygon",
                 "coordinates": [
@@ -50317,7 +50317,7 @@ var statesData = {
         }, {
             "type": "Feature",
             "id": "23",
-            "properties": { "name": "Usme", "hombres": 0, "mujeres": 0, "total": 0, "tiendas": 0, "PACS": 0 },
+            "properties": { "name": "Usme", "total": 101, "tiendas": 0, "PACS": 176 },
             "geometry": {
                 "type": "MultiPolygon",
                 "coordinates": [

@@ -12,6 +12,9 @@ declare const geo: any;
 declare const statesData: any;
 declare const Highcharts: any;
 declare const sunburst: any;
+declare const am4core:any ;
+declare const am4charts : any;
+declare const am4themes_animated : any;
 @Component({
   selector: 'app-alojamientos-page',
   templateUrl: './alojamientos-page.component.html',
@@ -39,6 +42,7 @@ export class AlojamientosPageComponent implements OnInit {
 
 
   ngOnInit(){this.sunburst();
+    this.mypyramid2();
     var mymap = L.map('container').setView([4.633694, -74.082380], 13);
 
     L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
@@ -67,7 +71,7 @@ export class AlojamientosPageComponent implements OnInit {
   
       
       L.marker([4.627131, -74.086893],{icon: greenIcon}).addTo(mymap)
-      .bindPopup("<b>CORPORACIÓN DE RESIDENCIAS UNIVERSITARIAS - CRU</b><br />Total estudiantes: 235").openPopup();
+      .bindPopup("<b>CORPORACIÓN DE RESIDENCIAS UNIVERSITARIAS - CRU</b><br />Total estudiantes: 236").openPopup();
 
       
 
@@ -156,7 +160,7 @@ export class AlojamientosPageComponent implements OnInit {
       id: '2.9',
       parent: '1.3',
       name: 'Indigena',
-      value: 55
+      value: 56
     }
     ,
     
@@ -211,7 +215,7 @@ export class AlojamientosPageComponent implements OnInit {
     Highcharts.chart('chxa', {
     
       chart: {
-        height: '65%'
+        height: '78%'
       },
     
       title: {
@@ -262,7 +266,114 @@ export class AlojamientosPageComponent implements OnInit {
     });
   }
  
+  mypyramid2(){
 
+
+    // Themes begin
+    am4core.useTheme(am4themes_animated);
+    // Themes end
+    
+    var mainContainer = am4core.create("pyramid3", am4core.Container);
+    mainContainer.width = am4core.percent(100);
+    mainContainer.height = am4core.percent(100);
+    mainContainer.layout = "horizontal";
+    
+    var usData = [
+      {
+        "PBM": "0 a 5",
+        "male": 143,
+        "female": 118
+      },
+      {
+        "PBM": "6 a 10",
+        "male": 18,
+        "female": 24
+      },
+      {
+        "PBM": "11 a 15",
+        "male": 2,
+        "female": 5
+      },
+      {
+        "PBM": "16+",
+        "male": 0,
+        "female": 3
+      }
+    ];
+    
+    var maleChart = mainContainer.createChild(am4charts.XYChart);
+    maleChart.paddingRight = 0;
+    maleChart.data = JSON.parse(JSON.stringify(usData));
+    
+    // Create axes
+    var maleCategoryAxis = maleChart.yAxes.push(new am4charts.CategoryAxis());
+    maleCategoryAxis.dataFields.category = "PBM";
+    maleCategoryAxis.renderer.grid.template.location = 0;
+    //maleCategoryAxis.renderer.inversed = true;
+    maleCategoryAxis.renderer.minGridDistance = 15;
+    
+    var maleValueAxis = maleChart.xAxes.push(new am4charts.ValueAxis());
+    maleValueAxis.renderer.inversed = true;
+    maleValueAxis.min = 0;
+    maleValueAxis.max = 20;
+    maleValueAxis.strictMinMax = true;
+    
+    maleValueAxis.numberFormatter = new am4core.NumberFormatter();
+    maleValueAxis.numberFormatter.numberFormat = "#.#'%'";
+    
+    // Create series
+    var maleSeries = maleChart.series.push(new am4charts.ColumnSeries());
+    maleSeries.dataFields.valueX = "male";
+    maleSeries.dataFields.valueXShow = "percent";
+    maleSeries.calculatePercent = true;
+    maleSeries.dataFields.categoryY = "PBM";
+    maleSeries.interpolationDuration = 1000;
+    maleSeries.columns.template.tooltipText = "Hombres, PBM {categoryY}: {valueX} ({valueX.percent.formatNumber('#.0')}%)";
+    //maleSeries.sequencedInterpolation = true;
+    
+    
+    var femaleChart = mainContainer.createChild(am4charts.XYChart);
+    femaleChart.paddingLeft = 0;
+    femaleChart.data = JSON.parse(JSON.stringify(usData));
+    
+    // Create axes
+    var femaleCategoryAxis = femaleChart.yAxes.push(new am4charts.CategoryAxis());
+    femaleCategoryAxis.renderer.opposite = true;
+    femaleCategoryAxis.dataFields.category = "PBM";
+    femaleCategoryAxis.renderer.grid.template.location = 0;
+    femaleCategoryAxis.renderer.minGridDistance = 15;
+    
+    var femaleValueAxis = femaleChart.xAxes.push(new am4charts.ValueAxis());
+    femaleValueAxis.min = 0;
+    femaleValueAxis.max = 20;
+    femaleValueAxis.strictMinMax = true;
+    femaleValueAxis.numberFormatter = new am4core.NumberFormatter();
+    femaleValueAxis.numberFormatter.numberFormat = "#.#'%'";
+    femaleValueAxis.renderer.minLabelPosition = 0.01;
+    
+    // Create series
+    var femaleSeries = femaleChart.series.push(new am4charts.ColumnSeries());
+    femaleSeries.dataFields.valueX = "female";
+    femaleSeries.dataFields.valueXShow = "percent";
+    femaleSeries.calculatePercent = true;
+    femaleSeries.fill = femaleChart.colors.getIndex(4);
+    femaleSeries.stroke = femaleSeries.fill;
+    //femaleSeries.sequencedInterpolation = true;
+    femaleSeries.columns.template.tooltipText = "Mujeres, PBM {categoryY}: {valueX} ({valueX.percent.formatNumber('#.0')}%)";
+    femaleSeries.dataFields.categoryY = "PBM";
+    femaleSeries.interpolationDuration = 1000;
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      }
 
 
  }
